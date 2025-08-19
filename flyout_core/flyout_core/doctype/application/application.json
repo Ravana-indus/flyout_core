@@ -1,0 +1,675 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:14:54.670030",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "application_title",
+  "lead",
+  "application_type",
+  "column_break_1",
+  "application_status",
+  "priority",
+  "assigned_to",
+  "section_break_1",
+  "client_name",
+  "client_email",
+  "client_phone",
+  "client_country",
+  "column_break_2",
+  "destination_country",
+  "nationality",
+  "date_of_birth",
+  "passport_number",
+  "section_break_2",
+  "program",
+  "university",
+  "job_opening",
+  "employer",
+  "column_break_3",
+  "visa_category",
+  "visa_subclass",
+  "application_fee",
+  "service_fee",
+  "section_break_3",
+  "application_date",
+  "submission_deadline",
+  "expected_decision_date",
+  "actual_submission_date",
+  "column_break_4",
+  "decision_date",
+  "visa_grant_date",
+  "visa_expiry_date",
+  "total_processing_days",
+  "section_break_4",
+  "documents_required",
+  "documents_received",
+  "missing_documents",
+  "document_completion_percentage",
+  "column_break_5",
+  "last_document_update",
+  "document_review_status",
+  "document_notes",
+  "section_break_5",
+  "total_application_cost",
+  "amount_paid",
+  "balance_due",
+  "payment_status",
+  "column_break_6",
+  "currency",
+  "exchange_rate",
+  "payment_terms",
+  "refund_policy",
+  "section_break_6",
+  "last_contact_date",
+  "next_follow_up",
+  "follow_up_reason",
+  "client_response_required",
+  "column_break_7",
+  "case_officer",
+  "government_reference",
+  "application_number",
+  "external_tracking_id",
+  "section_break_7",
+  "risk_level",
+  "compliance_status",
+  "risk_factors",
+  "compliance_notes",
+  "column_break_8",
+  "background_check_status",
+  "medical_exam_required",
+  "medical_exam_status",
+  "biometrics_required",
+  "section_break_8",
+  "success_probability",
+  "application_score",
+  "time_to_submission",
+  "client_satisfaction_rating",
+  "column_break_9",
+  "referral_source",
+  "marketing_campaign",
+  "conversion_value",
+  "lifetime_value",
+  "section_break_9",
+  "internal_notes",
+  "client_notes",
+  "special_instructions",
+  "column_break_10",
+  "created_by_user",
+  "last_modified_by",
+  "application_source",
+  "data_privacy_consent"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "APP-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Application Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead",
+   "options": "Lead",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Application Type",
+   "options": "Study Visa\nWork Visa\nPermanent Residence\nBusiness Immigration\nFamily Visa\nTourist Visa\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Application Status",
+   "options": "Draft\nIn Progress\nDocuments Pending\nSubmitted\nUnder Review\nApproved\nRejected\nOn Hold",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Critical\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Client Information"
+  },
+  {
+   "fetch_from": "lead.lead_name",
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lead.email",
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lead.phone",
+   "fieldname": "client_phone",
+   "fieldtype": "Data",
+   "label": "Client Phone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lead.country",
+   "fieldname": "client_country",
+   "fieldtype": "Link",
+   "label": "Client Country",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "destination_country",
+   "fieldtype": "Link",
+   "label": "Destination Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "lead.nationality",
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lead.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Application Details"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "university",
+   "fieldtype": "Link",
+   "label": "University",
+   "options": "University"
+  },
+  {
+   "fieldname": "job_opening",
+   "fieldtype": "Link",
+   "label": "Job Opening",
+   "options": "Job Opening"
+  },
+  {
+   "fieldname": "employer",
+   "fieldtype": "Link",
+   "label": "Employer",
+   "options": "Employer"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visa_category",
+   "fieldtype": "Data",
+   "label": "Visa Category"
+  },
+  {
+   "fieldname": "visa_subclass",
+   "fieldtype": "Data",
+   "label": "Visa Subclass"
+  },
+  {
+   "fieldname": "application_fee",
+   "fieldtype": "Currency",
+   "label": "Application Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_fee",
+   "fieldtype": "Currency",
+   "label": "Service Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Timeline & Milestones"
+  },
+  {
+   "default": "Today",
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "submission_deadline",
+   "fieldtype": "Date",
+   "label": "Submission Deadline"
+  },
+  {
+   "fieldname": "expected_decision_date",
+   "fieldtype": "Date",
+   "label": "Expected Decision Date"
+  },
+  {
+   "fieldname": "actual_submission_date",
+   "fieldtype": "Date",
+   "label": "Actual Submission Date"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision Date"
+  },
+  {
+   "fieldname": "visa_grant_date",
+   "fieldtype": "Date",
+   "label": "Visa Grant Date"
+  },
+  {
+   "fieldname": "visa_expiry_date",
+   "fieldtype": "Date",
+   "label": "Visa Expiry Date"
+  },
+  {
+   "fieldname": "total_processing_days",
+   "fieldtype": "Int",
+   "label": "Total Processing Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Document Management"
+  },
+  {
+   "fieldname": "documents_required",
+   "fieldtype": "Text Editor",
+   "label": "Documents Required"
+  },
+  {
+   "fieldname": "documents_received",
+   "fieldtype": "Text",
+   "label": "Documents Received"
+  },
+  {
+   "fieldname": "missing_documents",
+   "fieldtype": "Text",
+   "label": "Missing Documents"
+  },
+  {
+   "fieldname": "document_completion_percentage",
+   "fieldtype": "Float",
+   "label": "Document Completion (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_document_update",
+   "fieldtype": "Date",
+   "label": "Last Document Update"
+  },
+  {
+   "fieldname": "document_review_status",
+   "fieldtype": "Select",
+   "label": "Document Review Status",
+   "options": "Pending\nIn Review\nApproved\nRequires Changes\nRejected"
+  },
+  {
+   "fieldname": "document_notes",
+   "fieldtype": "Text Editor",
+   "label": "Document Notes"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Financial Information"
+  },
+  {
+   "fieldname": "total_application_cost",
+   "fieldtype": "Currency",
+   "label": "Total Application Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid"
+  },
+  {
+   "fieldname": "balance_due",
+   "fieldtype": "Currency",
+   "label": "Balance Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nPartial\nPaid\nRefunded\nDisputed"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "precision": "4"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Text",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "refund_policy",
+   "fieldtype": "Text",
+   "label": "Refund Policy"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Communication & Follow-up"
+  },
+  {
+   "fieldname": "last_contact_date",
+   "fieldtype": "Date",
+   "label": "Last Contact Date"
+  },
+  {
+   "fieldname": "next_follow_up",
+   "fieldtype": "Datetime",
+   "label": "Next Follow-up"
+  },
+  {
+   "fieldname": "follow_up_reason",
+   "fieldtype": "Text",
+   "label": "Follow-up Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "client_response_required",
+   "fieldtype": "Check",
+   "label": "Client Response Required"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "case_officer",
+   "fieldtype": "Data",
+   "label": "Case Officer"
+  },
+  {
+   "fieldname": "government_reference",
+   "fieldtype": "Data",
+   "label": "Government Reference"
+  },
+  {
+   "fieldname": "application_number",
+   "fieldtype": "Data",
+   "label": "Application Number"
+  },
+  {
+   "fieldname": "external_tracking_id",
+   "fieldtype": "Data",
+   "label": "External Tracking ID"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment & Compliance"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Risk Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "Compliant\nNon-Compliant\nUnder Review\nRequires Action"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Text Editor",
+   "label": "Risk Factors"
+  },
+  {
+   "fieldname": "compliance_notes",
+   "fieldtype": "Text Editor",
+   "label": "Compliance Notes"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "background_check_status",
+   "fieldtype": "Select",
+   "label": "Background Check Status",
+   "options": "Not Required\nPending\nIn Progress\nCompleted\nIssues Found"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_exam_required",
+   "fieldtype": "Check",
+   "label": "Medical Exam Required"
+  },
+  {
+   "fieldname": "medical_exam_status",
+   "fieldtype": "Select",
+   "label": "Medical Exam Status",
+   "options": "Not Required\nScheduled\nCompleted\nPassed\nFailed"
+  },
+  {
+   "default": "0",
+   "fieldname": "biometrics_required",
+   "fieldtype": "Check",
+   "label": "Biometrics Required"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Success Metrics & Analytics"
+  },
+  {
+   "fieldname": "success_probability",
+   "fieldtype": "Float",
+   "label": "Success Probability (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "application_score",
+   "fieldtype": "Float",
+   "label": "Application Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "time_to_submission",
+   "fieldtype": "Int",
+   "label": "Time to Submission (Days)"
+  },
+  {
+   "fieldname": "client_satisfaction_rating",
+   "fieldtype": "Float",
+   "label": "Client Satisfaction Rating",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "lead.lead_source",
+   "fieldname": "referral_source",
+   "fieldtype": "Data",
+   "label": "Referral Source",
+   "read_only": 1
+  },
+  {
+   "fieldname": "marketing_campaign",
+   "fieldtype": "Data",
+   "label": "Marketing Campaign"
+  },
+  {
+   "fieldname": "conversion_value",
+   "fieldtype": "Currency",
+   "label": "Conversion Value"
+  },
+  {
+   "fieldname": "lifetime_value",
+   "fieldtype": "Currency",
+   "label": "Lifetime Value"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Internal Notes & System Information"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "client_notes",
+   "fieldtype": "Text Editor",
+   "label": "Client Notes"
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Text Editor",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "application_source",
+   "fieldtype": "Select",
+   "label": "Application Source",
+   "options": "Website\nReferral\nAgent\nDirect\nPartner\nMarketing\nOther"
+  },
+  {
+   "default": "0",
+   "fieldname": "data_privacy_consent",
+   "fieldtype": "Check",
+   "label": "Data Privacy Consent",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:56:27.447518",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Application",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "application_title",
+ "track_changes": 1
+}

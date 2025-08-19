@@ -1,0 +1,560 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:university_name",
+ "creation": "2025-08-02 15:05:29.717302",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "university_name",
+  "university_code",
+  "country",
+  "city",
+  "column_break_1",
+  "website",
+  "university_type",
+  "established_year",
+  "logo",
+  "section_break_1",
+  "global_ranking",
+  "national_ranking",
+  "ranking_source",
+  "column_break_2",
+  "accreditation_status",
+  "accrediting_bodies",
+  "recognition_level",
+  "section_break_2",
+  "total_students",
+  "international_students",
+  "faculty_count",
+  "student_faculty_ratio",
+  "column_break_3",
+  "academic_calendar",
+  "language_of_instruction",
+  "english_proficiency_required",
+  "section_break_3",
+  "application_deadline_fall",
+  "application_deadline_spring",
+  "acceptance_rate",
+  "average_gpa_requirement",
+  "column_break_4",
+  "tuition_undergraduate_annual",
+  "tuition_graduate_annual",
+  "living_expenses_annual",
+  "currency",
+  "section_break_4",
+  "undergraduate_programs",
+  "graduate_programs",
+  "doctoral_programs",
+  "column_break_5",
+  "popular_fields",
+  "research_areas",
+  "special_programs",
+  "section_break_5",
+  "campus_size_acres",
+  "campus_type",
+  "housing_availability",
+  "column_break_6",
+  "library_resources",
+  "research_facilities",
+  "sports_facilities",
+  "section_break_6",
+  "international_student_services",
+  "career_services",
+  "academic_support",
+  "column_break_7",
+  "health_services",
+  "counseling_services",
+  "financial_aid_available",
+  "section_break_7",
+  "notable_alumni",
+  "graduate_employment_rate",
+  "average_starting_salary",
+  "column_break_8",
+  "alumni_network_size",
+  "industry_partnerships",
+  "research_output",
+  "section_break_8",
+  "admissions_office_email",
+  "admissions_office_phone",
+  "international_office_email",
+  "column_break_9",
+  "address",
+  "postal_code",
+  "time_zone",
+  "section_break_9",
+  "is_active",
+  "is_partner_university",
+  "data_last_updated",
+  "column_break_10",
+  "data_sources",
+  "internal_notes",
+  "priority_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "university_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "University Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "university_code",
+   "fieldtype": "Data",
+   "label": "University Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Official Website"
+  },
+  {
+   "fieldname": "university_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "University Type",
+   "options": "Public\nPrivate\nPrivate Non-Profit\nFor-Profit"
+  },
+  {
+   "fieldname": "established_year",
+   "fieldtype": "Int",
+   "label": "Established Year"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "University Logo"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Rankings & Recognition"
+  },
+  {
+   "fieldname": "global_ranking",
+   "fieldtype": "Int",
+   "label": "Global Ranking"
+  },
+  {
+   "fieldname": "national_ranking",
+   "fieldtype": "Int",
+   "label": "National Ranking"
+  },
+  {
+   "fieldname": "ranking_source",
+   "fieldtype": "Select",
+   "label": "Ranking Source",
+   "options": "QS World University Rankings\nTimes Higher Education\nAcademic Ranking of World Universities\nU.S. News & World Report\nOther"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accreditation_status",
+   "fieldtype": "Select",
+   "label": "Accreditation Status",
+   "options": "Fully Accredited\nConditionally Accredited\nNot Accredited\nPending"
+  },
+  {
+   "fieldname": "accrediting_bodies",
+   "fieldtype": "Text",
+   "label": "Accrediting Bodies"
+  },
+  {
+   "fieldname": "recognition_level",
+   "fieldtype": "Select",
+   "label": "Recognition Level",
+   "options": "International\nNational\nRegional\nLocal"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Academic Information"
+  },
+  {
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "label": "Total Students"
+  },
+  {
+   "fieldname": "international_students",
+   "fieldtype": "Int",
+   "label": "International Students"
+  },
+  {
+   "fieldname": "faculty_count",
+   "fieldtype": "Int",
+   "label": "Faculty Count"
+  },
+  {
+   "fieldname": "student_faculty_ratio",
+   "fieldtype": "Data",
+   "label": "Student-Faculty Ratio"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_calendar",
+   "fieldtype": "Select",
+   "label": "Academic Calendar",
+   "options": "Semester\nTrimester\nQuarter\nOther"
+  },
+  {
+   "fieldname": "language_of_instruction",
+   "fieldtype": "Data",
+   "label": "Primary Language of Instruction"
+  },
+  {
+   "default": "0",
+   "fieldname": "english_proficiency_required",
+   "fieldtype": "Check",
+   "label": "English Proficiency Required"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Admission & Costs"
+  },
+  {
+   "fieldname": "application_deadline_fall",
+   "fieldtype": "Date",
+   "label": "Application Deadline (Fall)"
+  },
+  {
+   "fieldname": "application_deadline_spring",
+   "fieldtype": "Date",
+   "label": "Application Deadline (Spring)"
+  },
+  {
+   "fieldname": "acceptance_rate",
+   "fieldtype": "Float",
+   "label": "Acceptance Rate (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "average_gpa_requirement",
+   "fieldtype": "Float",
+   "label": "Average GPA Requirement",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tuition_undergraduate_annual",
+   "fieldtype": "Currency",
+   "label": "Undergraduate Tuition (Annual)"
+  },
+  {
+   "fieldname": "tuition_graduate_annual",
+   "fieldtype": "Currency",
+   "label": "Graduate Tuition (Annual)"
+  },
+  {
+   "fieldname": "living_expenses_annual",
+   "fieldtype": "Currency",
+   "label": "Living Expenses (Annual)"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Programs & Specializations"
+  },
+  {
+   "fieldname": "undergraduate_programs",
+   "fieldtype": "Text",
+   "label": "Undergraduate Programs Offered"
+  },
+  {
+   "fieldname": "graduate_programs",
+   "fieldtype": "Text",
+   "label": "Graduate Programs Offered"
+  },
+  {
+   "fieldname": "doctoral_programs",
+   "fieldtype": "Text",
+   "label": "Doctoral Programs Offered"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "popular_fields",
+   "fieldtype": "Text",
+   "label": "Popular Fields of Study"
+  },
+  {
+   "fieldname": "research_areas",
+   "fieldtype": "Text",
+   "label": "Research Areas"
+  },
+  {
+   "fieldname": "special_programs",
+   "fieldtype": "Text",
+   "label": "Special Programs"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Campus & Facilities"
+  },
+  {
+   "fieldname": "campus_size_acres",
+   "fieldtype": "Float",
+   "label": "Campus Size (Acres)"
+  },
+  {
+   "fieldname": "campus_type",
+   "fieldtype": "Select",
+   "label": "Campus Type",
+   "options": "Urban\nSuburban\nRural\nOnline"
+  },
+  {
+   "fieldname": "housing_availability",
+   "fieldtype": "Select",
+   "label": "Housing Availability",
+   "options": "Guaranteed\nAvailable\nLimited\nNot Available"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "library_resources",
+   "fieldtype": "Text",
+   "label": "Library Resources"
+  },
+  {
+   "fieldname": "research_facilities",
+   "fieldtype": "Text",
+   "label": "Research Facilities"
+  },
+  {
+   "fieldname": "sports_facilities",
+   "fieldtype": "Text",
+   "label": "Sports & Recreation Facilities"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Student Services & Support"
+  },
+  {
+   "fieldname": "international_student_services",
+   "fieldtype": "Text",
+   "label": "International Student Services"
+  },
+  {
+   "fieldname": "career_services",
+   "fieldtype": "Text",
+   "label": "Career Services"
+  },
+  {
+   "fieldname": "academic_support",
+   "fieldtype": "Text",
+   "label": "Academic Support Services"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "health_services",
+   "fieldtype": "Text",
+   "label": "Health Services"
+  },
+  {
+   "fieldname": "counseling_services",
+   "fieldtype": "Text",
+   "label": "Counseling Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "financial_aid_available",
+   "fieldtype": "Check",
+   "label": "Financial Aid Available"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Alumni & Outcomes"
+  },
+  {
+   "fieldname": "notable_alumni",
+   "fieldtype": "Text",
+   "label": "Notable Alumni"
+  },
+  {
+   "fieldname": "graduate_employment_rate",
+   "fieldtype": "Float",
+   "label": "Graduate Employment Rate (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "average_starting_salary",
+   "fieldtype": "Currency",
+   "label": "Average Starting Salary"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alumni_network_size",
+   "fieldtype": "Int",
+   "label": "Alumni Network Size"
+  },
+  {
+   "fieldname": "industry_partnerships",
+   "fieldtype": "Text",
+   "label": "Industry Partnerships"
+  },
+  {
+   "fieldname": "research_output",
+   "fieldtype": "Text",
+   "label": "Research Output & Publications"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "admissions_office_email",
+   "fieldtype": "Data",
+   "label": "Admissions Office Email"
+  },
+  {
+   "fieldname": "admissions_office_phone",
+   "fieldtype": "Data",
+   "label": "Admissions Office Phone"
+  },
+  {
+   "fieldname": "international_office_email",
+   "fieldtype": "Data",
+   "label": "International Office Email"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_partner_university",
+   "fieldtype": "Check",
+   "label": "Partner University"
+  },
+  {
+   "fieldname": "data_last_updated",
+   "fieldtype": "Date",
+   "label": "Data Last Updated"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_sources",
+   "fieldtype": "Small Text",
+   "label": "Data Sources"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "High\nMedium\nLow"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:57:11.407138",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "University",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "university_name",
+ "track_changes": 1
+}

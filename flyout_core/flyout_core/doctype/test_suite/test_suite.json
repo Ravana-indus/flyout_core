@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TSU-.YYYY.-.#####",
+ "creation": "2025-08-05 20:43:27.604710",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "suite_name",
+  "suite_description",
+  "suite_type",
+  "prerequisites",
+  "setup_script",
+  "teardown_script",
+  "environment_config",
+  "test_data",
+  "expected_results",
+  "created_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "suite_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Suite Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "suite_description",
+   "fieldtype": "Text Editor",
+   "label": "Suite Description"
+  },
+  {
+   "fieldname": "suite_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Suite Type",
+   "options": "Unit Testing\nIntegration Testing\nEnd-to-End Testing\nPerformance Testing\nSecurity Testing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prerequisites",
+   "fieldtype": "Text",
+   "label": "Prerequisites"
+  },
+  {
+   "fieldname": "setup_script",
+   "fieldtype": "Code",
+   "label": "Setup Script",
+   "options": "Python"
+  },
+  {
+   "fieldname": "teardown_script",
+   "fieldtype": "Code",
+   "label": "Teardown Script",
+   "options": "Python"
+  },
+  {
+   "fieldname": "environment_config",
+   "fieldtype": "JSON",
+   "label": "Environment Configuration"
+  },
+  {
+   "fieldname": "test_data",
+   "fieldtype": "Attach",
+   "label": "Test Data"
+  },
+  {
+   "fieldname": "expected_results",
+   "fieldtype": "Text Editor",
+   "label": "Expected Results"
+  },
+  {
+   "default": "Administrator",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Test Suite",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-18 18:01:54.244099",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Test Suite",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "suite_name",
+ "track_changes": 1
+}

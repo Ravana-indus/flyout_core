@@ -1,0 +1,762 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ENQ-{YYYY}-{#####}",
+ "creation": "2025-08-02 21:30:01.049226",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "inquiry_id",
+  "inquiry_title",
+  "inquiry_type",
+  "inquiry_status",
+  "priority_level",
+  "column_break_1",
+  "inquiry_date",
+  "student_profile",
+  "target_country",
+  "preferred_destination",
+  "service_category",
+  "estimated_budget",
+  "contact_information_section",
+  "full_name",
+  "email_address",
+  "phone_number",
+  "whatsapp_number",
+  "column_break_2",
+  "country_of_origin",
+  "current_city",
+  "time_zone",
+  "preferred_contact_method",
+  "preferred_contact_time",
+  "language_preference",
+  "source_attribution_section",
+  "inquiry_source",
+  "source_channel",
+  "utm_source",
+  "utm_medium",
+  "column_break_3",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "referrer_url",
+  "landing_page",
+  "session_id",
+  "smart_categorization_section",
+  "ai_category",
+  "ai_subcategory",
+  "intent_classification",
+  "sentiment_score",
+  "column_break_4",
+  "complexity_score",
+  "urgency_indicator",
+  "processing_difficulty",
+  "keyword_tags",
+  "topic_clusters",
+  "auto_routing_section",
+  "routing_status",
+  "routing_algorithm",
+  "matched_providers_count",
+  "routing_confidence",
+  "column_break_5",
+  "auto_assigned_provider",
+  "assignment_reason",
+  "routing_timestamp",
+  "alternative_providers",
+  "geographic_preference",
+  "specialization_required",
+  "priority_scoring_section",
+  "overall_priority_score",
+  "quality_score",
+  "conversion_probability",
+  "lead_temperature",
+  "column_break_6",
+  "business_value_score",
+  "engagement_score",
+  "risk_assessment",
+  "fraud_indicator",
+  "data_completeness",
+  "follow_up_priority",
+  "duplicate_detection_section",
+  "duplicate_check_status",
+  "duplicate_confidence",
+  "potential_duplicates",
+  "duplicate_factors",
+  "column_break_7",
+  "merged_from_inquiries",
+  "master_inquiry",
+  "is_duplicate",
+  "merge_action_required",
+  "deduplication_algorithm",
+  "last_duplicate_check",
+  "inquiry_details_section",
+  "inquiry_description",
+  "specific_requirements",
+  "field_of_study",
+  "preferred_university",
+  "column_break_8",
+  "timeline_expectations",
+  "additional_notes",
+  "attachments",
+  "special_considerations",
+  "background_score",
+  "content_analysis",
+  "tracking_analytics_section",
+  "first_response_time",
+  "total_response_time",
+  "interaction_count",
+  "conversion_status",
+  "column_break_9",
+  "conversion_date",
+  "converted_to_lead",
+  "performance_metrics",
+  "last_activity_date",
+  "closure_reason",
+  "satisfaction_rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "inquiry_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Inquiry ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "inquiry_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Inquiry Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inquiry_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inquiry Type",
+   "options": "Study Abroad\nWork Visa\nTourism\nBusiness Immigration\nFamily Reunification\nGeneral Inquiry",
+   "reqd": 1
+  },
+  {
+   "default": "New",
+   "fieldname": "inquiry_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inquiry Status",
+   "options": "New\nProcessing\nRouted\nAssigned\nConverted\nClosed\nDuplicate",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "Low\nMedium\nHigh\nUrgent\nCritical"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "inquiry_date",
+   "fieldtype": "Datetime",
+   "label": "Inquiry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_profile",
+   "fieldtype": "Link",
+   "label": "Student Profile",
+   "options": "Student Profile"
+  },
+  {
+   "fieldname": "target_country",
+   "fieldtype": "Link",
+   "label": "Target Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "preferred_destination",
+   "fieldtype": "Small Text",
+   "label": "Preferred Destination"
+  },
+  {
+   "fieldname": "service_category",
+   "fieldtype": "Select",
+   "label": "Service Category",
+   "options": "Education\nImmigration\nEmployment\nTourism\nBusiness\nFamily"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "whatsapp_number",
+   "fieldtype": "Data",
+   "label": "WhatsApp Number"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country_of_origin",
+   "fieldtype": "Link",
+   "label": "Country of Origin",
+   "options": "Country"
+  },
+  {
+   "fieldname": "current_city",
+   "fieldtype": "Data",
+   "label": "Current City"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "preferred_contact_method",
+   "fieldtype": "Select",
+   "label": "Preferred Contact Method",
+   "options": "Email\nPhone\nWhatsApp\nVideo Call\nSMS"
+  },
+  {
+   "fieldname": "preferred_contact_time",
+   "fieldtype": "Data",
+   "label": "Preferred Contact Time"
+  },
+  {
+   "default": "English",
+   "fieldname": "language_preference",
+   "fieldtype": "Data",
+   "label": "Language Preference"
+  },
+  {
+   "fieldname": "source_attribution_section",
+   "fieldtype": "Section Break",
+   "label": "Source Attribution & Tracking"
+  },
+  {
+   "fieldname": "inquiry_source",
+   "fieldtype": "Select",
+   "label": "Inquiry Source",
+   "options": "Website\nMobile App\nSocial Media\nReferral\nAdvertisement\nEmail Campaign\nPhone Call\nWalk-in\nPartner\nEvent"
+  },
+  {
+   "fieldname": "source_channel",
+   "fieldtype": "Data",
+   "label": "Source Channel"
+  },
+  {
+   "fieldname": "utm_source",
+   "fieldtype": "Data",
+   "label": "UTM Source"
+  },
+  {
+   "fieldname": "utm_medium",
+   "fieldtype": "Data",
+   "label": "UTM Medium"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "utm_campaign",
+   "fieldtype": "Data",
+   "label": "UTM Campaign"
+  },
+  {
+   "fieldname": "utm_term",
+   "fieldtype": "Data",
+   "label": "UTM Term"
+  },
+  {
+   "fieldname": "utm_content",
+   "fieldtype": "Data",
+   "label": "UTM Content"
+  },
+  {
+   "fieldname": "referrer_url",
+   "fieldtype": "Data",
+   "label": "Referrer URL"
+  },
+  {
+   "fieldname": "landing_page",
+   "fieldtype": "Data",
+   "label": "Landing Page"
+  },
+  {
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "label": "Session ID"
+  },
+  {
+   "fieldname": "smart_categorization_section",
+   "fieldtype": "Section Break",
+   "label": "Smart Categorization & AI Insights"
+  },
+  {
+   "fieldname": "ai_category",
+   "fieldtype": "Data",
+   "label": "AI Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ai_subcategory",
+   "fieldtype": "Data",
+   "label": "AI Subcategory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "intent_classification",
+   "fieldtype": "Select",
+   "label": "Intent Classification",
+   "options": "Information Seeking\nPrice Inquiry\nService Request\nComplaint\nSupport\nUrgent Request"
+  },
+  {
+   "fieldname": "sentiment_score",
+   "fieldtype": "Float",
+   "label": "Sentiment Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complexity_score",
+   "fieldtype": "Float",
+   "label": "Complexity Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "urgency_indicator",
+   "fieldtype": "Select",
+   "label": "Urgency Indicator",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processing_difficulty",
+   "fieldtype": "Select",
+   "label": "Processing Difficulty",
+   "options": "Easy\nModerate\nComplex\nExpert Required"
+  },
+  {
+   "fieldname": "keyword_tags",
+   "fieldtype": "Small Text",
+   "label": "Keyword Tags",
+   "read_only": 1
+  },
+  {
+   "fieldname": "topic_clusters",
+   "fieldtype": "Small Text",
+   "label": "Topic Clusters",
+   "read_only": 1
+  },
+  {
+   "fieldname": "auto_routing_section",
+   "fieldtype": "Section Break",
+   "label": "Auto-Routing & Provider Matching"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "routing_status",
+   "fieldtype": "Select",
+   "label": "Routing Status",
+   "options": "Pending\nIn Progress\nRouted\nFailed\nManual Required"
+  },
+  {
+   "fieldname": "routing_algorithm",
+   "fieldtype": "Select",
+   "label": "Routing Algorithm",
+   "options": "Round Robin\nLoad Balanced\nExpertise Based\nGeographic\nPerformance Based\nCustom"
+  },
+  {
+   "default": "0",
+   "fieldname": "matched_providers_count",
+   "fieldtype": "Int",
+   "label": "Matched Providers Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "routing_confidence",
+   "fieldtype": "Percent",
+   "label": "Routing Confidence",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_assigned_provider",
+   "fieldtype": "Link",
+   "label": "Auto-Assigned Provider",
+   "options": "Provider Registry"
+  },
+  {
+   "fieldname": "assignment_reason",
+   "fieldtype": "Small Text",
+   "label": "Assignment Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "routing_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Routing Timestamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "alternative_providers",
+   "fieldtype": "Small Text",
+   "label": "Alternative Providers",
+   "read_only": 1
+  },
+  {
+   "fieldname": "geographic_preference",
+   "fieldtype": "Data",
+   "label": "Geographic Preference"
+  },
+  {
+   "fieldname": "specialization_required",
+   "fieldtype": "Data",
+   "label": "Specialization Required"
+  },
+  {
+   "fieldname": "priority_scoring_section",
+   "fieldtype": "Section Break",
+   "label": "Priority Scoring & Quality Assessment"
+  },
+  {
+   "fieldname": "overall_priority_score",
+   "fieldtype": "Float",
+   "label": "Overall Priority Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_score",
+   "fieldtype": "Float",
+   "label": "Quality Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_probability",
+   "fieldtype": "Percent",
+   "label": "Conversion Probability",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_temperature",
+   "fieldtype": "Select",
+   "label": "Lead Temperature",
+   "options": "Cold\nWarm\nHot\nBurning",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_value_score",
+   "fieldtype": "Float",
+   "label": "Business Value Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "engagement_score",
+   "fieldtype": "Float",
+   "label": "Engagement Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_assessment",
+   "fieldtype": "Select",
+   "label": "Risk Assessment",
+   "options": "Low Risk\nMedium Risk\nHigh Risk\nRequires Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "fraud_indicator",
+   "fieldtype": "Check",
+   "label": "Fraud Indicator",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_completeness",
+   "fieldtype": "Percent",
+   "label": "Data Completeness",
+   "read_only": 1
+  },
+  {
+   "fieldname": "follow_up_priority",
+   "fieldtype": "Select",
+   "label": "Follow-up Priority",
+   "options": "Immediate\nWithin 1 Hour\nWithin 4 Hours\nWithin 24 Hours\nWithin 48 Hours\nWeekly"
+  },
+  {
+   "fieldname": "duplicate_detection_section",
+   "fieldtype": "Section Break",
+   "label": "Duplicate Detection & Merging"
+  },
+  {
+   "default": "Not Checked",
+   "fieldname": "duplicate_check_status",
+   "fieldtype": "Select",
+   "label": "Duplicate Check Status",
+   "options": "Not Checked\nProcessing\nNo Duplicates\nDuplicates Found\nMerged"
+  },
+  {
+   "fieldname": "duplicate_confidence",
+   "fieldtype": "Percent",
+   "label": "Duplicate Confidence",
+   "read_only": 1
+  },
+  {
+   "fieldname": "potential_duplicates",
+   "fieldtype": "Small Text",
+   "label": "Potential Duplicates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duplicate_factors",
+   "fieldtype": "Small Text",
+   "label": "Duplicate Factors",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "merged_from_inquiries",
+   "fieldtype": "Small Text",
+   "label": "Merged From Inquiries",
+   "read_only": 1
+  },
+  {
+   "fieldname": "master_inquiry",
+   "fieldtype": "Link",
+   "label": "Master Inquiry",
+   "options": "Enhanced Inquiry"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_duplicate",
+   "fieldtype": "Check",
+   "label": "Is Duplicate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "merge_action_required",
+   "fieldtype": "Check",
+   "label": "Merge Action Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deduplication_algorithm",
+   "fieldtype": "Data",
+   "label": "Deduplication Algorithm",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_duplicate_check",
+   "fieldtype": "Datetime",
+   "label": "Last Duplicate Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inquiry_details_section",
+   "fieldtype": "Section Break",
+   "label": "Inquiry Details & Content"
+  },
+  {
+   "fieldname": "inquiry_description",
+   "fieldtype": "Text Editor",
+   "label": "Inquiry Description"
+  },
+  {
+   "fieldname": "specific_requirements",
+   "fieldtype": "Text",
+   "label": "Specific Requirements"
+  },
+  {
+   "fieldname": "field_of_study",
+   "fieldtype": "Link",
+   "label": "Field of Study",
+   "options": "Field of Study"
+  },
+  {
+   "fieldname": "preferred_university",
+   "fieldtype": "Link",
+   "label": "Preferred University",
+   "options": "University"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timeline_expectations",
+   "fieldtype": "Data",
+   "label": "Timeline Expectations"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Small Text",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "special_considerations",
+   "fieldtype": "Text",
+   "label": "Special Considerations"
+  },
+  {
+   "fieldname": "background_score",
+   "fieldtype": "Float",
+   "label": "Background Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "content_analysis",
+   "fieldtype": "Small Text",
+   "label": "Content Analysis",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tracking_analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Tracking & Analytics"
+  },
+  {
+   "fieldname": "first_response_time",
+   "fieldtype": "Duration",
+   "label": "First Response Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_response_time",
+   "fieldtype": "Duration",
+   "label": "Total Response Time",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "interaction_count",
+   "fieldtype": "Int",
+   "label": "Interaction Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_status",
+   "fieldtype": "Select",
+   "label": "Conversion Status",
+   "options": "Not Converted\nIn Progress\nConverted to Lead\nConverted to Client\nLost"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conversion_date",
+   "fieldtype": "Datetime",
+   "label": "Conversion Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "converted_to_lead",
+   "fieldtype": "Data",
+   "label": "Converted to Lead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "performance_metrics",
+   "fieldtype": "Small Text",
+   "label": "Performance Metrics",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_activity_date",
+   "fieldtype": "Datetime",
+   "label": "Last Activity Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "closure_reason",
+   "fieldtype": "Data",
+   "label": "Closure Reason"
+  },
+  {
+   "fieldname": "satisfaction_rating",
+   "fieldtype": "Rating",
+   "label": "Satisfaction Rating"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:59:48.646631",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Enhanced Inquiry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "inquiry_title",
+ "track_changes": 1
+}

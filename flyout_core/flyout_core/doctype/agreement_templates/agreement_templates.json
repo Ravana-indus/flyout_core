@@ -1,0 +1,937 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2025-08-03 00:32:46.451053",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "template_details_section",
+  "template_name",
+  "template_title",
+  "template_type",
+  "service_category",
+  "column_break_1",
+  "template_status",
+  "template_priority",
+  "effective_date",
+  "expiry_date",
+  "auto_renewal",
+  "renewal_period_days",
+  "version_control_section",
+  "version_number",
+  "major_version",
+  "minor_version",
+  "revision_notes",
+  "column_break_2",
+  "previous_version",
+  "is_current_version",
+  "version_approval_status",
+  "approved_by",
+  "approval_date",
+  "template_content_section",
+  "template_content",
+  "template_html",
+  "template_variables",
+  "conditional_clauses_section",
+  "has_conditional_clauses",
+  "clause_conditions",
+  "default_clauses",
+  "optional_clauses",
+  "column_break_3",
+  "service_specific_clauses",
+  "liability_clauses",
+  "termination_clauses",
+  "dispute_resolution_clause",
+  "digital_signature_section",
+  "requires_digital_signature",
+  "signature_provider",
+  "signature_workflow",
+  "required_signatories",
+  "column_break_4",
+  "legal_jurisdiction",
+  "governing_law",
+  "compliance_requirements",
+  "regulatory_approvals_required",
+  "legal_review_required",
+  "multi_language_section",
+  "primary_language",
+  "supports_translation",
+  "available_translations",
+  "translation_status",
+  "column_break_5",
+  "auto_translation_enabled",
+  "translation_service",
+  "translation_quality_score",
+  "last_translation_update",
+  "performance_tracking_section",
+  "enable_performance_tracking",
+  "usage_count",
+  "success_rate",
+  "average_completion_time",
+  "column_break_6",
+  "dispute_rate",
+  "client_satisfaction_score",
+  "performance_score",
+  "last_performance_update",
+  "customization_section",
+  "allows_customization",
+  "customization_level",
+  "protected_sections",
+  "customizable_fields",
+  "column_break_7",
+  "default_customizations",
+  "branding_options",
+  "custom_css",
+  "custom_header_footer",
+  "integration_section",
+  "crm_integration",
+  "invoice_integration",
+  "program_fee_integration",
+  "document_management_integration",
+  "column_break_8",
+  "api_endpoints",
+  "webhook_support",
+  "external_integrations",
+  "sync_frequency",
+  "security_section",
+  "encryption_enabled",
+  "encryption_level",
+  "access_control_enabled",
+  "allowed_roles",
+  "column_break_9",
+  "audit_trail_enabled",
+  "data_retention_period",
+  "gdpr_compliant",
+  "security_classification",
+  "analytics_section",
+  "analytics_enabled",
+  "conversion_rate",
+  "revenue_generated",
+  "average_deal_value",
+  "column_break_10",
+  "market_penetration",
+  "competitive_advantage_score",
+  "roi_percentage",
+  "last_analytics_update",
+  "metadata_section",
+  "created_by_user",
+  "template_category",
+  "template_tags",
+  "template_description",
+  "column_break_11",
+  "last_modified_by",
+  "last_modified_date",
+  "change_history",
+  "template_notes"
+ ],
+ "fields": [
+  {
+   "default": "AGT-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "AGT-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "template_details_section",
+   "fieldtype": "Section Break",
+   "label": "Template Details"
+  },
+  {
+   "description": "Unique name for the agreement template",
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Display title for the agreement template",
+   "fieldname": "template_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Title",
+   "reqd": 1
+  },
+  {
+   "description": "Type of agreement template",
+   "fieldname": "template_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Template Type",
+   "options": "Service Agreement\nStudy Abroad Contract\nWork Visa Agreement\nTourism Package Agreement\nConsultation Agreement\nRetainer Agreement\nPartnership Agreement\nNon-Disclosure Agreement\nTerms of Service\nPrivacy Policy\nCustom Agreement",
+   "reqd": 1
+  },
+  {
+   "description": "Category of services covered by this template",
+   "fieldname": "service_category",
+   "fieldtype": "Select",
+   "label": "Service Category",
+   "options": "Immigration Services\nEducation Services\nEmployment Services\nTourism Services\nConsultation Services\nLegal Services\nFinancial Services\nGeneral Services",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "description": "Current status of the template",
+   "fieldname": "template_status",
+   "fieldtype": "Select",
+   "label": "Template Status",
+   "options": "Draft\nActive\nInactive\nArchived\nUnder Review",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "description": "Priority level for template usage",
+   "fieldname": "template_priority",
+   "fieldtype": "Select",
+   "label": "Template Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "description": "Date when the template becomes effective",
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date",
+   "reqd": 1
+  },
+  {
+   "description": "Date when the template expires",
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "default": "0",
+   "description": "Enable automatic renewal notifications",
+   "fieldname": "auto_renewal",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
+  },
+  {
+   "default": "365",
+   "description": "Number of days before renewal notification",
+   "fieldname": "renewal_period_days",
+   "fieldtype": "Int",
+   "label": "Renewal Period (Days)"
+  },
+  {
+   "fieldname": "version_control_section",
+   "fieldtype": "Section Break",
+   "label": "Version Control"
+  },
+  {
+   "default": "1.0",
+   "description": "Current version of the template",
+   "fieldname": "version_number",
+   "fieldtype": "Data",
+   "label": "Version Number",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "description": "Major version number",
+   "fieldname": "major_version",
+   "fieldtype": "Int",
+   "label": "Major Version",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Minor version number",
+   "fieldname": "minor_version",
+   "fieldtype": "Int",
+   "label": "Minor Version",
+   "reqd": 1
+  },
+  {
+   "description": "Notes about changes in this version",
+   "fieldname": "revision_notes",
+   "fieldtype": "Long Text",
+   "label": "Revision Notes"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Reference to previous version",
+   "fieldname": "previous_version",
+   "fieldtype": "Link",
+   "label": "Previous Version",
+   "options": "Agreement Templates"
+  },
+  {
+   "default": "1",
+   "description": "Mark as current active version",
+   "fieldname": "is_current_version",
+   "fieldtype": "Check",
+   "label": "Is Current Version"
+  },
+  {
+   "default": "Pending",
+   "description": "Approval status for this version",
+   "fieldname": "version_approval_status",
+   "fieldtype": "Select",
+   "label": "Version Approval Status",
+   "options": "Pending\nApproved\nRejected\nUnder Review"
+  },
+  {
+   "description": "User who approved this version",
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "description": "Date and time of approval",
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "template_content_section",
+   "fieldtype": "Section Break",
+   "label": "Template Content"
+  },
+  {
+   "description": "Main content of the agreement template with placeholders",
+   "fieldname": "template_content",
+   "fieldtype": "Text Editor",
+   "label": "Template Content",
+   "reqd": 1
+  },
+  {
+   "description": "HTML version of the template for rendering",
+   "fieldname": "template_html",
+   "fieldtype": "Code",
+   "label": "Template HTML",
+   "options": "HTML"
+  },
+  {
+   "description": "Available variables and placeholders (JSON format)",
+   "fieldname": "template_variables",
+   "fieldtype": "Long Text",
+   "label": "Template Variables"
+  },
+  {
+   "fieldname": "conditional_clauses_section",
+   "fieldtype": "Section Break",
+   "label": "Conditional Clauses"
+  },
+  {
+   "default": "0",
+   "description": "Enable conditional clauses based on service type",
+   "fieldname": "has_conditional_clauses",
+   "fieldtype": "Check",
+   "label": "Has Conditional Clauses"
+  },
+  {
+   "description": "Conditions for including/excluding clauses (JSON format)",
+   "fieldname": "clause_conditions",
+   "fieldtype": "Long Text",
+   "label": "Clause Conditions"
+  },
+  {
+   "description": "Default clauses included in all agreements",
+   "fieldname": "default_clauses",
+   "fieldtype": "Text Editor",
+   "label": "Default Clauses"
+  },
+  {
+   "description": "Optional clauses based on service type",
+   "fieldname": "optional_clauses",
+   "fieldtype": "Text Editor",
+   "label": "Optional Clauses"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Clauses specific to different service types (JSON format)",
+   "fieldname": "service_specific_clauses",
+   "fieldtype": "Long Text",
+   "label": "Service Specific Clauses"
+  },
+  {
+   "description": "Liability and limitation clauses",
+   "fieldname": "liability_clauses",
+   "fieldtype": "Text Editor",
+   "label": "Liability Clauses"
+  },
+  {
+   "description": "Agreement termination conditions",
+   "fieldname": "termination_clauses",
+   "fieldtype": "Text Editor",
+   "label": "Termination Clauses"
+  },
+  {
+   "description": "Dispute resolution and arbitration clauses",
+   "fieldname": "dispute_resolution_clause",
+   "fieldtype": "Text Editor",
+   "label": "Dispute Resolution Clause"
+  },
+  {
+   "fieldname": "digital_signature_section",
+   "fieldtype": "Section Break",
+   "label": "Digital Signature & Legal Compliance"
+  },
+  {
+   "default": "1",
+   "description": "Agreement requires digital signature",
+   "fieldname": "requires_digital_signature",
+   "fieldtype": "Check",
+   "label": "Requires Digital Signature"
+  },
+  {
+   "default": "DocuSign",
+   "description": "Digital signature service provider",
+   "fieldname": "signature_provider",
+   "fieldtype": "Select",
+   "label": "Signature Provider",
+   "options": "DocuSign\nAdobe Sign\nPandaDoc\nSignNow\nHelloSign\nInternal System"
+  },
+  {
+   "default": "Sequential",
+   "description": "Order of signature collection",
+   "fieldname": "signature_workflow",
+   "fieldtype": "Select",
+   "label": "Signature Workflow",
+   "options": "Sequential\nParallel\nCustom"
+  },
+  {
+   "default": "2",
+   "description": "Number of required signatures",
+   "fieldname": "required_signatories",
+   "fieldtype": "Int",
+   "label": "Required Signatories"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Legal jurisdiction for the agreement",
+   "fieldname": "legal_jurisdiction",
+   "fieldtype": "Link",
+   "label": "Legal Jurisdiction",
+   "options": "Country"
+  },
+  {
+   "description": "Applicable governing law",
+   "fieldname": "governing_law",
+   "fieldtype": "Data",
+   "label": "Governing Law"
+  },
+  {
+   "description": "Legal compliance requirements (JSON format)",
+   "fieldname": "compliance_requirements",
+   "fieldtype": "Long Text",
+   "label": "Compliance Requirements"
+  },
+  {
+   "default": "0",
+   "description": "Agreement requires regulatory approvals",
+   "fieldname": "regulatory_approvals_required",
+   "fieldtype": "Check",
+   "label": "Regulatory Approvals Required"
+  },
+  {
+   "default": "1",
+   "description": "Agreement requires legal review",
+   "fieldname": "legal_review_required",
+   "fieldtype": "Check",
+   "label": "Legal Review Required"
+  },
+  {
+   "fieldname": "multi_language_section",
+   "fieldtype": "Section Break",
+   "label": "Multi-Language Support"
+  },
+  {
+   "default": "English",
+   "description": "Primary language of the template",
+   "fieldname": "primary_language",
+   "fieldtype": "Select",
+   "label": "Primary Language",
+   "options": "English\nSpanish\nFrench\nGerman\nChinese\nJapanese\nArabic\nHindi\nPortuguese\nRussian",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Template supports multi-language translation",
+   "fieldname": "supports_translation",
+   "fieldtype": "Check",
+   "label": "Supports Translation"
+  },
+  {
+   "description": "List of available translations (JSON format)",
+   "fieldname": "available_translations",
+   "fieldtype": "Long Text",
+   "label": "Available Translations"
+  },
+  {
+   "default": "Not Required",
+   "description": "Current translation status",
+   "fieldname": "translation_status",
+   "fieldtype": "Select",
+   "label": "Translation Status",
+   "options": "Not Required\nPending\nIn Progress\nCompleted\nVerified"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Enable automatic translation service",
+   "fieldname": "auto_translation_enabled",
+   "fieldtype": "Check",
+   "label": "Auto Translation Enabled"
+  },
+  {
+   "description": "Translation service provider",
+   "fieldname": "translation_service",
+   "fieldtype": "Select",
+   "label": "Translation Service",
+   "options": "Google Translate\nMicrosoft Translator\nAmazon Translate\nDeepL\nManual Translation"
+  },
+  {
+   "description": "Quality score for translations",
+   "fieldname": "translation_quality_score",
+   "fieldtype": "Percent",
+   "label": "Translation Quality Score"
+  },
+  {
+   "description": "Last time translations were updated",
+   "fieldname": "last_translation_update",
+   "fieldtype": "Datetime",
+   "label": "Last Translation Update"
+  },
+  {
+   "fieldname": "performance_tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Performance Tracking"
+  },
+  {
+   "default": "1",
+   "description": "Track contract performance metrics",
+   "fieldname": "enable_performance_tracking",
+   "fieldtype": "Check",
+   "label": "Enable Performance Tracking"
+  },
+  {
+   "default": "0",
+   "description": "Number of times template has been used",
+   "fieldname": "usage_count",
+   "fieldtype": "Int",
+   "label": "Usage Count",
+   "read_only": 1
+  },
+  {
+   "description": "Success rate of agreements using this template",
+   "fieldname": "success_rate",
+   "fieldtype": "Percent",
+   "label": "Success Rate",
+   "read_only": 1
+  },
+  {
+   "description": "Average time to complete agreements",
+   "fieldname": "average_completion_time",
+   "fieldtype": "Float",
+   "label": "Average Completion Time (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Percentage of agreements resulting in disputes",
+   "fieldname": "dispute_rate",
+   "fieldtype": "Percent",
+   "label": "Dispute Rate",
+   "read_only": 1
+  },
+  {
+   "description": "Average client satisfaction rating",
+   "fieldname": "client_satisfaction_score",
+   "fieldtype": "Float",
+   "label": "Client Satisfaction Score",
+   "read_only": 1
+  },
+  {
+   "description": "Overall performance score for the template",
+   "fieldname": "performance_score",
+   "fieldtype": "Float",
+   "label": "Performance Score",
+   "read_only": 1
+  },
+  {
+   "description": "Last time performance metrics were updated",
+   "fieldname": "last_performance_update",
+   "fieldtype": "Datetime",
+   "label": "Last Performance Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customization_section",
+   "fieldtype": "Section Break",
+   "label": "Template Customization"
+  },
+  {
+   "default": "1",
+   "description": "Allow users to customize this template",
+   "fieldname": "allows_customization",
+   "fieldtype": "Check",
+   "label": "Allows Customization"
+  },
+  {
+   "default": "Moderate",
+   "description": "Level of customization allowed",
+   "fieldname": "customization_level",
+   "fieldtype": "Select",
+   "label": "Customization Level",
+   "options": "None\nBasic\nModerate\nAdvanced\nFull"
+  },
+  {
+   "description": "Sections that cannot be modified (JSON format)",
+   "fieldname": "protected_sections",
+   "fieldtype": "Long Text",
+   "label": "Protected Sections"
+  },
+  {
+   "description": "Fields that can be customized (JSON format)",
+   "fieldname": "customizable_fields",
+   "fieldtype": "Long Text",
+   "label": "Customizable Fields"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Default customization settings (JSON format)",
+   "fieldname": "default_customizations",
+   "fieldtype": "Long Text",
+   "label": "Default Customizations"
+  },
+  {
+   "description": "Available branding customizations (JSON format)",
+   "fieldname": "branding_options",
+   "fieldtype": "Long Text",
+   "label": "Branding Options"
+  },
+  {
+   "description": "Custom CSS for template styling",
+   "fieldname": "custom_css",
+   "fieldtype": "Code",
+   "label": "Custom CSS",
+   "options": "CSS"
+  },
+  {
+   "default": "1",
+   "description": "Allow custom header and footer",
+   "fieldname": "custom_header_footer",
+   "fieldtype": "Check",
+   "label": "Custom Header/Footer"
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "System Integration"
+  },
+  {
+   "default": "1",
+   "description": "Integrate with CRM system",
+   "fieldname": "crm_integration",
+   "fieldtype": "Check",
+   "label": "CRM Integration"
+  },
+  {
+   "default": "1",
+   "description": "Integrate with invoice management",
+   "fieldname": "invoice_integration",
+   "fieldtype": "Check",
+   "label": "Invoice Integration"
+  },
+  {
+   "default": "1",
+   "description": "Integrate with program fee management",
+   "fieldname": "program_fee_integration",
+   "fieldtype": "Check",
+   "label": "Program Fee Integration"
+  },
+  {
+   "default": "1",
+   "description": "Integrate with document management system",
+   "fieldname": "document_management_integration",
+   "fieldtype": "Check",
+   "label": "Document Management Integration"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Available API endpoints for integration (JSON format)",
+   "fieldname": "api_endpoints",
+   "fieldtype": "Long Text",
+   "label": "API Endpoints"
+  },
+  {
+   "default": "1",
+   "description": "Support webhook notifications",
+   "fieldname": "webhook_support",
+   "fieldtype": "Check",
+   "label": "Webhook Support"
+  },
+  {
+   "description": "External system integrations (JSON format)",
+   "fieldname": "external_integrations",
+   "fieldtype": "Long Text",
+   "label": "External Integrations"
+  },
+  {
+   "default": "Daily",
+   "description": "Frequency of data synchronization",
+   "fieldname": "sync_frequency",
+   "fieldtype": "Select",
+   "label": "Sync Frequency",
+   "options": "Real-time\nHourly\nDaily\nWeekly\nManual"
+  },
+  {
+   "fieldname": "security_section",
+   "fieldtype": "Section Break",
+   "label": "Security & Compliance"
+  },
+  {
+   "default": "1",
+   "description": "Enable data encryption",
+   "fieldname": "encryption_enabled",
+   "fieldtype": "Check",
+   "label": "Encryption Enabled"
+  },
+  {
+   "default": "AES-256",
+   "description": "Level of encryption applied",
+   "fieldname": "encryption_level",
+   "fieldtype": "Select",
+   "label": "Encryption Level",
+   "options": "AES-128\nAES-256\nRSA-2048\nRSA-4096"
+  },
+  {
+   "default": "1",
+   "description": "Enable role-based access control",
+   "fieldname": "access_control_enabled",
+   "fieldtype": "Check",
+   "label": "Access Control Enabled"
+  },
+  {
+   "description": "Roles allowed to use this template (JSON format)",
+   "fieldname": "allowed_roles",
+   "fieldtype": "Long Text",
+   "label": "Allowed Roles"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Enable comprehensive audit trail",
+   "fieldname": "audit_trail_enabled",
+   "fieldtype": "Check",
+   "label": "Audit Trail Enabled"
+  },
+  {
+   "default": "7",
+   "description": "Number of years to retain agreement data",
+   "fieldname": "data_retention_period",
+   "fieldtype": "Int",
+   "label": "Data Retention Period (Years)"
+  },
+  {
+   "default": "1",
+   "description": "Template is GDPR compliant",
+   "fieldname": "gdpr_compliant",
+   "fieldtype": "Check",
+   "label": "GDPR Compliant"
+  },
+  {
+   "default": "Internal",
+   "description": "Security classification level",
+   "fieldname": "security_classification",
+   "fieldtype": "Select",
+   "label": "Security Classification",
+   "options": "Public\nInternal\nConfidential\nRestricted"
+  },
+  {
+   "fieldname": "analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Analytics & Reporting"
+  },
+  {
+   "default": "1",
+   "description": "Enable analytics tracking",
+   "fieldname": "analytics_enabled",
+   "fieldtype": "Check",
+   "label": "Analytics Enabled"
+  },
+  {
+   "description": "Rate of lead to agreement conversion",
+   "fieldname": "conversion_rate",
+   "fieldtype": "Percent",
+   "label": "Conversion Rate",
+   "read_only": 1
+  },
+  {
+   "description": "Total revenue from agreements using this template",
+   "fieldname": "revenue_generated",
+   "fieldtype": "Currency",
+   "label": "Revenue Generated",
+   "read_only": 1
+  },
+  {
+   "description": "Average value of agreements",
+   "fieldname": "average_deal_value",
+   "fieldtype": "Currency",
+   "label": "Average Deal Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Market penetration rate",
+   "fieldname": "market_penetration",
+   "fieldtype": "Percent",
+   "label": "Market Penetration",
+   "read_only": 1
+  },
+  {
+   "description": "Competitive advantage score",
+   "fieldname": "competitive_advantage_score",
+   "fieldtype": "Float",
+   "label": "Competitive Advantage Score",
+   "read_only": 1
+  },
+  {
+   "description": "Return on investment percentage",
+   "fieldname": "roi_percentage",
+   "fieldtype": "Percent",
+   "label": "ROI Percentage",
+   "read_only": 1
+  },
+  {
+   "description": "Last time analytics were updated",
+   "fieldname": "last_analytics_update",
+   "fieldtype": "Datetime",
+   "label": "Last Analytics Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "metadata_section",
+   "fieldtype": "Section Break",
+   "label": "Metadata & History"
+  },
+  {
+   "description": "User who created the template",
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "Standard",
+   "description": "Category classification for the template",
+   "fieldname": "template_category",
+   "fieldtype": "Select",
+   "label": "Template Category",
+   "options": "Standard\nPremium\nCustom\nLegacy\nBeta"
+  },
+  {
+   "description": "Comma-separated tags for categorization",
+   "fieldname": "template_tags",
+   "fieldtype": "Data",
+   "label": "Template Tags"
+  },
+  {
+   "description": "Detailed description of the template",
+   "fieldname": "template_description",
+   "fieldtype": "Text",
+   "label": "Template Description"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "User who last modified the template",
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "description": "Date of last modification",
+   "fieldname": "last_modified_date",
+   "fieldtype": "Datetime",
+   "label": "Last Modified Date",
+   "read_only": 1
+  },
+  {
+   "description": "Complete change history",
+   "fieldname": "change_history",
+   "fieldtype": "JSON",
+   "label": "Change History",
+   "read_only": 1
+  },
+  {
+   "description": "Internal notes about the template",
+   "fieldname": "template_notes",
+   "fieldtype": "Long Text",
+   "label": "Template Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-18 18:30:19.922610",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Agreement Templates",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "template_title",
+ "track_changes": 1
+}

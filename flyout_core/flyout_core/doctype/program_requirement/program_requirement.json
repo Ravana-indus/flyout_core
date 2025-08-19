@@ -1,0 +1,703 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:19:27.590268",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "requirement_title",
+  "program",
+  "requirement_type",
+  "column_break_1",
+  "is_mandatory",
+  "priority_level",
+  "compliance_deadline",
+  "section_break_1",
+  "minimum_gpa",
+  "grading_system",
+  "education_level_required",
+  "column_break_2",
+  "specific_subjects",
+  "prerequisite_courses",
+  "transcript_requirements",
+  "section_break_2",
+  "language_test_type",
+  "minimum_overall_score",
+  "minimum_reading_score",
+  "column_break_3",
+  "minimum_writing_score",
+  "minimum_speaking_score",
+  "minimum_listening_score",
+  "section_break_3",
+  "standardized_test_type",
+  "minimum_test_score",
+  "test_validity_period",
+  "column_break_4",
+  "subject_test_required",
+  "subject_test_details",
+  "alternative_tests_accepted",
+  "section_break_4",
+  "minimum_work_experience",
+  "relevant_industry_experience",
+  "professional_certifications",
+  "column_break_5",
+  "volunteer_experience",
+  "leadership_experience",
+  "research_experience",
+  "section_break_5",
+  "required_documents",
+  "document_format",
+  "document_language",
+  "column_break_6",
+  "notarization_required",
+  "apostille_required",
+  "translation_required",
+  "section_break_6",
+  "portfolio_required",
+  "portfolio_format",
+  "portfolio_size_limit",
+  "column_break_7",
+  "number_of_pieces",
+  "portfolio_guidelines",
+  "creative_brief_required",
+  "section_break_7",
+  "interview_required",
+  "interview_type",
+  "interview_duration",
+  "column_break_8",
+  "assessment_test",
+  "assessment_type",
+  "preparation_materials",
+  "section_break_8",
+  "alternative_qualification_1",
+  "alternative_qualification_2",
+  "alternative_qualification_3",
+  "column_break_9",
+  "conditional_admission",
+  "conditional_admission_details",
+  "bridge_program_available",
+  "section_break_9",
+  "international_student_notes",
+  "domestic_student_notes",
+  "disability_accommodations",
+  "column_break_10",
+  "mature_student_requirements",
+  "transfer_student_requirements",
+  "special_circumstances",
+  "section_break_10",
+  "submission_deadline",
+  "early_submission_deadline",
+  "late_submission_allowed",
+  "column_break_11",
+  "processing_time_days",
+  "notification_method",
+  "appeals_process_available",
+  "section_break_11",
+  "requirement_description",
+  "evaluation_criteria",
+  "helpful_resources",
+  "column_break_12",
+  "contact_for_questions",
+  "contact_email",
+  "requirement_url",
+  "section_break_12",
+  "created_by_user",
+  "last_updated_by",
+  "requirement_status",
+  "column_break_13",
+  "effective_date",
+  "expiry_date",
+  "version_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "REQ-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requirement_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Requirement Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Program",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requirement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Requirement Type",
+   "options": "Academic\nLanguage Proficiency\nTest Score\nDocument\nExperience\nPortfolio\nInterview\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory Requirement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "compliance_deadline",
+   "fieldtype": "Date",
+   "label": "Compliance Deadline"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Academic Requirements"
+  },
+  {
+   "fieldname": "minimum_gpa",
+   "fieldtype": "Float",
+   "label": "Minimum GPA",
+   "precision": "2"
+  },
+  {
+   "fieldname": "grading_system",
+   "fieldtype": "Select",
+   "label": "Grading System",
+   "options": "4.0 Scale\n100 Point Scale\nLetter Grades\nClass Rank\nOther"
+  },
+  {
+   "fieldname": "education_level_required",
+   "fieldtype": "Select",
+   "label": "Education Level Required",
+   "options": "High School\nAssociate Degree\nBachelor's Degree\nMaster's Degree\nDoctoral Degree\nProfessional Degree"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "specific_subjects",
+   "fieldtype": "Small Text",
+   "label": "Required Subjects"
+  },
+  {
+   "fieldname": "prerequisite_courses",
+   "fieldtype": "Small Text",
+   "label": "Prerequisite Courses"
+  },
+  {
+   "fieldname": "transcript_requirements",
+   "fieldtype": "Text",
+   "label": "Transcript Requirements"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Language & Test Requirements"
+  },
+  {
+   "fieldname": "language_test_type",
+   "fieldtype": "Select",
+   "label": "Language Test Type",
+   "options": "IELTS\nTOEFL\nPTE\nDuolingo\nCELPIP\nCAE\nNo Requirement"
+  },
+  {
+   "fieldname": "minimum_overall_score",
+   "fieldtype": "Float",
+   "label": "Minimum Overall Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "minimum_reading_score",
+   "fieldtype": "Float",
+   "label": "Minimum Reading Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_writing_score",
+   "fieldtype": "Float",
+   "label": "Minimum Writing Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "minimum_speaking_score",
+   "fieldtype": "Float",
+   "label": "Minimum Speaking Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "minimum_listening_score",
+   "fieldtype": "Float",
+   "label": "Minimum Listening Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Standardized Test Requirements"
+  },
+  {
+   "fieldname": "standardized_test_type",
+   "fieldtype": "Select",
+   "label": "Standardized Test Type",
+   "options": "GRE\nGMAT\nSAT\nACT\nMCAT\nLSAT\nDAT\nPCAT\nOAT\nVAT\nNo Requirement"
+  },
+  {
+   "fieldname": "minimum_test_score",
+   "fieldtype": "Int",
+   "label": "Minimum Test Score"
+  },
+  {
+   "fieldname": "test_validity_period",
+   "fieldtype": "Int",
+   "label": "Test Validity Period (Years)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "subject_test_required",
+   "fieldtype": "Check",
+   "label": "Subject Test Required"
+  },
+  {
+   "fieldname": "subject_test_details",
+   "fieldtype": "Small Text",
+   "label": "Subject Test Details"
+  },
+  {
+   "fieldname": "alternative_tests_accepted",
+   "fieldtype": "Small Text",
+   "label": "Alternative Tests Accepted"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Experience & Professional Requirements"
+  },
+  {
+   "fieldname": "minimum_work_experience",
+   "fieldtype": "Int",
+   "label": "Minimum Work Experience (Years)"
+  },
+  {
+   "fieldname": "relevant_industry_experience",
+   "fieldtype": "Small Text",
+   "label": "Relevant Industry Experience"
+  },
+  {
+   "fieldname": "professional_certifications",
+   "fieldtype": "Small Text",
+   "label": "Professional Certifications"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "volunteer_experience",
+   "fieldtype": "Small Text",
+   "label": "Volunteer Experience"
+  },
+  {
+   "fieldname": "leadership_experience",
+   "fieldtype": "Small Text",
+   "label": "Leadership Experience"
+  },
+  {
+   "fieldname": "research_experience",
+   "fieldtype": "Small Text",
+   "label": "Research Experience"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Document Requirements"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Text",
+   "label": "Required Documents"
+  },
+  {
+   "fieldname": "document_format",
+   "fieldtype": "Select",
+   "label": "Document Format",
+   "options": "PDF\nWord Document\nScanned Copy\nOriginal\nCertified Copy\nAny Format"
+  },
+  {
+   "fieldname": "document_language",
+   "fieldtype": "Select",
+   "label": "Document Language",
+   "options": "English\nFrench\nSpanish\nMandarin\nGerman\nOriginal Language\nTranslated"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "notarization_required",
+   "fieldtype": "Check",
+   "label": "Notarization Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "apostille_required",
+   "fieldtype": "Check",
+   "label": "Apostille Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "translation_required",
+   "fieldtype": "Check",
+   "label": "Translation Required"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Portfolio & Creative Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "portfolio_required",
+   "fieldtype": "Check",
+   "label": "Portfolio Required"
+  },
+  {
+   "fieldname": "portfolio_format",
+   "fieldtype": "Select",
+   "label": "Portfolio Format",
+   "options": "Digital Portfolio\nPhysical Portfolio\nOnline Platform\nPDF Document\nWebsite Link\nCD/DVD"
+  },
+  {
+   "fieldname": "portfolio_size_limit",
+   "fieldtype": "Int",
+   "label": "Portfolio Size Limit (MB)"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_pieces",
+   "fieldtype": "Int",
+   "label": "Number of Pieces Required"
+  },
+  {
+   "fieldname": "portfolio_guidelines",
+   "fieldtype": "Text",
+   "label": "Portfolio Guidelines"
+  },
+  {
+   "default": "0",
+   "fieldname": "creative_brief_required",
+   "fieldtype": "Check",
+   "label": "Creative Brief Required"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Interview & Assessment"
+  },
+  {
+   "default": "0",
+   "fieldname": "interview_required",
+   "fieldtype": "Check",
+   "label": "Interview Required"
+  },
+  {
+   "fieldname": "interview_type",
+   "fieldtype": "Select",
+   "label": "Interview Type",
+   "options": "In-Person\nVideo Call\nPhone\nPanel Interview\nGroup Interview\nTechnical Interview"
+  },
+  {
+   "fieldname": "interview_duration",
+   "fieldtype": "Int",
+   "label": "Interview Duration (Minutes)"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "assessment_test",
+   "fieldtype": "Check",
+   "label": "Assessment Test Required"
+  },
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Select",
+   "label": "Assessment Type",
+   "options": "Written Test\nPractical Test\nCase Study\nPresentation\nSkills Demonstration\nAptitude Test"
+  },
+  {
+   "default": "0",
+   "fieldname": "preparation_materials",
+   "fieldtype": "Check",
+   "label": "Preparation Materials Provided"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Alternative Qualifications"
+  },
+  {
+   "fieldname": "alternative_qualification_1",
+   "fieldtype": "Text",
+   "label": "Alternative Qualification 1"
+  },
+  {
+   "fieldname": "alternative_qualification_2",
+   "fieldtype": "Text",
+   "label": "Alternative Qualification 2"
+  },
+  {
+   "fieldname": "alternative_qualification_3",
+   "fieldtype": "Text",
+   "label": "Alternative Qualification 3"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "conditional_admission",
+   "fieldtype": "Check",
+   "label": "Conditional Admission Available"
+  },
+  {
+   "fieldname": "conditional_admission_details",
+   "fieldtype": "Text",
+   "label": "Conditional Admission Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "bridge_program_available",
+   "fieldtype": "Check",
+   "label": "Bridge Program Available"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Special Considerations"
+  },
+  {
+   "fieldname": "international_student_notes",
+   "fieldtype": "Text",
+   "label": "International Student Notes"
+  },
+  {
+   "fieldname": "domestic_student_notes",
+   "fieldtype": "Text",
+   "label": "Domestic Student Notes"
+  },
+  {
+   "fieldname": "disability_accommodations",
+   "fieldtype": "Text",
+   "label": "Disability Accommodations"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mature_student_requirements",
+   "fieldtype": "Text",
+   "label": "Mature Student Requirements"
+  },
+  {
+   "fieldname": "transfer_student_requirements",
+   "fieldtype": "Text",
+   "label": "Transfer Student Requirements"
+  },
+  {
+   "fieldname": "special_circumstances",
+   "fieldtype": "Text",
+   "label": "Special Circumstances"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Timeline & Deadlines"
+  },
+  {
+   "fieldname": "submission_deadline",
+   "fieldtype": "Date",
+   "label": "Submission Deadline"
+  },
+  {
+   "fieldname": "early_submission_deadline",
+   "fieldtype": "Date",
+   "label": "Early Submission Deadline"
+  },
+  {
+   "default": "0",
+   "fieldname": "late_submission_allowed",
+   "fieldtype": "Check",
+   "label": "Late Submission Allowed"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "processing_time_days",
+   "fieldtype": "Int",
+   "label": "Processing Time (Days)"
+  },
+  {
+   "fieldname": "notification_method",
+   "fieldtype": "Select",
+   "label": "Notification Method",
+   "options": "Email\nMail\nOnline Portal\nPhone\nSMS"
+  },
+  {
+   "default": "0",
+   "fieldname": "appeals_process_available",
+   "fieldtype": "Check",
+   "label": "Appeals Process Available"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "requirement_description",
+   "fieldtype": "Text Editor",
+   "label": "Detailed Requirement Description"
+  },
+  {
+   "fieldname": "evaluation_criteria",
+   "fieldtype": "Text Editor",
+   "label": "Evaluation Criteria"
+  },
+  {
+   "fieldname": "helpful_resources",
+   "fieldtype": "Text Editor",
+   "label": "Helpful Resources"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_for_questions",
+   "fieldtype": "Data",
+   "label": "Contact for Questions"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "requirement_url",
+   "fieldtype": "Data",
+   "label": "Requirement URL"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_updated_by",
+   "fieldtype": "Link",
+   "label": "Last Updated By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requirement_status",
+   "fieldtype": "Select",
+   "label": "Requirement Status",
+   "options": "Active\nInactive\nUnder Review\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "version_number",
+   "fieldtype": "Data",
+   "label": "Version Number",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:56:05.537392",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Program Requirement",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "requirement_title",
+ "track_changes": 1
+}

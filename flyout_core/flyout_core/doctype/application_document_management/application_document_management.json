@@ -1,0 +1,846 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:21:34.008116",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "document_name",
+  "application",
+  "document_category",
+  "column_break_1",
+  "document_type",
+  "document_status",
+  "priority",
+  "is_mandatory",
+  "section_break_1",
+  "document_description",
+  "document_requirements",
+  "submission_deadline",
+  "submission_instructions",
+  "column_break_2",
+  "document_language",
+  "translation_required",
+  "notarization_required",
+  "apostille_required",
+  "certified_copy_required",
+  "section_break_2",
+  "original_document",
+  "current_version",
+  "file_format",
+  "file_size_mb",
+  "column_break_3",
+  "document_hash",
+  "version_notes",
+  "backup_location",
+  "cloud_storage_url",
+  "section_break_3",
+  "validation_status",
+  "validation_notes",
+  "validation_date",
+  "validated_by",
+  "column_break_4",
+  "compliance_requirements",
+  "legal_review_required",
+  "confidentiality_level",
+  "retention_period_years",
+  "section_break_4",
+  "digital_signature_required",
+  "signature_status",
+  "signature_date",
+  "signed_by",
+  "column_break_5",
+  "encryption_status",
+  "access_permissions",
+  "password_protected",
+  "watermark_applied",
+  "section_break_5",
+  "document_issue_date",
+  "document_expiry_date",
+  "renewal_required",
+  "renewal_reminder_days",
+  "column_break_6",
+  "auto_archive_expired",
+  "replacement_document",
+  "superseded_by",
+  "supersedes",
+  "section_break_6",
+  "assigned_to",
+  "reviewer",
+  "approver",
+  "estimated_processing_time",
+  "column_break_7",
+  "actual_processing_time",
+  "workflow_stage",
+  "escalation_date",
+  "escalation_to",
+  "section_break_7",
+  "client_submission_method",
+  "submission_reference",
+  "tracking_number",
+  "received_date",
+  "column_break_8",
+  "reviewed_date",
+  "approved_date",
+  "client_notification_sent",
+  "last_communication_date",
+  "section_break_8",
+  "quality_score",
+  "rejection_reason",
+  "improvement_suggestions",
+  "resubmission_count",
+  "column_break_9",
+  "client_feedback",
+  "internal_notes",
+  "follow_up_required",
+  "follow_up_date",
+  "section_break_9",
+  "external_system_id",
+  "sync_status",
+  "last_sync_date",
+  "auto_processing_enabled",
+  "column_break_10",
+  "ocr_processed",
+  "extracted_data",
+  "ai_analysis_results",
+  "automation_flags",
+  "section_break_10",
+  "processing_efficiency",
+  "accuracy_score",
+  "client_satisfaction",
+  "compliance_score",
+  "column_break_11",
+  "cost_processing",
+  "revenue_impact",
+  "risk_assessment",
+  "audit_trail_enabled",
+  "section_break_11",
+  "created_by_user",
+  "last_updated_by",
+  "document_uuid",
+  "version_history",
+  "column_break_12",
+  "tags",
+  "search_keywords",
+  "metadata",
+  "system_flags"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DOC-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Application",
+   "options": "Application",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Category",
+   "options": "Personal Documents\nEducational Documents\nWork Experience\nFinancial Documents\nImmigration Documents\nMedical Documents\nLegal Documents\nSupporting Documents\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "Passport\nVisa\nTranscripts\nDiploma\nCertificate\nEmployment Letter\nBank Statement\nTax Return\nMedical Report\nPolice Clearance\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Status",
+   "options": "Pending\nReceived\nUnder Review\nRequires Revision\nApproved\nRejected\nExpired\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Critical\nHigh\nMedium\nLow",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory Document",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "document_description",
+   "fieldtype": "Text Editor",
+   "label": "Document Description"
+  },
+  {
+   "fieldname": "document_requirements",
+   "fieldtype": "Text",
+   "label": "Document Requirements"
+  },
+  {
+   "fieldname": "submission_deadline",
+   "fieldtype": "Date",
+   "label": "Submission Deadline"
+  },
+  {
+   "fieldname": "submission_instructions",
+   "fieldtype": "Text",
+   "label": "Submission Instructions"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_language",
+   "fieldtype": "Select",
+   "label": "Document Language",
+   "options": "English\nFrench\nSpanish\nMandarin\nGerman\nOther"
+  },
+  {
+   "default": "0",
+   "fieldname": "translation_required",
+   "fieldtype": "Check",
+   "label": "Translation Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "notarization_required",
+   "fieldtype": "Check",
+   "label": "Notarization Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "apostille_required",
+   "fieldtype": "Check",
+   "label": "Apostille Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "certified_copy_required",
+   "fieldtype": "Check",
+   "label": "Certified Copy Required"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "File Management"
+  },
+  {
+   "fieldname": "original_document",
+   "fieldtype": "Attach",
+   "label": "Original Document"
+  },
+  {
+   "default": "1.0",
+   "fieldname": "current_version",
+   "fieldtype": "Data",
+   "label": "Current Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_format",
+   "fieldtype": "Select",
+   "label": "File Format",
+   "options": "PDF\nJPG\nPNG\nDOC\nDOCX\nXLS\nXLSX\nOther"
+  },
+  {
+   "fieldname": "file_size_mb",
+   "fieldtype": "Float",
+   "label": "File Size (MB)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_hash",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Document Hash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "version_notes",
+   "fieldtype": "Small Text",
+   "label": "Version Notes"
+  },
+  {
+   "fieldname": "backup_location",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Backup Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cloud_storage_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Cloud Storage URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Validation & Compliance"
+  },
+  {
+   "default": "Not Validated",
+   "fieldname": "validation_status",
+   "fieldtype": "Select",
+   "label": "Validation Status",
+   "options": "Not Validated\nPassed\nFailed\nRequires Review"
+  },
+  {
+   "fieldname": "validation_notes",
+   "fieldtype": "Text",
+   "label": "Validation Notes"
+  },
+  {
+   "fieldname": "validation_date",
+   "fieldtype": "Date",
+   "label": "Validation Date"
+  },
+  {
+   "fieldname": "validated_by",
+   "fieldtype": "Link",
+   "label": "Validated By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compliance_requirements",
+   "fieldtype": "Text",
+   "label": "Compliance Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "legal_review_required",
+   "fieldtype": "Check",
+   "label": "Legal Review Required"
+  },
+  {
+   "default": "Confidential",
+   "fieldname": "confidentiality_level",
+   "fieldtype": "Select",
+   "label": "Confidentiality Level",
+   "options": "Public\nInternal\nConfidential\nRestricted\nTop Secret"
+  },
+  {
+   "default": "7",
+   "fieldname": "retention_period_years",
+   "fieldtype": "Int",
+   "label": "Retention Period (Years)"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Digital Signatures & Security"
+  },
+  {
+   "default": "0",
+   "fieldname": "digital_signature_required",
+   "fieldtype": "Check",
+   "label": "Digital Signature Required"
+  },
+  {
+   "default": "Not Required",
+   "fieldname": "signature_status",
+   "fieldtype": "Select",
+   "label": "Signature Status",
+   "options": "Not Required\nPending\nSigned\nExpired\nInvalid"
+  },
+  {
+   "fieldname": "signature_date",
+   "fieldtype": "Datetime",
+   "label": "Signature Date"
+  },
+  {
+   "fieldname": "signed_by",
+   "fieldtype": "Link",
+   "label": "Signed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Not Encrypted",
+   "fieldname": "encryption_status",
+   "fieldtype": "Select",
+   "label": "Encryption Status",
+   "options": "Not Encrypted\nEncrypted\nDecrypted"
+  },
+  {
+   "default": "Team Only",
+   "fieldname": "access_permissions",
+   "fieldtype": "Select",
+   "label": "Access Permissions",
+   "options": "Public\nRestricted\nClient Only\nTeam Only\nAdmin Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "password_protected",
+   "fieldtype": "Check",
+   "label": "Password Protected"
+  },
+  {
+   "default": "0",
+   "fieldname": "watermark_applied",
+   "fieldtype": "Check",
+   "label": "Watermark Applied"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Expiry & Renewal"
+  },
+  {
+   "fieldname": "document_issue_date",
+   "fieldtype": "Date",
+   "label": "Document Issue Date"
+  },
+  {
+   "fieldname": "document_expiry_date",
+   "fieldtype": "Date",
+   "label": "Document Expiry Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "renewal_required",
+   "fieldtype": "Check",
+   "label": "Renewal Required"
+  },
+  {
+   "default": "30",
+   "fieldname": "renewal_reminder_days",
+   "fieldtype": "Int",
+   "label": "Renewal Reminder (Days Before)"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_archive_expired",
+   "fieldtype": "Check",
+   "label": "Auto Archive When Expired"
+  },
+  {
+   "fieldname": "replacement_document",
+   "fieldtype": "Link",
+   "label": "Replacement Document",
+   "options": "Application Document Management"
+  },
+  {
+   "fieldname": "superseded_by",
+   "fieldtype": "Link",
+   "label": "Superseded By",
+   "options": "Application Document Management"
+  },
+  {
+   "fieldname": "supersedes",
+   "fieldtype": "Link",
+   "label": "Supersedes",
+   "options": "Application Document Management"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Workflow & Assignment"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "User"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "User"
+  },
+  {
+   "fieldname": "estimated_processing_time",
+   "fieldtype": "Float",
+   "label": "Estimated Processing Time (Hours)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_processing_time",
+   "fieldtype": "Float",
+   "label": "Actual Processing Time (Hours)",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "default": "Collection",
+   "fieldname": "workflow_stage",
+   "fieldtype": "Select",
+   "label": "Workflow Stage",
+   "options": "Collection\nReview\nValidation\nApproval\nArchive"
+  },
+  {
+   "fieldname": "escalation_date",
+   "fieldtype": "Date",
+   "label": "Escalation Date"
+  },
+  {
+   "fieldname": "escalation_to",
+   "fieldtype": "Link",
+   "label": "Escalation To",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Communication & Tracking"
+  },
+  {
+   "fieldname": "client_submission_method",
+   "fieldtype": "Select",
+   "label": "Client Submission Method",
+   "options": "Email\nPortal Upload\nPhysical Delivery\nCourier\nFax\nOther"
+  },
+  {
+   "fieldname": "submission_reference",
+   "fieldtype": "Data",
+   "label": "Submission Reference"
+  },
+  {
+   "fieldname": "tracking_number",
+   "fieldtype": "Data",
+   "label": "Tracking Number"
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Received Date"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_date",
+   "fieldtype": "Date",
+   "label": "Reviewed Date"
+  },
+  {
+   "fieldname": "approved_date",
+   "fieldtype": "Date",
+   "label": "Approved Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "client_notification_sent",
+   "fieldtype": "Check",
+   "label": "Client Notification Sent"
+  },
+  {
+   "fieldname": "last_communication_date",
+   "fieldtype": "Date",
+   "label": "Last Communication Date"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Quality Control & Feedback"
+  },
+  {
+   "fieldname": "quality_score",
+   "fieldtype": "Int",
+   "label": "Quality Score (1-10)"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "improvement_suggestions",
+   "fieldtype": "Text",
+   "label": "Improvement Suggestions"
+  },
+  {
+   "default": "0",
+   "fieldname": "resubmission_count",
+   "fieldtype": "Int",
+   "label": "Resubmission Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_feedback",
+   "fieldtype": "Text",
+   "label": "Client Feedback"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Integration & Automation"
+  },
+  {
+   "fieldname": "external_system_id",
+   "fieldtype": "Data",
+   "label": "External System ID"
+  },
+  {
+   "default": "Not Synced",
+   "fieldname": "sync_status",
+   "fieldtype": "Select",
+   "label": "Sync Status",
+   "options": "Not Synced\nSynced\nSync Failed\nPending Sync"
+  },
+  {
+   "fieldname": "last_sync_date",
+   "fieldtype": "Datetime",
+   "label": "Last Sync Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_processing_enabled",
+   "fieldtype": "Check",
+   "label": "Auto Processing Enabled"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ocr_processed",
+   "fieldtype": "Check",
+   "label": "OCR Processed"
+  },
+  {
+   "fieldname": "extracted_data",
+   "fieldtype": "Long Text",
+   "label": "Extracted Data (JSON)"
+  },
+  {
+   "fieldname": "ai_analysis_results",
+   "fieldtype": "Long Text",
+   "label": "AI Analysis Results"
+  },
+  {
+   "fieldname": "automation_flags",
+   "fieldtype": "Small Text",
+   "label": "Automation Flags"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Analytics & Reporting"
+  },
+  {
+   "fieldname": "processing_efficiency",
+   "fieldtype": "Float",
+   "label": "Processing Efficiency (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accuracy_score",
+   "fieldtype": "Float",
+   "label": "Accuracy Score (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "client_satisfaction",
+   "fieldtype": "Float",
+   "label": "Client Satisfaction (1-5)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Float",
+   "label": "Compliance Score (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_processing",
+   "fieldtype": "Currency",
+   "label": "Processing Cost"
+  },
+  {
+   "fieldname": "revenue_impact",
+   "fieldtype": "Currency",
+   "label": "Revenue Impact"
+  },
+  {
+   "default": "Low",
+   "fieldname": "risk_assessment",
+   "fieldtype": "Select",
+   "label": "Risk Assessment",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "default": "1",
+   "fieldname": "audit_trail_enabled",
+   "fieldtype": "Check",
+   "label": "Audit Trail Enabled"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_updated_by",
+   "fieldtype": "Link",
+   "label": "Last Updated By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_uuid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Document UUID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "version_history",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Version History (JSON)"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Small Text",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "search_keywords",
+   "fieldtype": "Small Text",
+   "label": "Search Keywords"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "Metadata (JSON)"
+  },
+  {
+   "fieldname": "system_flags",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "System Flags"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:55:17.629775",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Application Document Management",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "document_name",
+ "track_changes": 1
+}

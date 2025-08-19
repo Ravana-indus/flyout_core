@@ -1,0 +1,845 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 23:27:43.064024",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "invoice_title",
+  "column_break_basic_1",
+  "invoice_status",
+  "section_break_client_info",
+  "client",
+  "client_name",
+  "client_email",
+  "column_break_client_1",
+  "billing_address",
+  "client_phone",
+  "client_country",
+  "section_break_invoice_details",
+  "invoice_date",
+  "due_date",
+  "payment_terms",
+  "column_break_invoice_1",
+  "reference_number",
+  "purchase_order_number",
+  "application_reference",
+  "section_break_currency",
+  "invoice_currency",
+  "exchange_rate",
+  "base_currency",
+  "column_break_currency_1",
+  "price_list_name",
+  "discount_type",
+  "discount_value",
+  "section_break_items",
+  "program_fee_reference",
+  "invoice_items",
+  "section_break_calculations",
+  "subtotal_amount",
+  "total_discount_amount",
+  "taxable_amount",
+  "column_break_calc_1",
+  "tax_percentage",
+  "tax_amount",
+  "total_amount",
+  "section_break_payment",
+  "payment_method",
+  "payment_gateway",
+  "payment_link",
+  "column_break_payment_1",
+  "amount_paid",
+  "amount_due",
+  "payment_status",
+  "section_break_recurring",
+  "is_recurring",
+  "recurring_frequency",
+  "recurring_start_date",
+  "column_break_recurring_1",
+  "recurring_end_date",
+  "next_invoice_date",
+  "recurring_count",
+  "section_break_customization",
+  "invoice_template",
+  "company_logo",
+  "brand_color",
+  "column_break_custom_1",
+  "header_text",
+  "footer_text",
+  "custom_fields",
+  "section_break_communication",
+  "email_sent",
+  "email_sent_date",
+  "email_opened",
+  "column_break_comm_1",
+  "email_opened_date",
+  "delivery_method",
+  "tracking_enabled",
+  "section_break_compliance",
+  "tax_jurisdiction",
+  "tax_identification_number",
+  "vat_number",
+  "column_break_compliance_1",
+  "regulatory_compliance",
+  "legal_terms",
+  "dispute_resolution",
+  "section_break_analytics",
+  "invoice_performance_score",
+  "payment_velocity",
+  "collection_probability",
+  "column_break_analytics_1",
+  "client_payment_history_score",
+  "revenue_impact",
+  "profit_margin",
+  "section_break_automation",
+  "auto_generated",
+  "generation_source",
+  "auto_send_enabled",
+  "column_break_automation_1",
+  "auto_reminder_enabled",
+  "reminder_frequency",
+  "escalation_enabled",
+  "section_break_integration",
+  "accounting_integration",
+  "external_invoice_id",
+  "sync_status",
+  "column_break_integration_1",
+  "crm_integration",
+  "api_webhook_url",
+  "last_sync_date",
+  "section_break_audit",
+  "created_by_user",
+  "approved_by",
+  "approval_date",
+  "column_break_audit_1",
+  "last_modified_by",
+  "version_number",
+  "audit_trail",
+  "section_break_notes",
+  "internal_notes",
+  "client_notes",
+  "terms_and_conditions"
+ ],
+ "fields": [
+  {
+   "default": "INV-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "INV-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Invoice Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_basic_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Invoice Status",
+   "options": "Draft\nPending\nSent\nViewed\nPartially Paid\nPaid\nOverdue\nCancelled\nRefunded",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_client_info",
+   "fieldtype": "Section Break",
+   "label": "Client Information"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Client",
+   "options": "Lead",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "client.lead_name",
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "client.email",
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_client_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
+  },
+  {
+   "fetch_from": "client.phone",
+   "fieldname": "client_phone",
+   "fieldtype": "Data",
+   "label": "Client Phone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "client.country",
+   "fieldname": "client_country",
+   "fieldtype": "Link",
+   "label": "Client Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "section_break_invoice_details",
+   "fieldtype": "Section Break",
+   "label": "Invoice Details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "default": "Net 30",
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": "Payment Terms",
+   "options": "Net 15\nNet 30\nNet 45\nNet 60\nDue on Receipt\nCustom"
+  },
+  {
+   "fieldname": "column_break_invoice_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "purchase_order_number",
+   "fieldtype": "Data",
+   "label": "Purchase Order Number"
+  },
+  {
+   "fieldname": "application_reference",
+   "fieldtype": "Link",
+   "label": "Application Reference",
+   "options": "Application"
+  },
+  {
+   "fieldname": "section_break_currency",
+   "fieldtype": "Section Break",
+   "label": "Currency & Pricing"
+  },
+  {
+   "default": "USD",
+   "fieldname": "invoice_currency",
+   "fieldtype": "Link",
+   "label": "Invoice Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "precision": "6"
+  },
+  {
+   "default": "USD",
+   "fieldname": "base_currency",
+   "fieldtype": "Link",
+   "label": "Base Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_currency_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_list_name",
+   "fieldtype": "Data",
+   "label": "Price List"
+  },
+  {
+   "fieldname": "discount_type",
+   "fieldtype": "Select",
+   "label": "Discount Type",
+   "options": "None\nPercentage\nFixed Amount\nEarly Bird\nBulk\nLoyalty\nPromotional"
+  },
+  {
+   "fieldname": "discount_value",
+   "fieldtype": "Float",
+   "label": "Discount Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_items",
+   "fieldtype": "Section Break",
+   "label": "Invoice Items"
+  },
+  {
+   "fieldname": "program_fee_reference",
+   "fieldtype": "Link",
+   "label": "Program Fee Reference",
+   "options": "Program Fee"
+  },
+  {
+   "description": "Invoice line items (Program fees, Service charges, Additional fees)",
+   "fieldname": "invoice_items",
+   "fieldtype": "Text Editor",
+   "label": "Invoice Items Description"
+  },
+  {
+   "fieldname": "section_break_calculations",
+   "fieldtype": "Section Break",
+   "label": "Calculations"
+  },
+  {
+   "fieldname": "subtotal_amount",
+   "fieldtype": "Currency",
+   "label": "Subtotal Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_discount_amount",
+   "fieldtype": "Currency",
+   "label": "Total Discount Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "taxable_amount",
+   "fieldtype": "Currency",
+   "label": "Taxable Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_calc_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_percentage",
+   "fieldtype": "Float",
+   "label": "Tax Percentage",
+   "precision": "2"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_payment",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Bank Transfer\nCredit Card\nPayPal\nStripe\nCheck\nCash\nWire Transfer\nCryptocurrency"
+  },
+  {
+   "fieldname": "payment_gateway",
+   "fieldtype": "Select",
+   "label": "Payment Gateway",
+   "options": "Stripe\nPayPal\nSquare\nRazorpay\nPaystack\nFlutterwave\nManual"
+  },
+  {
+   "fieldname": "payment_link",
+   "fieldtype": "Data",
+   "label": "Payment Link",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_payment_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amount_due",
+   "fieldtype": "Currency",
+   "label": "Amount Due",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPartially Paid\nPaid\nOverdue\nRefunded"
+  },
+  {
+   "fieldname": "section_break_recurring",
+   "fieldtype": "Section Break",
+   "label": "Recurring Billing"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_recurring",
+   "fieldtype": "Check",
+   "label": "Is Recurring Invoice"
+  },
+  {
+   "depends_on": "is_recurring",
+   "fieldname": "recurring_frequency",
+   "fieldtype": "Select",
+   "label": "Recurring Frequency",
+   "options": "Weekly\nMonthly\nQuarterly\nSemi-annually\nAnnually"
+  },
+  {
+   "depends_on": "is_recurring",
+   "fieldname": "recurring_start_date",
+   "fieldtype": "Date",
+   "label": "Recurring Start Date"
+  },
+  {
+   "fieldname": "column_break_recurring_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "is_recurring",
+   "fieldname": "recurring_end_date",
+   "fieldtype": "Date",
+   "label": "Recurring End Date"
+  },
+  {
+   "depends_on": "is_recurring",
+   "fieldname": "next_invoice_date",
+   "fieldtype": "Date",
+   "label": "Next Invoice Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "recurring_count",
+   "fieldtype": "Int",
+   "label": "Recurring Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_customization",
+   "fieldtype": "Section Break",
+   "label": "Customization & Branding"
+  },
+  {
+   "default": "Professional",
+   "fieldname": "invoice_template",
+   "fieldtype": "Select",
+   "label": "Invoice Template",
+   "options": "Standard\nProfessional\nModern\nMinimal\nCustom"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo"
+  },
+  {
+   "default": "#007bff",
+   "fieldname": "brand_color",
+   "fieldtype": "Color",
+   "label": "Brand Color"
+  },
+  {
+   "fieldname": "column_break_custom_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "header_text",
+   "fieldtype": "Small Text",
+   "label": "Header Text"
+  },
+  {
+   "default": "Thank you for your business!",
+   "fieldname": "footer_text",
+   "fieldtype": "Small Text",
+   "label": "Footer Text"
+  },
+  {
+   "fieldname": "custom_fields",
+   "fieldtype": "JSON",
+   "label": "Custom Fields"
+  },
+  {
+   "fieldname": "section_break_communication",
+   "fieldtype": "Section Break",
+   "label": "Communication & Delivery"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_sent",
+   "fieldtype": "Check",
+   "label": "Email Sent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "email_sent_date",
+   "fieldtype": "Datetime",
+   "label": "Email Sent Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "email_opened",
+   "fieldtype": "Check",
+   "label": "Email Opened",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_comm_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_opened_date",
+   "fieldtype": "Datetime",
+   "label": "Email Opened Date",
+   "read_only": 1
+  },
+  {
+   "default": "Email",
+   "fieldname": "delivery_method",
+   "fieldtype": "Select",
+   "label": "Delivery Method",
+   "options": "Email\nPortal\nPrint\nManual"
+  },
+  {
+   "default": "1",
+   "fieldname": "tracking_enabled",
+   "fieldtype": "Check",
+   "label": "Tracking Enabled"
+  },
+  {
+   "fieldname": "section_break_compliance",
+   "fieldtype": "Section Break",
+   "label": "Tax Compliance & Legal"
+  },
+  {
+   "fieldname": "tax_jurisdiction",
+   "fieldtype": "Data",
+   "label": "Tax Jurisdiction"
+  },
+  {
+   "fieldname": "tax_identification_number",
+   "fieldtype": "Data",
+   "label": "Tax Identification Number"
+  },
+  {
+   "fieldname": "vat_number",
+   "fieldtype": "Data",
+   "label": "VAT Number"
+  },
+  {
+   "fieldname": "column_break_compliance_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Compliant",
+   "fieldname": "regulatory_compliance",
+   "fieldtype": "Select",
+   "label": "Regulatory Compliance",
+   "options": "Compliant\nPending Review\nNon-compliant\nExempt"
+  },
+  {
+   "fieldname": "legal_terms",
+   "fieldtype": "Text Editor",
+   "label": "Legal Terms"
+  },
+  {
+   "default": "Standard",
+   "fieldname": "dispute_resolution",
+   "fieldtype": "Select",
+   "label": "Dispute Resolution",
+   "options": "Standard\nArbitration\nMediation\nCourt"
+  },
+  {
+   "fieldname": "section_break_analytics",
+   "fieldtype": "Section Break",
+   "label": "Analytics & Performance"
+  },
+  {
+   "fieldname": "invoice_performance_score",
+   "fieldtype": "Float",
+   "label": "Invoice Performance Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_velocity",
+   "fieldtype": "Float",
+   "label": "Payment Velocity (Days)",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "collection_probability",
+   "fieldtype": "Float",
+   "label": "Collection Probability (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_analytics_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_payment_history_score",
+   "fieldtype": "Float",
+   "label": "Client Payment History Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revenue_impact",
+   "fieldtype": "Currency",
+   "label": "Revenue Impact",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_margin",
+   "fieldtype": "Float",
+   "label": "Profit Margin (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_automation",
+   "fieldtype": "Section Break",
+   "label": "Automation & Workflows"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_generated",
+   "fieldtype": "Check",
+   "label": "Auto Generated",
+   "read_only": 1
+  },
+  {
+   "default": "Manual",
+   "fieldname": "generation_source",
+   "fieldtype": "Select",
+   "label": "Generation Source",
+   "options": "Manual\nProgram Fee\nApplication\nRecurring\nAPI\nBulk Import"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_send_enabled",
+   "fieldtype": "Check",
+   "label": "Auto Send Enabled"
+  },
+  {
+   "fieldname": "column_break_automation_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_reminder_enabled",
+   "fieldtype": "Check",
+   "label": "Auto Reminder Enabled"
+  },
+  {
+   "default": "Weekly",
+   "depends_on": "auto_reminder_enabled",
+   "fieldname": "reminder_frequency",
+   "fieldtype": "Select",
+   "label": "Reminder Frequency",
+   "options": "Daily\nWeekly\nBi-weekly\nCustom"
+  },
+  {
+   "default": "1",
+   "fieldname": "escalation_enabled",
+   "fieldtype": "Check",
+   "label": "Escalation Enabled"
+  },
+  {
+   "fieldname": "section_break_integration",
+   "fieldtype": "Section Break",
+   "label": "System Integration"
+  },
+  {
+   "default": "None",
+   "fieldname": "accounting_integration",
+   "fieldtype": "Select",
+   "label": "Accounting Integration",
+   "options": "QuickBooks\nXero\nSAP\nOracle\nNone"
+  },
+  {
+   "fieldname": "external_invoice_id",
+   "fieldtype": "Data",
+   "label": "External Invoice ID",
+   "read_only": 1
+  },
+  {
+   "default": "Not Synced",
+   "fieldname": "sync_status",
+   "fieldtype": "Select",
+   "label": "Sync Status",
+   "options": "Not Synced\nSynced\nPending\nFailed"
+  },
+  {
+   "fieldname": "column_break_integration_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "crm_integration",
+   "fieldtype": "Check",
+   "label": "CRM Integration"
+  },
+  {
+   "fieldname": "api_webhook_url",
+   "fieldtype": "Data",
+   "label": "API Webhook URL"
+  },
+  {
+   "fieldname": "last_sync_date",
+   "fieldtype": "Datetime",
+   "label": "Last Sync Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_audit",
+   "fieldtype": "Section Break",
+   "label": "Audit Trail & History"
+  },
+  {
+   "default": "Administrator",
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_audit_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Data",
+   "label": "Last Modified By",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "version_number",
+   "fieldtype": "Int",
+   "label": "Version Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "audit_trail",
+   "fieldtype": "Text Editor",
+   "label": "Audit Trail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes & Comments"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "client_notes",
+   "fieldtype": "Text Editor",
+   "label": "Client Notes"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:59:23.556417",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Invoice Management",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "invoice_title",
+ "track_changes": 1
+}

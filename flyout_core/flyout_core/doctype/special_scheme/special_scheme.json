@@ -1,0 +1,784 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:50:34.455321",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme_name",
+  "naming_rule",
+  "naming_series",
+  "basic_information_section",
+  "scheme_title",
+  "scheme_description",
+  "scheme_type",
+  "column_break_1",
+  "organizing_authority",
+  "authority_name",
+  "scheme_status",
+  "target_country",
+  "eligibility_section",
+  "eligibility_overview",
+  "minimum_age",
+  "maximum_age",
+  "column_break_2",
+  "education_requirement",
+  "field_of_study_requirement",
+  "nationality_requirement",
+  "detailed_criteria_section",
+  "academic_requirements",
+  "language_requirements",
+  "experience_requirements",
+  "column_break_3",
+  "income_requirements",
+  "health_requirements",
+  "other_requirements",
+  "benefits_section",
+  "benefits_overview",
+  "financial_benefits",
+  "benefit_amount",
+  "currency",
+  "column_break_4",
+  "non_financial_benefits",
+  "duration_of_benefits",
+  "renewable_benefits",
+  "application_section",
+  "application_process",
+  "application_start_date",
+  "application_deadline",
+  "column_break_5",
+  "application_fee",
+  "application_mode",
+  "application_website",
+  "documents_section",
+  "required_documents",
+  "document_format",
+  "language_of_documents",
+  "column_break_6",
+  "attestation_requirements",
+  "translation_requirements",
+  "document_submission_deadline",
+  "selection_section",
+  "selection_process",
+  "selection_criteria",
+  "interview_required",
+  "column_break_7",
+  "test_required",
+  "result_announcement_date",
+  "number_of_recipients",
+  "processing_section",
+  "processing_time",
+  "approval_stages",
+  "status_tracking",
+  "column_break_8",
+  "communication_method",
+  "appeals_process",
+  "notification_timeline",
+  "success_section",
+  "success_rate",
+  "total_applicants_last_cycle",
+  "total_recipients_last_cycle",
+  "column_break_9",
+  "participant_feedback",
+  "average_rating",
+  "testimonials",
+  "obligations_section",
+  "post_program_obligations",
+  "service_commitment",
+  "service_duration",
+  "column_break_10",
+  "penalty_clause",
+  "monitoring_process",
+  "compliance_requirements",
+  "contact_section",
+  "contact_person",
+  "contact_designation",
+  "contact_email",
+  "column_break_11",
+  "contact_phone",
+  "office_address",
+  "official_website",
+  "additional_section",
+  "special_features",
+  "related_schemes",
+  "exclusions",
+  "column_break_12",
+  "important_notes",
+  "last_updated",
+  "data_source",
+  "verification_section",
+  "verification_status",
+  "verified_by",
+  "verification_date",
+  "column_break_13",
+  "accuracy_rating",
+  "content_quality",
+  "featured_scheme",
+  "tags_section",
+  "tags",
+  "priority_level",
+  "difficulty_level",
+  "column_break_14",
+  "competition_level",
+  "target_audience",
+  "recurring_scheme"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scheme Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "By \"Naming Series\" field",
+   "fieldname": "naming_rule",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Rule",
+   "options": "By fieldname\nBy \"Naming Series\" field"
+  },
+  {
+   "default": "SCHEME-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "SCHEME-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "scheme_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scheme Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scheme_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Scheme Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scheme_type",
+   "fieldtype": "Select",
+   "label": "Scheme Type",
+   "options": "Government Program\nInstitutional Program\nScholarship\nFellowship\nExchange Program\nInternship\nTraining Program\nResearch Grant\nEntrepreneurship\nSkill Development\nEmployment Scheme\nEducation Loan\nSubsidy Program\nTax Incentive\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "organizing_authority",
+   "fieldtype": "Select",
+   "label": "Organizing Authority",
+   "options": "Government\nMinistry\nUniversity\nPrivate Institution\nNGO\nInternational Organization\nCorporate\nFoundation\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "authority_name",
+   "fieldtype": "Data",
+   "label": "Authority Name",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "scheme_status",
+   "fieldtype": "Select",
+   "label": "Scheme Status",
+   "options": "Active\nInactive\nUpcoming\nExpired\nSuspended\nUnder Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_country",
+   "fieldtype": "Link",
+   "label": "Target Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "eligibility_section",
+   "fieldtype": "Section Break",
+   "label": "Eligibility Criteria"
+  },
+  {
+   "fieldname": "eligibility_overview",
+   "fieldtype": "Text Editor",
+   "label": "Eligibility Overview",
+   "reqd": 1
+  },
+  {
+   "fieldname": "minimum_age",
+   "fieldtype": "Int",
+   "label": "Minimum Age"
+  },
+  {
+   "fieldname": "maximum_age",
+   "fieldtype": "Int",
+   "label": "Maximum Age"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "education_requirement",
+   "fieldtype": "Select",
+   "label": "Education Requirement",
+   "options": "No Specific Requirement\nHigh School\nBachelor's Degree\nMaster's Degree\nDoctoral Degree\nProfessional Certification\nTechnical Qualification\nOther"
+  },
+  {
+   "fieldname": "field_of_study_requirement",
+   "fieldtype": "Link",
+   "label": "Field of Study Requirement",
+   "options": "Field of Study"
+  },
+  {
+   "fieldname": "nationality_requirement",
+   "fieldtype": "Text Editor",
+   "label": "Nationality Requirement"
+  },
+  {
+   "fieldname": "detailed_criteria_section",
+   "fieldtype": "Section Break",
+   "label": "Detailed Eligibility Criteria"
+  },
+  {
+   "fieldname": "academic_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Academic Requirements"
+  },
+  {
+   "fieldname": "language_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Language Requirements"
+  },
+  {
+   "fieldname": "experience_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Work Experience Requirements"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "income_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Income/Financial Requirements"
+  },
+  {
+   "fieldname": "health_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Health Requirements"
+  },
+  {
+   "fieldname": "other_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Other Specific Requirements"
+  },
+  {
+   "fieldname": "benefits_section",
+   "fieldtype": "Section Break",
+   "label": "Benefits & Incentives"
+  },
+  {
+   "fieldname": "benefits_overview",
+   "fieldtype": "Text Editor",
+   "label": "Benefits Overview",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financial_benefits",
+   "fieldtype": "Text Editor",
+   "label": "Financial Benefits"
+  },
+  {
+   "fieldname": "benefit_amount",
+   "fieldtype": "Currency",
+   "label": "Benefit Amount"
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "non_financial_benefits",
+   "fieldtype": "Text Editor",
+   "label": "Non-Financial Benefits"
+  },
+  {
+   "fieldname": "duration_of_benefits",
+   "fieldtype": "Data",
+   "label": "Duration of Benefits"
+  },
+  {
+   "default": "0",
+   "fieldname": "renewable_benefits",
+   "fieldtype": "Check",
+   "label": "Renewable Benefits"
+  },
+  {
+   "fieldname": "application_section",
+   "fieldtype": "Section Break",
+   "label": "Application Process"
+  },
+  {
+   "fieldname": "application_process",
+   "fieldtype": "Text Editor",
+   "label": "Application Process",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_start_date",
+   "fieldtype": "Date",
+   "label": "Application Start Date"
+  },
+  {
+   "fieldname": "application_deadline",
+   "fieldtype": "Date",
+   "label": "Application Deadline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "application_fee",
+   "fieldtype": "Currency",
+   "label": "Application Fee"
+  },
+  {
+   "fieldname": "application_mode",
+   "fieldtype": "Select",
+   "label": "Application Mode",
+   "options": "Online\nOffline\nBoth\nThrough Agent"
+  },
+  {
+   "fieldname": "application_website",
+   "fieldtype": "Data",
+   "label": "Application Website"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Required Documentation"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Text Editor",
+   "label": "Required Documents",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_format",
+   "fieldtype": "Text Editor",
+   "label": "Document Format Requirements"
+  },
+  {
+   "fieldname": "language_of_documents",
+   "fieldtype": "Data",
+   "label": "Language of Documents"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attestation_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Attestation Requirements"
+  },
+  {
+   "fieldname": "translation_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Translation Requirements"
+  },
+  {
+   "fieldname": "document_submission_deadline",
+   "fieldtype": "Date",
+   "label": "Document Submission Deadline"
+  },
+  {
+   "fieldname": "selection_section",
+   "fieldtype": "Section Break",
+   "label": "Selection Process"
+  },
+  {
+   "fieldname": "selection_process",
+   "fieldtype": "Text Editor",
+   "label": "Selection Process"
+  },
+  {
+   "fieldname": "selection_criteria",
+   "fieldtype": "Text Editor",
+   "label": "Selection Criteria"
+  },
+  {
+   "default": "0",
+   "fieldname": "interview_required",
+   "fieldtype": "Check",
+   "label": "Interview Required"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "test_required",
+   "fieldtype": "Check",
+   "label": "Test Required"
+  },
+  {
+   "fieldname": "result_announcement_date",
+   "fieldtype": "Date",
+   "label": "Result Announcement Date"
+  },
+  {
+   "fieldname": "number_of_recipients",
+   "fieldtype": "Int",
+   "label": "Number of Recipients"
+  },
+  {
+   "fieldname": "processing_section",
+   "fieldtype": "Section Break",
+   "label": "Processing Timeline"
+  },
+  {
+   "fieldname": "processing_time",
+   "fieldtype": "Int",
+   "label": "Processing Time (Days)"
+  },
+  {
+   "fieldname": "approval_stages",
+   "fieldtype": "Text Editor",
+   "label": "Approval Stages"
+  },
+  {
+   "default": "0",
+   "fieldname": "status_tracking",
+   "fieldtype": "Check",
+   "label": "Status Tracking Available"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "communication_method",
+   "fieldtype": "Select",
+   "label": "Communication Method",
+   "options": "Email\nPhone\nPost\nOnline Portal\nMixed"
+  },
+  {
+   "fieldname": "appeals_process",
+   "fieldtype": "Text Editor",
+   "label": "Appeals Process"
+  },
+  {
+   "fieldname": "notification_timeline",
+   "fieldtype": "Data",
+   "label": "Notification Timeline"
+  },
+  {
+   "fieldname": "success_section",
+   "fieldtype": "Section Break",
+   "label": "Success Metrics & Feedback"
+  },
+  {
+   "fieldname": "success_rate",
+   "fieldtype": "Percent",
+   "label": "Success Rate (%)"
+  },
+  {
+   "fieldname": "total_applicants_last_cycle",
+   "fieldtype": "Int",
+   "label": "Total Applicants (Last Cycle)"
+  },
+  {
+   "fieldname": "total_recipients_last_cycle",
+   "fieldtype": "Int",
+   "label": "Total Recipients (Last Cycle)"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "participant_feedback",
+   "fieldtype": "Text Editor",
+   "label": "Participant Feedback"
+  },
+  {
+   "fieldname": "average_rating",
+   "fieldtype": "Float",
+   "label": "Average Rating",
+   "precision": "1"
+  },
+  {
+   "fieldname": "testimonials",
+   "fieldtype": "Text Editor",
+   "label": "Testimonials"
+  },
+  {
+   "fieldname": "obligations_section",
+   "fieldtype": "Section Break",
+   "label": "Post-Program Obligations"
+  },
+  {
+   "fieldname": "post_program_obligations",
+   "fieldtype": "Text Editor",
+   "label": "Post-Program Obligations"
+  },
+  {
+   "default": "0",
+   "fieldname": "service_commitment",
+   "fieldtype": "Check",
+   "label": "Service Commitment Required"
+  },
+  {
+   "fieldname": "service_duration",
+   "fieldtype": "Float",
+   "label": "Service Duration (Years)"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty_clause",
+   "fieldtype": "Text Editor",
+   "label": "Penalty Clause"
+  },
+  {
+   "fieldname": "monitoring_process",
+   "fieldtype": "Text Editor",
+   "label": "Monitoring Process"
+  },
+  {
+   "fieldname": "compliance_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Compliance Requirements"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_designation",
+   "fieldtype": "Data",
+   "label": "Contact Designation"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "office_address",
+   "fieldtype": "Text Editor",
+   "label": "Office Address"
+  },
+  {
+   "fieldname": "official_website",
+   "fieldtype": "Data",
+   "label": "Official Website"
+  },
+  {
+   "fieldname": "additional_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "special_features",
+   "fieldtype": "Text Editor",
+   "label": "Special Features"
+  },
+  {
+   "fieldname": "related_schemes",
+   "fieldtype": "Text Editor",
+   "label": "Related Schemes"
+  },
+  {
+   "fieldname": "exclusions",
+   "fieldtype": "Text Editor",
+   "label": "Exclusions/Restrictions"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "important_notes",
+   "fieldtype": "Text Editor",
+   "label": "Important Notes"
+  },
+  {
+   "default": "Today",
+   "fieldname": "last_updated",
+   "fieldtype": "Date",
+   "label": "Last Updated"
+  },
+  {
+   "fieldname": "data_source",
+   "fieldtype": "Data",
+   "label": "Data Source"
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification & Quality"
+  },
+  {
+   "default": "Pending Verification",
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Verified\nPending Verification\nNot Verified\nUnder Review"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Data",
+   "label": "Verified By"
+  },
+  {
+   "fieldname": "verification_date",
+   "fieldtype": "Date",
+   "label": "Verification Date"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Not Rated",
+   "fieldname": "accuracy_rating",
+   "fieldtype": "Select",
+   "label": "Accuracy Rating",
+   "options": "Excellent\nGood\nFair\nPoor\nNot Rated"
+  },
+  {
+   "default": "Partial",
+   "fieldname": "content_quality",
+   "fieldtype": "Select",
+   "label": "Content Quality",
+   "options": "Complete\nMostly Complete\nPartial\nIncomplete"
+  },
+  {
+   "default": "0",
+   "fieldname": "featured_scheme",
+   "fieldtype": "Check",
+   "label": "Featured Scheme"
+  },
+  {
+   "fieldname": "tags_section",
+   "fieldtype": "Section Break",
+   "label": "Tags & Classification"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "default": "Moderate",
+   "fieldname": "difficulty_level",
+   "fieldtype": "Select",
+   "label": "Application Difficulty Level",
+   "options": "Easy\nModerate\nDifficult\nVery Difficult"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Moderate",
+   "fieldname": "competition_level",
+   "fieldtype": "Select",
+   "label": "Competition Level",
+   "options": "Low\nModerate\nHigh\nVery High"
+  },
+  {
+   "fieldname": "target_audience",
+   "fieldtype": "Select",
+   "label": "Target Audience",
+   "options": "Students\nProfessionals\nResearchers\nEntrepreneurs\nGeneral Public\nSpecific Groups\nOther"
+  },
+  {
+   "default": "0",
+   "fieldname": "recurring_scheme",
+   "fieldtype": "Check",
+   "label": "Recurring Scheme"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 10:00:52.379469",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Special Scheme",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "scheme_title",
+ "track_changes": 1
+}

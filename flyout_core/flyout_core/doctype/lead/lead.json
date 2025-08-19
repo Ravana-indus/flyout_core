@@ -1,0 +1,500 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:13:33.087120",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "lead_name",
+  "email",
+  "phone",
+  "column_break_1",
+  "lead_source",
+  "lead_status",
+  "priority",
+  "lead_score",
+  "section_break_1",
+  "first_name",
+  "last_name",
+  "date_of_birth",
+  "nationality",
+  "column_break_2",
+  "address",
+  "city",
+  "country",
+  "postal_code",
+  "section_break_2",
+  "service_category",
+  "preferred_destination",
+  "budget_range",
+  "timeline",
+  "column_break_3",
+  "education_level",
+  "field_of_study",
+  "work_experience_years",
+  "current_occupation",
+  "language_skills",
+  "section_break_3",
+  "current_visa_status",
+  "previous_visa_applications",
+  "previous_refusals",
+  "refusal_details",
+  "column_break_4",
+  "family_members_count",
+  "spouse_details",
+  "children_details",
+  "dependents_included",
+  "section_break_4",
+  "assigned_to",
+  "first_contact_date",
+  "last_contact_date",
+  "next_follow_up",
+  "column_break_5",
+  "consultation_scheduled",
+  "consultation_date",
+  "proposal_sent",
+  "proposal_value",
+  "conversion_probability",
+  "section_break_5",
+  "preferred_communication",
+  "communication_notes",
+  "requirements_notes",
+  "internal_notes",
+  "column_break_6",
+  "documents_received",
+  "missing_documents",
+  "urgency_level",
+  "special_requirements",
+  "section_break_6",
+  "campaign_source",
+  "referral_source",
+  "utm_source",
+  "utm_medium",
+  "column_break_7",
+  "qualification_date",
+  "disqualification_reason",
+  "converted_to_customer",
+  "customer_reference",
+  "conversion_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "LEAD-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lead Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lead_source",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Lead Source",
+   "options": "Website\nReferral\nSocial Media\nAdvertisement\nEmail Campaign\nCold Call\nEvent\nPartner\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Lead Status",
+   "options": "New\nContacted\nQualified\nProposal Sent\nNegotiation\nClosed Won\nClosed Lost\nNurturing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "lead_score",
+   "fieldtype": "Float",
+   "label": "Lead Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Service Interest & Requirements"
+  },
+  {
+   "fieldname": "service_category",
+   "fieldtype": "Select",
+   "label": "Service Category",
+   "options": "Study Abroad\nWork Visa\nPermanent Residence\nBusiness Immigration\nFamily Visa\nTourist Visa\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "preferred_destination",
+   "fieldtype": "Link",
+   "label": "Preferred Destination",
+   "options": "Country"
+  },
+  {
+   "fieldname": "budget_range",
+   "fieldtype": "Select",
+   "label": "Budget Range",
+   "options": "Under $5,000\n$5,000 - $10,000\n$10,000 - $25,000\n$25,000 - $50,000\nOver $50,000\nNot Disclosed"
+  },
+  {
+   "fieldname": "timeline",
+   "fieldtype": "Select",
+   "label": "Timeline",
+   "options": "ASAP\nWithin 3 months\n3-6 months\n6-12 months\nOver 1 year\nFlexible"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Select",
+   "label": "Education Level",
+   "options": "High School\nDiploma\nBachelor's Degree\nMaster's Degree\nDoctoral Degree\nProfessional Certification"
+  },
+  {
+   "fieldname": "field_of_study",
+   "fieldtype": "Link",
+   "label": "Field of Study",
+   "options": "Field of Study"
+  },
+  {
+   "fieldname": "work_experience_years",
+   "fieldtype": "Int",
+   "label": "Work Experience (Years)"
+  },
+  {
+   "fieldname": "current_occupation",
+   "fieldtype": "Data",
+   "label": "Current Occupation"
+  },
+  {
+   "fieldname": "language_skills",
+   "fieldtype": "Text",
+   "label": "Language Skills"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Immigration History & Status"
+  },
+  {
+   "fieldname": "current_visa_status",
+   "fieldtype": "Data",
+   "label": "Current Visa Status"
+  },
+  {
+   "fieldname": "previous_visa_applications",
+   "fieldtype": "Text",
+   "label": "Previous Visa Applications"
+  },
+  {
+   "default": "0",
+   "fieldname": "previous_refusals",
+   "fieldtype": "Check",
+   "label": "Previous Refusals"
+  },
+  {
+   "fieldname": "refusal_details",
+   "fieldtype": "Text Editor",
+   "label": "Refusal Details"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "family_members_count",
+   "fieldtype": "Int",
+   "label": "Family Members Count"
+  },
+  {
+   "fieldname": "spouse_details",
+   "fieldtype": "Text",
+   "label": "Spouse Details"
+  },
+  {
+   "fieldname": "children_details",
+   "fieldtype": "Text",
+   "label": "Children Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "dependents_included",
+   "fieldtype": "Check",
+   "label": "Dependents Included"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Sales & Follow-up"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "first_contact_date",
+   "fieldtype": "Date",
+   "label": "First Contact Date"
+  },
+  {
+   "fieldname": "last_contact_date",
+   "fieldtype": "Date",
+   "label": "Last Contact Date"
+  },
+  {
+   "fieldname": "next_follow_up",
+   "fieldtype": "Datetime",
+   "label": "Next Follow-up"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "consultation_scheduled",
+   "fieldtype": "Check",
+   "label": "Consultation Scheduled"
+  },
+  {
+   "fieldname": "consultation_date",
+   "fieldtype": "Datetime",
+   "label": "Consultation Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "proposal_sent",
+   "fieldtype": "Check",
+   "label": "Proposal Sent"
+  },
+  {
+   "fieldname": "proposal_value",
+   "fieldtype": "Currency",
+   "label": "Proposal Value"
+  },
+  {
+   "fieldname": "conversion_probability",
+   "fieldtype": "Float",
+   "label": "Conversion Probability (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Communication & Notes"
+  },
+  {
+   "fieldname": "preferred_communication",
+   "fieldtype": "Select",
+   "label": "Preferred Communication",
+   "options": "Email\nPhone\nWhatsApp\nSkype\nVideo Call\nIn Person"
+  },
+  {
+   "fieldname": "communication_notes",
+   "fieldtype": "Text Editor",
+   "label": "Communication Notes"
+  },
+  {
+   "fieldname": "requirements_notes",
+   "fieldtype": "Text Editor",
+   "label": "Requirements Notes"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "documents_received",
+   "fieldtype": "Text",
+   "label": "Documents Received"
+  },
+  {
+   "fieldname": "missing_documents",
+   "fieldtype": "Text",
+   "label": "Missing Documents"
+  },
+  {
+   "fieldname": "urgency_level",
+   "fieldtype": "Select",
+   "label": "Urgency Level",
+   "options": "Critical\nHigh\nNormal\nLow"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "campaign_source",
+   "fieldtype": "Data",
+   "label": "Campaign Source"
+  },
+  {
+   "fieldname": "referral_source",
+   "fieldtype": "Data",
+   "label": "Referral Source"
+  },
+  {
+   "fieldname": "utm_source",
+   "fieldtype": "Data",
+   "label": "UTM Source"
+  },
+  {
+   "fieldname": "utm_medium",
+   "fieldtype": "Data",
+   "label": "UTM Medium"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qualification_date",
+   "fieldtype": "Date",
+   "label": "Qualification Date"
+  },
+  {
+   "fieldname": "disqualification_reason",
+   "fieldtype": "Text",
+   "label": "Disqualification Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "converted_to_customer",
+   "fieldtype": "Check",
+   "label": "Converted to Customer"
+  },
+  {
+   "fieldname": "customer_reference",
+   "fieldtype": "Data",
+   "label": "Customer Reference"
+  },
+  {
+   "fieldname": "conversion_date",
+   "fieldtype": "Date",
+   "label": "Conversion Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:55:49.916603",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Lead",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "lead_name",
+ "track_changes": 1
+}

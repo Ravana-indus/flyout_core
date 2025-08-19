@@ -1,0 +1,363 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:employer_name",
+ "creation": "2025-08-02 15:07:39.917780",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employer_name",
+  "employer_code",
+  "country",
+  "city",
+  "column_break_1",
+  "website",
+  "industry",
+  "employer_type",
+  "logo",
+  "section_break_1",
+  "contact_person",
+  "hr_email",
+  "hr_phone",
+  "column_break_2",
+  "address",
+  "postal_code",
+  "tax_id",
+  "section_break_2",
+  "employee_count",
+  "average_salary_range",
+  "benefits_package",
+  "column_break_3",
+  "work_culture",
+  "company_rating",
+  "growth_stage",
+  "section_break_3",
+  "visa_sponsorship_available",
+  "sponsored_visa_types",
+  "annual_visa_quota",
+  "column_break_4",
+  "visa_success_rate",
+  "average_processing_time",
+  "relocation_assistance",
+  "section_break_4",
+  "hiring_frequency",
+  "preferred_experience_level",
+  "remote_work_policy",
+  "column_break_5",
+  "diversity_initiatives",
+  "training_programs",
+  "career_advancement",
+  "section_break_5",
+  "status",
+  "is_verified",
+  "is_preferred_partner",
+  "column_break_6",
+  "last_updated",
+  "data_source",
+  "verification_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "employer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employer Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "employer_code",
+   "fieldtype": "Data",
+   "label": "Employer Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Industry",
+   "options": "Technology\nHealthcare\nFinance\nEducation\nManufacturing\nConstruction\nHospitality\nRetail\nGovernment\nOther"
+  },
+  {
+   "fieldname": "employer_type",
+   "fieldtype": "Select",
+   "label": "Employer Type",
+   "options": "Corporation\nGovernment\nNon-Profit\nStartup\nSmall Business\nMultinational"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Employer Logo"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "HR Contact Person"
+  },
+  {
+   "fieldname": "hr_email",
+   "fieldtype": "Data",
+   "label": "HR Email"
+  },
+  {
+   "fieldname": "hr_phone",
+   "fieldtype": "Data",
+   "label": "HR Phone"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Employment Intelligence"
+  },
+  {
+   "fieldname": "employee_count",
+   "fieldtype": "Select",
+   "label": "Employee Count",
+   "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+  },
+  {
+   "fieldname": "average_salary_range",
+   "fieldtype": "Data",
+   "label": "Average Salary Range (USD)"
+  },
+  {
+   "fieldname": "benefits_package",
+   "fieldtype": "Select",
+   "label": "Benefits Package",
+   "options": "Comprehensive\nStandard\nBasic\nMinimal\nUnknown"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_culture",
+   "fieldtype": "Select",
+   "label": "Work Culture",
+   "options": "Remote-First\nHybrid\nOn-Site\nFlexible\nTraditional"
+  },
+  {
+   "fieldname": "company_rating",
+   "fieldtype": "Float",
+   "label": "Company Rating (1-5)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "growth_stage",
+   "fieldtype": "Select",
+   "label": "Growth Stage",
+   "options": "Startup\nGrowth\nMaturity\nLarge Enterprise\nGovernment"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Immigration & Visa Support"
+  },
+  {
+   "default": "0",
+   "fieldname": "visa_sponsorship_available",
+   "fieldtype": "Check",
+   "label": "Visa Sponsorship Available"
+  },
+  {
+   "fieldname": "sponsored_visa_types",
+   "fieldtype": "Small Text",
+   "label": "Sponsored Visa Types"
+  },
+  {
+   "fieldname": "annual_visa_quota",
+   "fieldtype": "Int",
+   "label": "Annual Visa Quota"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visa_success_rate",
+   "fieldtype": "Float",
+   "label": "Visa Success Rate (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "average_processing_time",
+   "fieldtype": "Float",
+   "label": "Average Processing Time (months)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "relocation_assistance",
+   "fieldtype": "Select",
+   "label": "Relocation Assistance",
+   "options": "Full\nPartial\nNone\nUnknown"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Hiring Intelligence"
+  },
+  {
+   "fieldname": "hiring_frequency",
+   "fieldtype": "Select",
+   "label": "Hiring Frequency",
+   "options": "Continuous\nQuarterly\nBi-Annual\nAnnual\nProject-Based\nSeasonal"
+  },
+  {
+   "fieldname": "preferred_experience_level",
+   "fieldtype": "Select",
+   "label": "Preferred Experience Level",
+   "options": "Entry Level\nMid Level\nSenior Level\nExecutive\nAll Levels"
+  },
+  {
+   "fieldname": "remote_work_policy",
+   "fieldtype": "Select",
+   "label": "Remote Work Policy",
+   "options": "Fully Remote\nHybrid\nOn-Site Only\nFlexible\nLocation Dependent"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "diversity_initiatives",
+   "fieldtype": "Check",
+   "label": "Diversity Initiatives"
+  },
+  {
+   "default": "0",
+   "fieldname": "training_programs",
+   "fieldtype": "Check",
+   "label": "Training Programs Available"
+  },
+  {
+   "fieldname": "career_advancement",
+   "fieldtype": "Select",
+   "label": "Career Advancement Opportunities",
+   "options": "Excellent\nGood\nAverage\nLimited\nUnknown"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nPending Verification\nSuspended"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_verified",
+   "fieldtype": "Check",
+   "label": "Is Verified"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_preferred_partner",
+   "fieldtype": "Check",
+   "label": "Is Preferred Partner"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_source",
+   "fieldtype": "Select",
+   "label": "Data Source",
+   "options": "Manual Entry\nAPI Import\nBulk Import\nPartner Integration"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Verified\nPending\nRequires Update\nUnverified"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:57:31.659937",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Employer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employer_name",
+ "track_changes": 1
+}

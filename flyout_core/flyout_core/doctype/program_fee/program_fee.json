@@ -1,0 +1,942 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 22:49:16.503225",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "basic_information_section",
+  "program",
+  "university",
+  "program_title",
+  "country",
+  "field_of_study",
+  "column_break_basic_1",
+  "fee_category",
+  "fee_type",
+  "academic_year",
+  "semester_quarter",
+  "program_level",
+  "fee_structure_section",
+  "base_fee_amount",
+  "base_currency",
+  "exchange_rate",
+  "converted_amount",
+  "column_break_fee_1",
+  "fee_per_credit",
+  "minimum_credits",
+  "maximum_credits",
+  "additional_fees",
+  "mandatory_fees",
+  "pricing_tiers_section",
+  "tier_1_threshold",
+  "tier_1_rate",
+  "tier_2_threshold",
+  "tier_2_rate",
+  "tier_3_threshold",
+  "tier_3_rate",
+  "column_break_tier_1",
+  "volume_discount_enabled",
+  "volume_threshold",
+  "volume_discount_percentage",
+  "complexity_factor",
+  "risk_factor",
+  "dynamic_pricing_section",
+  "dynamic_pricing_enabled",
+  "demand_factor",
+  "seasonal_factor",
+  "capacity_factor",
+  "market_factor",
+  "column_break_dynamic_1",
+  "urgency_factor",
+  "reputation_factor",
+  "peak_season_surcharge",
+  "off_season_discount",
+  "currency_management_section",
+  "multi_currency_enabled",
+  "display_currency",
+  "auto_update_exchange_rate",
+  "exchange_rate_source",
+  "column_break_currency_1",
+  "rate_update_frequency",
+  "rate_fluctuation_threshold",
+  "hedging_enabled",
+  "hedging_percentage",
+  "discounts_section",
+  "early_bird_discount",
+  "early_bird_deadline",
+  "bulk_discount_enabled",
+  "bulk_threshold",
+  "bulk_discount_percentage",
+  "column_break_discount_1",
+  "loyalty_discount",
+  "referral_discount",
+  "seasonal_discount",
+  "need_based_discount",
+  "promotion_management_section",
+  "promotion_active",
+  "promotion_code",
+  "promotion_description",
+  "promotion_discount_type",
+  "promotion_discount_value",
+  "column_break_promotion_1",
+  "promotion_start_date",
+  "promotion_end_date",
+  "promotion_usage_limit",
+  "promotion_usage_count",
+  "market_analysis_section",
+  "competitive_benchmarking",
+  "market_position",
+  "competitor_analysis",
+  "price_elasticity",
+  "column_break_market_1",
+  "demand_forecast",
+  "market_saturation",
+  "growth_potential",
+  "target_market_segment",
+  "fee_calculations_section",
+  "calculated_base_fee",
+  "total_discounts",
+  "total_surcharges",
+  "net_fee_amount",
+  "column_break_calculation_1",
+  "profit_margin",
+  "cost_breakdown",
+  "roi_projection",
+  "break_even_point",
+  "validity_section",
+  "valid_from",
+  "valid_to",
+  "payment_terms",
+  "payment_deadline",
+  "column_break_validity_1",
+  "late_payment_penalty",
+  "refund_policy",
+  "cancellation_terms",
+  "special_conditions",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "approval_comments",
+  "column_break_approval_1",
+  "revision_number",
+  "revision_reason",
+  "published",
+  "publish_date",
+  "tracking_section",
+  "view_count",
+  "application_count",
+  "conversion_rate",
+  "average_application_time",
+  "column_break_tracking_1",
+  "performance_score",
+  "last_viewed",
+  "last_updated",
+  "next_review_date"
+ ],
+ "fields": [
+  {
+   "default": "FEE-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "FEE-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Program",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "program.university",
+   "fieldname": "university",
+   "fieldtype": "Link",
+   "label": "University",
+   "options": "University",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.program_title",
+   "fieldname": "program_title",
+   "fieldtype": "Data",
+   "label": "Program Title",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "university.country",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.field_of_study",
+   "fieldname": "field_of_study",
+   "fieldtype": "Link",
+   "label": "Field of Study",
+   "options": "Field of Study",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_basic_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fee_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fee Category",
+   "options": "Tuition\nApplication\nRegistration\nLaboratory\nLibrary\nAccommodation\nMeal Plan\nInsurance\nVisa Processing\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Select",
+   "label": "Fee Type",
+   "options": "Annual\nSemestral\nQuarterly\nMonthly\nOne-time\nPer Credit Hour\nPer Course\nVariable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester_quarter",
+   "fieldtype": "Select",
+   "label": "Semester/Quarter",
+   "options": "Fall\nSpring\nSummer\nWinter\nQ1\nQ2\nQ3\nQ4\nFull Year"
+  },
+  {
+   "fetch_from": "program.program_level",
+   "fieldname": "program_level",
+   "fieldtype": "Select",
+   "label": "Program Level",
+   "options": "Undergraduate\nGraduate\nPostgraduate\nDoctoral\nCertificate\nDiploma",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fee_structure_section",
+   "fieldtype": "Section Break",
+   "label": "Fee Structure"
+  },
+  {
+   "fieldname": "base_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Base Fee Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "default": "USD",
+   "fieldname": "base_currency",
+   "fieldtype": "Link",
+   "label": "Base Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "precision": "6"
+  },
+  {
+   "fieldname": "converted_amount",
+   "fieldtype": "Currency",
+   "label": "Converted Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fee_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fee_per_credit",
+   "fieldtype": "Currency",
+   "label": "Fee Per Credit Hour",
+   "precision": "2"
+  },
+  {
+   "fieldname": "minimum_credits",
+   "fieldtype": "Int",
+   "label": "Minimum Credits"
+  },
+  {
+   "fieldname": "maximum_credits",
+   "fieldtype": "Int",
+   "label": "Maximum Credits"
+  },
+  {
+   "fieldname": "additional_fees",
+   "fieldtype": "Text",
+   "label": "Additional Fees"
+  },
+  {
+   "fieldname": "mandatory_fees",
+   "fieldtype": "Text",
+   "label": "Mandatory Fees"
+  },
+  {
+   "fieldname": "pricing_tiers_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing Tiers & Rates"
+  },
+  {
+   "default": "0",
+   "fieldname": "tier_1_threshold",
+   "fieldtype": "Int",
+   "label": "Tier 1 Threshold"
+  },
+  {
+   "fieldname": "tier_1_rate",
+   "fieldtype": "Currency",
+   "label": "Tier 1 Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "tier_2_threshold",
+   "fieldtype": "Int",
+   "label": "Tier 2 Threshold"
+  },
+  {
+   "fieldname": "tier_2_rate",
+   "fieldtype": "Currency",
+   "label": "Tier 2 Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "tier_3_threshold",
+   "fieldtype": "Int",
+   "label": "Tier 3 Threshold"
+  },
+  {
+   "fieldname": "tier_3_rate",
+   "fieldtype": "Currency",
+   "label": "Tier 3 Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_tier_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "volume_discount_enabled",
+   "fieldtype": "Check",
+   "label": "Volume Discount Enabled"
+  },
+  {
+   "fieldname": "volume_threshold",
+   "fieldtype": "Int",
+   "label": "Volume Threshold"
+  },
+  {
+   "fieldname": "volume_discount_percentage",
+   "fieldtype": "Float",
+   "label": "Volume Discount (%)",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "complexity_factor",
+   "fieldtype": "Float",
+   "label": "Complexity Factor",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "risk_factor",
+   "fieldtype": "Float",
+   "label": "Risk Factor",
+   "precision": "2"
+  },
+  {
+   "fieldname": "dynamic_pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Dynamic Pricing"
+  },
+  {
+   "default": "0",
+   "fieldname": "dynamic_pricing_enabled",
+   "fieldtype": "Check",
+   "label": "Dynamic Pricing Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "demand_factor",
+   "fieldtype": "Float",
+   "label": "Demand Factor",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "seasonal_factor",
+   "fieldtype": "Float",
+   "label": "Seasonal Factor",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "capacity_factor",
+   "fieldtype": "Float",
+   "label": "Capacity Factor",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "market_factor",
+   "fieldtype": "Float",
+   "label": "Market Factor",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_dynamic_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "urgency_factor",
+   "fieldtype": "Float",
+   "label": "Urgency Factor",
+   "precision": "2"
+  },
+  {
+   "default": "1",
+   "fieldname": "reputation_factor",
+   "fieldtype": "Float",
+   "label": "Reputation Factor",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "peak_season_surcharge",
+   "fieldtype": "Float",
+   "label": "Peak Season Surcharge (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "off_season_discount",
+   "fieldtype": "Float",
+   "label": "Off Season Discount (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "currency_management_section",
+   "fieldtype": "Section Break",
+   "label": "Currency Management"
+  },
+  {
+   "default": "0",
+   "fieldname": "multi_currency_enabled",
+   "fieldtype": "Check",
+   "label": "Multi-Currency Enabled"
+  },
+  {
+   "fieldname": "display_currency",
+   "fieldtype": "Link",
+   "label": "Display Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_update_exchange_rate",
+   "fieldtype": "Check",
+   "label": "Auto Update Exchange Rate"
+  },
+  {
+   "fieldname": "exchange_rate_source",
+   "fieldtype": "Select",
+   "label": "Exchange Rate Source",
+   "options": "Manual\nXE.com\nFixer.io\nCurrencyLayer\nOpenExchangeRates"
+  },
+  {
+   "fieldname": "column_break_currency_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_update_frequency",
+   "fieldtype": "Select",
+   "label": "Rate Update Frequency",
+   "options": "Real-time\nHourly\nDaily\nWeekly\nManual"
+  },
+  {
+   "default": "2",
+   "fieldname": "rate_fluctuation_threshold",
+   "fieldtype": "Float",
+   "label": "Rate Fluctuation Threshold (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "hedging_enabled",
+   "fieldtype": "Check",
+   "label": "Hedging Enabled"
+  },
+  {
+   "fieldname": "hedging_percentage",
+   "fieldtype": "Float",
+   "label": "Hedging Percentage",
+   "precision": "2"
+  },
+  {
+   "fieldname": "discounts_section",
+   "fieldtype": "Section Break",
+   "label": "Discounts & Incentives"
+  },
+  {
+   "default": "0",
+   "fieldname": "early_bird_discount",
+   "fieldtype": "Float",
+   "label": "Early Bird Discount (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "early_bird_deadline",
+   "fieldtype": "Date",
+   "label": "Early Bird Deadline"
+  },
+  {
+   "default": "0",
+   "fieldname": "bulk_discount_enabled",
+   "fieldtype": "Check",
+   "label": "Bulk Discount Enabled"
+  },
+  {
+   "fieldname": "bulk_threshold",
+   "fieldtype": "Int",
+   "label": "Bulk Threshold"
+  },
+  {
+   "fieldname": "bulk_discount_percentage",
+   "fieldtype": "Float",
+   "label": "Bulk Discount (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_discount_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "loyalty_discount",
+   "fieldtype": "Float",
+   "label": "Loyalty Discount (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "referral_discount",
+   "fieldtype": "Float",
+   "label": "Referral Discount (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "seasonal_discount",
+   "fieldtype": "Float",
+   "label": "Seasonal Discount (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "need_based_discount",
+   "fieldtype": "Float",
+   "label": "Need-Based Discount (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "promotion_management_section",
+   "fieldtype": "Section Break",
+   "label": "Promotion Management"
+  },
+  {
+   "default": "0",
+   "fieldname": "promotion_active",
+   "fieldtype": "Check",
+   "label": "Promotion Active"
+  },
+  {
+   "fieldname": "promotion_code",
+   "fieldtype": "Data",
+   "label": "Promotion Code"
+  },
+  {
+   "fieldname": "promotion_description",
+   "fieldtype": "Text",
+   "label": "Promotion Description"
+  },
+  {
+   "fieldname": "promotion_discount_type",
+   "fieldtype": "Select",
+   "label": "Promotion Discount Type",
+   "options": "Percentage\nFixed Amount\nBuy One Get One\nTiered"
+  },
+  {
+   "fieldname": "promotion_discount_value",
+   "fieldtype": "Float",
+   "label": "Promotion Discount Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_promotion_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "promotion_start_date",
+   "fieldtype": "Datetime",
+   "label": "Promotion Start Date"
+  },
+  {
+   "fieldname": "promotion_end_date",
+   "fieldtype": "Datetime",
+   "label": "Promotion End Date"
+  },
+  {
+   "fieldname": "promotion_usage_limit",
+   "fieldtype": "Int",
+   "label": "Promotion Usage Limit"
+  },
+  {
+   "default": "0",
+   "fieldname": "promotion_usage_count",
+   "fieldtype": "Int",
+   "label": "Promotion Usage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "market_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Market Analysis"
+  },
+  {
+   "default": "0",
+   "fieldname": "competitive_benchmarking",
+   "fieldtype": "Check",
+   "label": "Competitive Benchmarking"
+  },
+  {
+   "fieldname": "market_position",
+   "fieldtype": "Select",
+   "label": "Market Position",
+   "options": "Premium\nCompetitive\nValue\nEconomy"
+  },
+  {
+   "fieldname": "competitor_analysis",
+   "fieldtype": "Text",
+   "label": "Competitor Analysis"
+  },
+  {
+   "fieldname": "price_elasticity",
+   "fieldtype": "Float",
+   "label": "Price Elasticity",
+   "precision": "3"
+  },
+  {
+   "fieldname": "column_break_market_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "demand_forecast",
+   "fieldtype": "Select",
+   "label": "Demand Forecast",
+   "options": "Very High\nHigh\nModerate\nLow\nVery Low"
+  },
+  {
+   "fieldname": "market_saturation",
+   "fieldtype": "Float",
+   "label": "Market Saturation (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "growth_potential",
+   "fieldtype": "Select",
+   "label": "Growth Potential",
+   "options": "Excellent\nGood\nFair\nPoor"
+  },
+  {
+   "fieldname": "target_market_segment",
+   "fieldtype": "Text",
+   "label": "Target Market Segment"
+  },
+  {
+   "fieldname": "fee_calculations_section",
+   "fieldtype": "Section Break",
+   "label": "Fee Calculations"
+  },
+  {
+   "fieldname": "calculated_base_fee",
+   "fieldtype": "Currency",
+   "label": "Calculated Base Fee",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_discounts",
+   "fieldtype": "Currency",
+   "label": "Total Discounts",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_surcharges",
+   "fieldtype": "Currency",
+   "label": "Total Surcharges",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Net Fee Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_calculation_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profit_margin",
+   "fieldtype": "Float",
+   "label": "Profit Margin (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_breakdown",
+   "fieldtype": "Text",
+   "label": "Cost Breakdown",
+   "read_only": 1
+  },
+  {
+   "fieldname": "roi_projection",
+   "fieldtype": "Float",
+   "label": "ROI Projection (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "break_even_point",
+   "fieldtype": "Int",
+   "label": "Break Even Point",
+   "read_only": 1
+  },
+  {
+   "fieldname": "validity_section",
+   "fieldtype": "Section Break",
+   "label": "Validity & Terms"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": "Payment Terms",
+   "options": "Full Payment\nInstallments\nSemestral\nQuarterly\nMonthly"
+  },
+  {
+   "fieldname": "payment_deadline",
+   "fieldtype": "Date",
+   "label": "Payment Deadline"
+  },
+  {
+   "fieldname": "column_break_validity_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "late_payment_penalty",
+   "fieldtype": "Float",
+   "label": "Late Payment Penalty (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "refund_policy",
+   "fieldtype": "Select",
+   "label": "Refund Policy",
+   "options": "Full Refund\nPartial Refund\nNo Refund\nProrated Refund"
+  },
+  {
+   "fieldname": "cancellation_terms",
+   "fieldtype": "Text",
+   "label": "Cancellation Terms"
+  },
+  {
+   "fieldname": "special_conditions",
+   "fieldtype": "Text",
+   "label": "Special Conditions"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval & Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Draft\nPending Approval\nApproved\nRejected\nRevision Required"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "approval_comments",
+   "fieldtype": "Text",
+   "label": "Approval Comments"
+  },
+  {
+   "fieldname": "column_break_approval_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "revision_number",
+   "fieldtype": "Int",
+   "label": "Revision Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revision_reason",
+   "fieldtype": "Text",
+   "label": "Revision Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "publish_date",
+   "fieldtype": "Datetime",
+   "label": "Publish Date"
+  },
+  {
+   "fieldname": "tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Usage & Analytics"
+  },
+  {
+   "default": "0",
+   "fieldname": "view_count",
+   "fieldtype": "Int",
+   "label": "View Count",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "application_count",
+   "fieldtype": "Int",
+   "label": "Application Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Conversion Rate (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "average_application_time",
+   "fieldtype": "Float",
+   "label": "Average Application Time (days)",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tracking_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performance_score",
+   "fieldtype": "Float",
+   "label": "Performance Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_viewed",
+   "fieldtype": "Datetime",
+   "label": "Last Viewed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:59:36.182131",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Program Fee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "program",
+ "track_changes": 1
+}

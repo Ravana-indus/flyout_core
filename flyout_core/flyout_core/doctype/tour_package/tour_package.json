@@ -1,0 +1,702 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:49:21.300524",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "package_name",
+  "naming_rule",
+  "naming_series",
+  "basic_information_section",
+  "package_title",
+  "package_description",
+  "destination_country",
+  "column_break_1",
+  "package_type",
+  "package_category",
+  "package_status",
+  "itinerary_section",
+  "duration_days",
+  "duration_nights",
+  "detailed_itinerary",
+  "column_break_2",
+  "major_attractions",
+  "cultural_experiences",
+  "special_activities",
+  "accommodation_section",
+  "accommodation_type",
+  "accommodation_rating",
+  "accommodation_details",
+  "column_break_3",
+  "transportation_mode",
+  "transportation_class",
+  "transportation_details",
+  "local_transport_included",
+  "pricing_section",
+  "base_price_per_person",
+  "currency",
+  "price_includes",
+  "column_break_4",
+  "price_excludes",
+  "seasonal_pricing",
+  "peak_season_surcharge",
+  "group_section",
+  "minimum_group_size",
+  "maximum_group_size",
+  "private_tour_available",
+  "column_break_5",
+  "customization_options",
+  "group_discount_available",
+  "group_discount_threshold",
+  "guides_section",
+  "tour_guide_included",
+  "guide_language",
+  "local_guide_details",
+  "column_break_6",
+  "local_support_contact",
+  "emergency_contact",
+  "local_customs_briefing",
+  "safety_section",
+  "safety_measures",
+  "travel_insurance_included",
+  "insurance_coverage",
+  "column_break_7",
+  "health_requirements",
+  "vaccination_required",
+  "medical_facilities_access",
+  "visa_section",
+  "visa_assistance_provided",
+  "visa_requirements",
+  "visa_processing_time",
+  "column_break_8",
+  "required_documents",
+  "passport_validity_required",
+  "visa_fee_included",
+  "seasonal_section",
+  "available_year_round",
+  "best_travel_months",
+  "peak_season_months",
+  "column_break_9",
+  "weather_conditions",
+  "seasonal_highlights",
+  "blackout_dates",
+  "booking_section",
+  "advance_booking_required",
+  "deposit_required",
+  "payment_terms",
+  "column_break_10",
+  "cancellation_policy",
+  "refund_policy",
+  "force_majeure_policy",
+  "contact_section",
+  "tour_operator",
+  "contact_person",
+  "contact_email",
+  "column_break_11",
+  "contact_phone",
+  "customer_support_hours",
+  "website_url",
+  "additional_section",
+  "age_restrictions",
+  "fitness_level_required",
+  "special_requirements",
+  "column_break_12",
+  "reviews_rating",
+  "total_reviews",
+  "last_updated",
+  "tags",
+  "featured_package"
+ ],
+ "fields": [
+  {
+   "fieldname": "package_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Package Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "By \"Naming Series\" field",
+   "fieldname": "naming_rule",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Rule",
+   "options": "By fieldname\nBy \"Naming Series\" field"
+  },
+  {
+   "default": "TOUR-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "TOUR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "package_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Package Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "package_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Package Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "destination_country",
+   "fieldtype": "Link",
+   "label": "Destination Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "package_type",
+   "fieldtype": "Select",
+   "label": "Package Type",
+   "options": "Adventure\nCultural\nEducational\nFamily\nLuxury\nBudget\nRomantic\nBusiness\nMedical Tourism\nReligious\nSports\nWildlife\nBeach\nMountain\nUrban\nRural",
+   "reqd": 1
+  },
+  {
+   "default": "Standard",
+   "fieldname": "package_category",
+   "fieldtype": "Select",
+   "label": "Package Category",
+   "options": "Standard\nPremium\nLuxury\nBudget\nCustom"
+  },
+  {
+   "default": "Active",
+   "fieldname": "package_status",
+   "fieldtype": "Select",
+   "label": "Package Status",
+   "options": "Active\nInactive\nSeasonal\nDiscontinued\nUpcoming",
+   "reqd": 1
+  },
+  {
+   "fieldname": "itinerary_section",
+   "fieldtype": "Section Break",
+   "label": "Itinerary & Attractions"
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "label": "Duration (Days)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_nights",
+   "fieldtype": "Int",
+   "label": "Duration (Nights)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "detailed_itinerary",
+   "fieldtype": "Text Editor",
+   "label": "Detailed Itinerary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "major_attractions",
+   "fieldtype": "Text Editor",
+   "label": "Major Attractions",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cultural_experiences",
+   "fieldtype": "Text Editor",
+   "label": "Cultural Experiences"
+  },
+  {
+   "fieldname": "special_activities",
+   "fieldtype": "Text Editor",
+   "label": "Special Activities"
+  },
+  {
+   "fieldname": "accommodation_section",
+   "fieldtype": "Section Break",
+   "label": "Accommodation & Transportation"
+  },
+  {
+   "fieldname": "accommodation_type",
+   "fieldtype": "Select",
+   "label": "Accommodation Type",
+   "options": "Hotel\nResort\nHostel\nGuesthouse\nApartment\nVilla\nCamping\nMixed\nCustomizable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accommodation_rating",
+   "fieldtype": "Select",
+   "label": "Accommodation Rating",
+   "options": "1 Star\n2 Star\n3 Star\n4 Star\n5 Star\nBoutique\nLuxury\nBudget\nMixed"
+  },
+  {
+   "fieldname": "accommodation_details",
+   "fieldtype": "Text Editor",
+   "label": "Accommodation Details"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transportation_mode",
+   "fieldtype": "Select",
+   "label": "Transportation Mode",
+   "options": "Air\nRoad\nRail\nSea\nMixed\nCustomizable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transportation_class",
+   "fieldtype": "Select",
+   "label": "Transportation Class",
+   "options": "Economy\nBusiness\nFirst Class\nMixed\nCustomizable"
+  },
+  {
+   "fieldname": "transportation_details",
+   "fieldtype": "Text Editor",
+   "label": "Transportation Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "local_transport_included",
+   "fieldtype": "Check",
+   "label": "Local Transport Included"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing & Availability"
+  },
+  {
+   "fieldname": "base_price_per_person",
+   "fieldtype": "Currency",
+   "label": "Base Price Per Person",
+   "reqd": 1
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_includes",
+   "fieldtype": "Text Editor",
+   "label": "Price Includes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_excludes",
+   "fieldtype": "Text Editor",
+   "label": "Price Excludes"
+  },
+  {
+   "default": "0",
+   "fieldname": "seasonal_pricing",
+   "fieldtype": "Check",
+   "label": "Seasonal Pricing Available"
+  },
+  {
+   "fieldname": "peak_season_surcharge",
+   "fieldtype": "Percent",
+   "label": "Peak Season Surcharge (%)"
+  },
+  {
+   "fieldname": "group_section",
+   "fieldtype": "Section Break",
+   "label": "Group Size & Customization"
+  },
+  {
+   "default": "1",
+   "fieldname": "minimum_group_size",
+   "fieldtype": "Int",
+   "label": "Minimum Group Size"
+  },
+  {
+   "fieldname": "maximum_group_size",
+   "fieldtype": "Int",
+   "label": "Maximum Group Size"
+  },
+  {
+   "default": "0",
+   "fieldname": "private_tour_available",
+   "fieldtype": "Check",
+   "label": "Private Tour Available"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customization_options",
+   "fieldtype": "Text Editor",
+   "label": "Customization Options"
+  },
+  {
+   "default": "0",
+   "fieldname": "group_discount_available",
+   "fieldtype": "Check",
+   "label": "Group Discount Available"
+  },
+  {
+   "fieldname": "group_discount_threshold",
+   "fieldtype": "Int",
+   "label": "Group Discount Threshold"
+  },
+  {
+   "fieldname": "guides_section",
+   "fieldtype": "Section Break",
+   "label": "Guides & Local Support"
+  },
+  {
+   "default": "1",
+   "fieldname": "tour_guide_included",
+   "fieldtype": "Check",
+   "label": "Tour Guide Included"
+  },
+  {
+   "fieldname": "guide_language",
+   "fieldtype": "Data",
+   "label": "Guide Language"
+  },
+  {
+   "fieldname": "local_guide_details",
+   "fieldtype": "Text Editor",
+   "label": "Local Guide Details"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "local_support_contact",
+   "fieldtype": "Data",
+   "label": "Local Support Contact"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "default": "0",
+   "fieldname": "local_customs_briefing",
+   "fieldtype": "Check",
+   "label": "Local Customs Briefing Included"
+  },
+  {
+   "fieldname": "safety_section",
+   "fieldtype": "Section Break",
+   "label": "Safety & Insurance"
+  },
+  {
+   "fieldname": "safety_measures",
+   "fieldtype": "Text Editor",
+   "label": "Safety Measures",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_insurance_included",
+   "fieldtype": "Check",
+   "label": "Travel Insurance Included"
+  },
+  {
+   "fieldname": "insurance_coverage",
+   "fieldtype": "Text Editor",
+   "label": "Insurance Coverage Details"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "health_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Health Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "vaccination_required",
+   "fieldtype": "Check",
+   "label": "Vaccination Required"
+  },
+  {
+   "fieldname": "medical_facilities_access",
+   "fieldtype": "Text Editor",
+   "label": "Medical Facilities Access"
+  },
+  {
+   "fieldname": "visa_section",
+   "fieldtype": "Section Break",
+   "label": "Visa & Documentation"
+  },
+  {
+   "default": "1",
+   "fieldname": "visa_assistance_provided",
+   "fieldtype": "Check",
+   "label": "Visa Assistance Provided"
+  },
+  {
+   "fieldname": "visa_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Visa Requirements",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visa_processing_time",
+   "fieldtype": "Int",
+   "label": "Visa Processing Time (Days)"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Text Editor",
+   "label": "Required Documents",
+   "reqd": 1
+  },
+  {
+   "default": "6",
+   "fieldname": "passport_validity_required",
+   "fieldtype": "Int",
+   "label": "Passport Validity Required (Months)"
+  },
+  {
+   "default": "0",
+   "fieldname": "visa_fee_included",
+   "fieldtype": "Check",
+   "label": "Visa Fee Included in Price"
+  },
+  {
+   "fieldname": "seasonal_section",
+   "fieldtype": "Section Break",
+   "label": "Seasonal Availability"
+  },
+  {
+   "default": "0",
+   "fieldname": "available_year_round",
+   "fieldtype": "Check",
+   "label": "Available Year Round"
+  },
+  {
+   "fieldname": "best_travel_months",
+   "fieldtype": "Data",
+   "label": "Best Travel Months"
+  },
+  {
+   "fieldname": "peak_season_months",
+   "fieldtype": "Data",
+   "label": "Peak Season Months"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weather_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Weather Conditions"
+  },
+  {
+   "fieldname": "seasonal_highlights",
+   "fieldtype": "Text Editor",
+   "label": "Seasonal Highlights"
+  },
+  {
+   "fieldname": "blackout_dates",
+   "fieldtype": "Data",
+   "label": "Blackout Dates"
+  },
+  {
+   "fieldname": "booking_section",
+   "fieldtype": "Section Break",
+   "label": "Booking & Cancellation"
+  },
+  {
+   "default": "30",
+   "fieldname": "advance_booking_required",
+   "fieldtype": "Int",
+   "label": "Advance Booking Required (Days)"
+  },
+  {
+   "default": "20",
+   "fieldname": "deposit_required",
+   "fieldtype": "Percent",
+   "label": "Deposit Required (%)"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Text Editor",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cancellation_policy",
+   "fieldtype": "Text Editor",
+   "label": "Cancellation Policy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "refund_policy",
+   "fieldtype": "Text Editor",
+   "label": "Refund Policy"
+  },
+  {
+   "fieldname": "force_majeure_policy",
+   "fieldtype": "Text Editor",
+   "label": "Force Majeure Policy"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact & Support"
+  },
+  {
+   "fieldname": "tour_operator",
+   "fieldtype": "Link",
+   "label": "Tour Operator",
+   "options": "Company"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "customer_support_hours",
+   "fieldtype": "Data",
+   "label": "Customer Support Hours"
+  },
+  {
+   "fieldname": "website_url",
+   "fieldtype": "Data",
+   "label": "Website URL"
+  },
+  {
+   "fieldname": "additional_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "age_restrictions",
+   "fieldtype": "Text Editor",
+   "label": "Age Restrictions"
+  },
+  {
+   "fieldname": "fitness_level_required",
+   "fieldtype": "Select",
+   "label": "Fitness Level Required",
+   "options": "Easy\nModerate\nChallenging\nStrenuous\nAny"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviews_rating",
+   "fieldtype": "Float",
+   "label": "Average Reviews Rating",
+   "precision": "1"
+  },
+  {
+   "fieldname": "total_reviews",
+   "fieldtype": "Int",
+   "label": "Total Reviews"
+  },
+  {
+   "default": "Today",
+   "fieldname": "last_updated",
+   "fieldtype": "Date",
+   "label": "Last Updated"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "default": "0",
+   "fieldname": "featured_package",
+   "fieldtype": "Check",
+   "label": "Featured Package"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 10:01:04.670439",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Tour Package",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "package_title",
+ "track_changes": 1
+}

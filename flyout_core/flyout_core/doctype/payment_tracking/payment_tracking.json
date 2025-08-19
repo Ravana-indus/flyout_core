@@ -1,0 +1,404 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:payment_id",
+ "creation": "2025-08-03 14:03:55.277416",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_id",
+  "naming_series",
+  "payment_date",
+  "payment_amount",
+  "currency",
+  "payment_method",
+  "payment_status",
+  "client",
+  "invoice_reference",
+  "program_fee_reference",
+  "payment_channel",
+  "transaction_id",
+  "payment_gateway",
+  "payment_description",
+  "payment_category",
+  "service_type",
+  "provider",
+  "due_date",
+  "overdue_days",
+  "late_fee_applicable",
+  "late_fee_amount",
+  "total_amount_with_fees",
+  "reconciliation_status",
+  "reconciled_date",
+  "reconciled_by",
+  "bank_reference",
+  "refund_status",
+  "refund_request_date",
+  "refund_processed_date",
+  "refund_amount",
+  "refund_reason",
+  "refund_transaction_id",
+  "payment_source",
+  "payment_priority",
+  "payment_notes",
+  "payment_tags",
+  "payment_owner",
+  "section_break_payment_details",
+  "payment_details_column_break",
+  "section_break_reconciliation",
+  "reconciliation_column_break",
+  "section_break_refund",
+  "refund_column_break",
+  "section_break_analytics",
+  "payment_forecast_category",
+  "forecast_confidence_score",
+  "expected_payment_date",
+  "payment_risk_score",
+  "analytics_column_break",
+  "section_break_audit",
+  "created_via",
+  "last_synced",
+  "audit_column_break",
+  "compliance_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "PAY-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PAY-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "options": "Bank Transfer\nCredit Card\nDebit Card\nPayPal\nStripe\nCash\nCheque\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "Pending\nProcessing\nCompleted\nFailed\nRefunded\nPartially Refunded\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Student Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_reference",
+   "fieldtype": "Link",
+   "label": "Invoice Reference",
+   "options": "Invoice Management"
+  },
+  {
+   "fieldname": "program_fee_reference",
+   "fieldtype": "Link",
+   "label": "Program Fee Reference",
+   "options": "Program Fee"
+  },
+  {
+   "fieldname": "payment_channel",
+   "fieldtype": "Select",
+   "label": "Payment Channel",
+   "options": "Online Portal\nBank Transfer\nPayment Gateway\nIn Person\nMobile App\nOther"
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID"
+  },
+  {
+   "fieldname": "payment_gateway",
+   "fieldtype": "Select",
+   "label": "Payment Gateway",
+   "options": "PayPal\nStripe\nRazorpay\nSquare\nOther"
+  },
+  {
+   "fieldname": "payment_description",
+   "fieldtype": "Text",
+   "label": "Payment Description"
+  },
+  {
+   "fieldname": "payment_category",
+   "fieldtype": "Select",
+   "label": "Payment Category",
+   "options": "Service Fee\nApplication Fee\nTuition Fee\nConsultation Fee\nOther"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "Study Abroad\nWork Visa\nTourism\nConsultation\nOther"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Provider",
+   "options": "Provider Registry"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "overdue_days",
+   "fieldtype": "Int",
+   "label": "Overdue Days"
+  },
+  {
+   "default": "0",
+   "fieldname": "late_fee_applicable",
+   "fieldtype": "Check",
+   "label": "Late Fee Applicable"
+  },
+  {
+   "fieldname": "late_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Late Fee Amount"
+  },
+  {
+   "fieldname": "total_amount_with_fees",
+   "fieldtype": "Currency",
+   "label": "Total Amount with Fees"
+  },
+  {
+   "fieldname": "reconciliation_status",
+   "fieldtype": "Select",
+   "label": "Reconciliation Status",
+   "options": "Not Reconciled\nReconciled\nPartially Reconciled\nPending Review"
+  },
+  {
+   "fieldname": "reconciled_date",
+   "fieldtype": "Date",
+   "label": "Reconciled Date"
+  },
+  {
+   "fieldname": "reconciled_by",
+   "fieldtype": "Link",
+   "label": "Reconciled By",
+   "options": "User"
+  },
+  {
+   "fieldname": "bank_reference",
+   "fieldtype": "Data",
+   "label": "Bank Reference"
+  },
+  {
+   "fieldname": "refund_status",
+   "fieldtype": "Select",
+   "label": "Refund Status",
+   "options": "Not Requested\nRequested\nProcessing\nCompleted\nRejected"
+  },
+  {
+   "fieldname": "refund_request_date",
+   "fieldtype": "Date",
+   "label": "Refund Request Date"
+  },
+  {
+   "fieldname": "refund_processed_date",
+   "fieldtype": "Date",
+   "label": "Refund Processed Date"
+  },
+  {
+   "fieldname": "refund_amount",
+   "fieldtype": "Currency",
+   "label": "Refund Amount"
+  },
+  {
+   "fieldname": "refund_reason",
+   "fieldtype": "Text",
+   "label": "Refund Reason"
+  },
+  {
+   "fieldname": "refund_transaction_id",
+   "fieldtype": "Data",
+   "label": "Refund Transaction ID"
+  },
+  {
+   "fieldname": "payment_source",
+   "fieldtype": "Select",
+   "label": "Payment Source",
+   "options": "Direct Payment\nInstallment Plan\nScholarship\nSponsorship\nOther"
+  },
+  {
+   "fieldname": "payment_priority",
+   "fieldtype": "Select",
+   "label": "Payment Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "payment_notes",
+   "fieldtype": "Text Editor",
+   "label": "Payment Notes"
+  },
+  {
+   "fieldname": "payment_tags",
+   "fieldtype": "Data",
+   "label": "Payment Tags"
+  },
+  {
+   "fieldname": "payment_owner",
+   "fieldtype": "Link",
+   "label": "Payment Owner",
+   "options": "User"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_payment_details",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "payment_details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_reconciliation",
+   "fieldtype": "Section Break",
+   "label": "Reconciliation"
+  },
+  {
+   "fieldname": "reconciliation_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_refund",
+   "fieldtype": "Section Break",
+   "label": "Refund Information"
+  },
+  {
+   "fieldname": "refund_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_analytics",
+   "fieldtype": "Section Break",
+   "label": "Analytics & Forecasting"
+  },
+  {
+   "fieldname": "payment_forecast_category",
+   "fieldtype": "Select",
+   "label": "Payment Forecast Category",
+   "options": "Expected\nUncertain\nAt Risk\nConfirmed"
+  },
+  {
+   "fieldname": "forecast_confidence_score",
+   "fieldtype": "Float",
+   "label": "Forecast Confidence Score",
+   "precision": "2"
+  },
+  {
+   "fieldname": "expected_payment_date",
+   "fieldtype": "Date",
+   "label": "Expected Payment Date"
+  },
+  {
+   "fieldname": "payment_risk_score",
+   "fieldtype": "Float",
+   "label": "Payment Risk Score",
+   "precision": "2"
+  },
+  {
+   "fieldname": "analytics_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_audit",
+   "fieldtype": "Section Break",
+   "label": "Audit Trail"
+  },
+  {
+   "fieldname": "created_via",
+   "fieldtype": "Select",
+   "label": "Created Via",
+   "options": "Manual Entry\nAPI\nImport\nPayment Gateway\nOther"
+  },
+  {
+   "fieldname": "last_synced",
+   "fieldtype": "Datetime",
+   "label": "Last Synced"
+  },
+  {
+   "fieldname": "audit_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "Compliant\nNon-Compliant\nUnder Review\nNot Applicable"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:59:13.072907",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Payment Tracking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "payment_id",
+ "track_changes": 1
+}

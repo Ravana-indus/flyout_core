@@ -1,0 +1,370 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:message_id",
+ "creation": "2025-08-03 22:10:25.772341",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "message_id",
+  "chat_session",
+  "sender",
+  "recipient",
+  "message_type",
+  "message_content",
+  "file_attachment",
+  "file_size",
+  "file_type",
+  "language",
+  "translated_content",
+  "translation_service",
+  "scheduled_time",
+  "delivery_status",
+  "read_receipt",
+  "read_by",
+  "encryption_status",
+  "encryption_key",
+  "external_platform",
+  "external_message_id",
+  "priority",
+  "message_category",
+  "response_required",
+  "response_deadline",
+  "auto_reply",
+  "auto_reply_content",
+  "message_thread",
+  "reply_count",
+  "view_count",
+  "engagement_score",
+  "sentiment_score",
+  "keywords",
+  "tags",
+  "workflow_status",
+  "created_at",
+  "updated_at",
+  "expires_at",
+  "is_archived",
+  "is_deleted",
+  "is_pinned",
+  "is_forwarded",
+  "forwarded_from",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "message_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Message ID",
+   "length": 50,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "chat_session",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Chat Session",
+   "length": 100,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sender",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sender",
+   "length": 100,
+   "reqd": 1
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient",
+   "length": 100,
+   "reqd": 1
+  },
+  {
+   "default": "Text",
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "label": "Message Type",
+   "options": "Text\nFile\nVoice\nVideo\nImage\nSystem",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_content",
+   "fieldtype": "Text Editor",
+   "label": "Message Content",
+   "reqd": 1
+  },
+  {
+   "description": "For file, image, voice, and video messages",
+   "fieldname": "file_attachment",
+   "fieldtype": "Attach",
+   "label": "File Attachment"
+  },
+  {
+   "description": "Size in bytes",
+   "fieldname": "file_size",
+   "fieldtype": "Int",
+   "label": "File Size"
+  },
+  {
+   "fieldname": "file_type",
+   "fieldtype": "Data",
+   "label": "File Type",
+   "length": 50
+  },
+  {
+   "default": "English",
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nSpanish\nFrench\nGerman\nChinese\nJapanese\nArabic\nHindi\nPortuguese\nRussian"
+  },
+  {
+   "description": "Auto-translated message content",
+   "fieldname": "translated_content",
+   "fieldtype": "Text Editor",
+   "label": "Translated Content"
+  },
+  {
+   "default": "Google Translate",
+   "fieldname": "translation_service",
+   "fieldtype": "Select",
+   "label": "Translation Service",
+   "options": "Google Translate\nMicrosoft Translator\nDeepL\nCustom"
+  },
+  {
+   "description": "For scheduled messages",
+   "fieldname": "scheduled_time",
+   "fieldtype": "Datetime",
+   "label": "Scheduled Time"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "delivery_status",
+   "fieldtype": "Select",
+   "label": "Delivery Status",
+   "options": "Pending\nDelivered\nRead\nFailed"
+  },
+  {
+   "description": "When message was read by recipient",
+   "fieldname": "read_receipt",
+   "fieldtype": "Datetime",
+   "label": "Read Receipt"
+  },
+  {
+   "description": "User who read the message",
+   "fieldname": "read_by",
+   "fieldtype": "Data",
+   "label": "Read By",
+   "length": 100
+  },
+  {
+   "default": "Unencrypted",
+   "fieldname": "encryption_status",
+   "fieldtype": "Select",
+   "label": "Encryption Status",
+   "options": "Unencrypted\nEncrypted\nDecrypted"
+  },
+  {
+   "description": "For end-to-end encryption",
+   "fieldname": "encryption_key",
+   "fieldtype": "Data",
+   "label": "Encryption Key",
+   "length": 100
+  },
+  {
+   "description": "For external messaging platform integration",
+   "fieldname": "external_platform",
+   "fieldtype": "Select",
+   "label": "External Platform",
+   "options": "WhatsApp\nTelegram\nFacebook Messenger\nSMS\nEmail\nSlack\nMicrosoft Teams\nCustom"
+  },
+  {
+   "description": "Message ID from external platform",
+   "fieldname": "external_message_id",
+   "fieldtype": "Data",
+   "label": "External Message ID",
+   "length": 100
+  },
+  {
+   "default": "Normal",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nNormal\nHigh\nUrgent"
+  },
+  {
+   "default": "General",
+   "fieldname": "message_category",
+   "fieldtype": "Select",
+   "label": "Message Category",
+   "options": "General\nInquiry\nApplication\nPayment\nSupport\nMarketing\nSystem"
+  },
+  {
+   "default": "No",
+   "fieldname": "response_required",
+   "fieldtype": "Select",
+   "label": "Response Required",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "response_deadline",
+   "fieldtype": "Datetime",
+   "label": "Response Deadline"
+  },
+  {
+   "default": "No",
+   "fieldname": "auto_reply",
+   "fieldtype": "Select",
+   "label": "Auto Reply",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "auto_reply_content",
+   "fieldtype": "Text Editor",
+   "label": "Auto Reply Content"
+  },
+  {
+   "description": "Parent message for threaded conversations",
+   "fieldname": "message_thread",
+   "fieldtype": "Data",
+   "label": "Message Thread",
+   "length": 100
+  },
+  {
+   "default": "0",
+   "fieldname": "reply_count",
+   "fieldtype": "Int",
+   "label": "Reply Count"
+  },
+  {
+   "default": "0",
+   "fieldname": "view_count",
+   "fieldtype": "Int",
+   "label": "View Count"
+  },
+  {
+   "description": "Calculated engagement metric",
+   "fieldname": "engagement_score",
+   "fieldtype": "Float",
+   "label": "Engagement Score",
+   "precision": "2"
+  },
+  {
+   "description": "Positive/Negative sentiment analysis",
+   "fieldname": "sentiment_score",
+   "fieldtype": "Float",
+   "label": "Sentiment Score",
+   "precision": "2"
+  },
+  {
+   "description": "Extracted keywords from message",
+   "fieldname": "keywords",
+   "fieldtype": "Text",
+   "label": "Keywords"
+  },
+  {
+   "description": "Comma-separated tags",
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "workflow_status",
+   "fieldtype": "Select",
+   "label": "Workflow Status",
+   "options": "Draft\nSent\nAcknowledged\nCompleted\nCancelled"
+  },
+  {
+   "default": "Now",
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At"
+  },
+  {
+   "default": "Now",
+   "fieldname": "updated_at",
+   "fieldtype": "Datetime",
+   "label": "Updated At"
+  },
+  {
+   "description": "Message expiration time",
+   "fieldname": "expires_at",
+   "fieldtype": "Datetime",
+   "label": "Expires At"
+  },
+  {
+   "default": "No",
+   "fieldname": "is_archived",
+   "fieldtype": "Select",
+   "label": "Is Archived",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "No",
+   "fieldname": "is_deleted",
+   "fieldtype": "Select",
+   "label": "Is Deleted",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "No",
+   "fieldname": "is_pinned",
+   "fieldtype": "Select",
+   "label": "Is Pinned",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "No",
+   "fieldname": "is_forwarded",
+   "fieldtype": "Select",
+   "label": "Is Forwarded",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "forwarded_from",
+   "fieldtype": "Data",
+   "label": "Forwarded From",
+   "length": 100
+  },
+  {
+   "description": "Internal notes about the message",
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:55:38.323230",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Enhanced Chat Message",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "message_content",
+ "track_changes": 1
+}

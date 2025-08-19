@@ -1,0 +1,308 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:field_name",
+ "creation": "2025-08-02 15:04:48.931061",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "field_name",
+  "field_code",
+  "description",
+  "section_break_1",
+  "industry_alignment",
+  "career_prospects",
+  "average_starting_salary",
+  "average_experienced_salary",
+  "column_break_1",
+  "job_growth_rate",
+  "market_demand",
+  "employment_rate",
+  "section_break_2",
+  "core_skills_required",
+  "technical_skills",
+  "soft_skills",
+  "column_break_2",
+  "certifications_recommended",
+  "professional_associations",
+  "continuing_education_requirements",
+  "section_break_3",
+  "minimum_education_level",
+  "typical_degree_duration_years",
+  "prerequisite_subjects",
+  "column_break_3",
+  "accreditation_bodies",
+  "licensing_requirements",
+  "specialization_options",
+  "section_break_4",
+  "related_fields",
+  "career_transition_paths",
+  "interdisciplinary_opportunities",
+  "column_break_4",
+  "entrepreneurship_potential",
+  "remote_work_compatibility",
+  "section_break_5",
+  "is_active",
+  "is_stem_field",
+  "data_last_updated",
+  "column_break_5",
+  "data_sources",
+  "internal_notes",
+  "priority_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Field of Study Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "field_code",
+   "fieldtype": "Data",
+   "label": "Field Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Career Intelligence"
+  },
+  {
+   "fieldname": "industry_alignment",
+   "fieldtype": "Text Editor",
+   "label": "Industry Alignment"
+  },
+  {
+   "fieldname": "career_prospects",
+   "fieldtype": "Text Editor",
+   "label": "Career Prospects"
+  },
+  {
+   "fieldname": "average_starting_salary",
+   "fieldtype": "Currency",
+   "label": "Average Starting Salary (USD)"
+  },
+  {
+   "fieldname": "average_experienced_salary",
+   "fieldtype": "Currency",
+   "label": "Average Experienced Salary (USD)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_growth_rate",
+   "fieldtype": "Float",
+   "label": "Job Growth Rate (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "market_demand",
+   "fieldtype": "Select",
+   "label": "Market Demand",
+   "options": "Very High\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "employment_rate",
+   "fieldtype": "Float",
+   "label": "Employment Rate (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Skills & Competency Mapping"
+  },
+  {
+   "fieldname": "core_skills_required",
+   "fieldtype": "Text",
+   "label": "Core Skills Required"
+  },
+  {
+   "fieldname": "technical_skills",
+   "fieldtype": "Text",
+   "label": "Technical Skills"
+  },
+  {
+   "fieldname": "soft_skills",
+   "fieldtype": "Text",
+   "label": "Soft Skills"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certifications_recommended",
+   "fieldtype": "Text",
+   "label": "Recommended Certifications"
+  },
+  {
+   "fieldname": "professional_associations",
+   "fieldtype": "Text",
+   "label": "Professional Associations"
+  },
+  {
+   "fieldname": "continuing_education_requirements",
+   "fieldtype": "Text",
+   "label": "Continuing Education Requirements"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Academic Requirements"
+  },
+  {
+   "fieldname": "minimum_education_level",
+   "fieldtype": "Select",
+   "label": "Minimum Education Level",
+   "options": "High School\nAssociate Degree\nBachelor's Degree\nMaster's Degree\nDoctoral Degree\nProfessional Certification"
+  },
+  {
+   "fieldname": "typical_degree_duration_years",
+   "fieldtype": "Float",
+   "label": "Typical Degree Duration (Years)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "prerequisite_subjects",
+   "fieldtype": "Text",
+   "label": "Prerequisite Subjects"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accreditation_bodies",
+   "fieldtype": "Text",
+   "label": "Accreditation Bodies"
+  },
+  {
+   "fieldname": "licensing_requirements",
+   "fieldtype": "Text",
+   "label": "Licensing Requirements"
+  },
+  {
+   "fieldname": "specialization_options",
+   "fieldtype": "Text",
+   "label": "Specialization Options"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Related Fields & Pathways"
+  },
+  {
+   "fieldname": "related_fields",
+   "fieldtype": "Text",
+   "label": "Related Fields of Study"
+  },
+  {
+   "fieldname": "career_transition_paths",
+   "fieldtype": "Text",
+   "label": "Career Transition Paths"
+  },
+  {
+   "fieldname": "interdisciplinary_opportunities",
+   "fieldtype": "Text",
+   "label": "Interdisciplinary Opportunities"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entrepreneurship_potential",
+   "fieldtype": "Select",
+   "label": "Entrepreneurship Potential",
+   "options": "Very High\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "remote_work_compatibility",
+   "fieldtype": "Select",
+   "label": "Remote Work Compatibility",
+   "options": "Fully Remote\nHybrid Possible\nMinimal Remote\nOn-site Required"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_stem_field",
+   "fieldtype": "Check",
+   "label": "STEM Field"
+  },
+  {
+   "fieldname": "data_last_updated",
+   "fieldtype": "Date",
+   "label": "Data Last Updated"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_sources",
+   "fieldtype": "Small Text",
+   "label": "Data Sources"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "High\nMedium\nLow"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:57:45.640010",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Field of Study",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "field_name",
+ "track_changes": 1
+}

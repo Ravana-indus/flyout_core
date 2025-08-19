@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:report_id",
+ "creation": "2025-08-03 18:04:46.398500",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "report_id",
+  "report_type",
+  "report_date",
+  "start_date",
+  "end_date",
+  "total_revenue",
+  "total_expenses",
+  "net_profit",
+  "cash_flow_forecast",
+  "tax_liability",
+  "budget_variance",
+  "client_profitability",
+  "commission_total",
+  "report_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "report_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Report ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "report_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Report Type",
+   "options": "Profit and Loss\nCash Flow\nRevenue Recognition\nTax Report\nBudget Analysis\nClient Profitability\nCommission Report",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Report Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Revenue"
+  },
+  {
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses"
+  },
+  {
+   "fieldname": "net_profit",
+   "fieldtype": "Currency",
+   "label": "Net Profit"
+  },
+  {
+   "fieldname": "cash_flow_forecast",
+   "fieldtype": "Currency",
+   "label": "Cash Flow Forecast"
+  },
+  {
+   "fieldname": "tax_liability",
+   "fieldtype": "Currency",
+   "label": "Tax Liability"
+  },
+  {
+   "fieldname": "budget_variance",
+   "fieldtype": "Currency",
+   "label": "Budget Variance"
+  },
+  {
+   "fieldname": "client_profitability",
+   "fieldtype": "Currency",
+   "label": "Client Profitability"
+  },
+  {
+   "fieldname": "commission_total",
+   "fieldtype": "Currency",
+   "label": "Commission Total"
+  },
+  {
+   "fieldname": "report_notes",
+   "fieldtype": "Text Editor",
+   "label": "Report Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:58:47.047601",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Financial Reporting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "report_id",
+ "track_changes": 1
+}

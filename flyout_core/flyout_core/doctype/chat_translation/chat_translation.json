@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:translation_id",
+ "creation": "2025-08-04 14:51:52.693434",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "translation_id",
+  "message_id",
+  "source_language",
+  "target_language",
+  "original_content",
+  "translated_content",
+  "translation_service",
+  "confidence_score",
+  "translation_cost",
+  "translation_time",
+  "is_approved",
+  "approved_by",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "translation_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Translation ID",
+   "length": 50,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "message_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Message ID",
+   "options": "Enhanced Chat Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_language",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Source Language",
+   "options": "English\nSpanish\nFrench\nGerman\nChinese\nJapanese\nArabic\nHindi\nPortuguese\nRussian",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_language",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Target Language",
+   "options": "English\nSpanish\nFrench\nGerman\nChinese\nJapanese\nArabic\nHindi\nPortuguese\nRussian",
+   "reqd": 1
+  },
+  {
+   "fieldname": "original_content",
+   "fieldtype": "Text Editor",
+   "label": "Original Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "translated_content",
+   "fieldtype": "Text Editor",
+   "label": "Translated Content",
+   "reqd": 1
+  },
+  {
+   "default": "Google Translate",
+   "fieldname": "translation_service",
+   "fieldtype": "Select",
+   "label": "Translation Service",
+   "options": "Google Translate\nMicrosoft Translator\nDeepL\nCustom"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "confidence_score",
+   "fieldtype": "Float",
+   "label": "Confidence Score",
+   "precision": "2"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "translation_cost",
+   "fieldtype": "Currency",
+   "label": "Translation Cost"
+  },
+  {
+   "description": "Time taken in seconds",
+   "fieldname": "translation_time",
+   "fieldtype": "Int",
+   "label": "Translation Time"
+  },
+  {
+   "default": "No",
+   "fieldname": "is_approved",
+   "fieldtype": "Select",
+   "label": "Is Approved",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:55:27.261349",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Chat Translation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "original_content",
+ "track_changes": 1
+}

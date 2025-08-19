@@ -1,0 +1,465 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:18:24.957823",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "intake_name",
+  "program",
+  "intake_year",
+  "column_break_1",
+  "intake_cycle",
+  "intake_term",
+  "intake_status",
+  "section_break_1",
+  "total_seats",
+  "available_seats",
+  "confirmed_seats",
+  "column_break_2",
+  "waitlist_capacity",
+  "waitlist_count",
+  "overbook_percentage",
+  "section_break_2",
+  "application_open_date",
+  "early_admission_deadline",
+  "regular_admission_deadline",
+  "column_break_3",
+  "late_admission_deadline",
+  "final_deadline",
+  "decision_notification_date",
+  "section_break_3",
+  "program_start_date",
+  "orientation_date",
+  "registration_start_date",
+  "column_break_4",
+  "program_end_date",
+  "add_drop_deadline",
+  "tuition_payment_deadline",
+  "section_break_4",
+  "tuition_fee",
+  "application_fee",
+  "deposit_amount",
+  "column_break_5",
+  "currency",
+  "early_bird_discount",
+  "scholarship_availability",
+  "section_break_5",
+  "minimum_gpa",
+  "language_requirement",
+  "minimum_language_score",
+  "column_break_6",
+  "work_experience_required",
+  "portfolio_required",
+  "interview_required",
+  "section_break_6",
+  "special_notes",
+  "admission_coordinator",
+  "coordinator_email",
+  "column_break_7",
+  "is_international_intake",
+  "is_domestic_intake",
+  "priority_intake",
+  "section_break_7",
+  "created_by_user",
+  "last_updated_by",
+  "intake_url",
+  "column_break_8",
+  "application_count",
+  "acceptance_rate",
+  "yield_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "INTAKE-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intake_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Intake Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Program",
+   "options": "Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intake_year",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Intake Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intake_cycle",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Intake Cycle",
+   "options": "Fall\nWinter\nSpring\nSummer\nRolling",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intake_term",
+   "fieldtype": "Select",
+   "label": "Intake Term",
+   "options": "September\nJanuary\nMay\nJune\nAugust\nContinuous",
+   "reqd": 1
+  },
+  {
+   "fieldname": "intake_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Intake Status",
+   "options": "Active\nClosed\nSuspended\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Capacity Management"
+  },
+  {
+   "fieldname": "total_seats",
+   "fieldtype": "Int",
+   "label": "Total Seats",
+   "reqd": 1
+  },
+  {
+   "fieldname": "available_seats",
+   "fieldtype": "Int",
+   "label": "Available Seats",
+   "read_only": 1
+  },
+  {
+   "fieldname": "confirmed_seats",
+   "fieldtype": "Int",
+   "label": "Confirmed Seats",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waitlist_capacity",
+   "fieldtype": "Int",
+   "label": "Waitlist Capacity"
+  },
+  {
+   "fieldname": "waitlist_count",
+   "fieldtype": "Int",
+   "label": "Current Waitlist Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overbook_percentage",
+   "fieldtype": "Float",
+   "label": "Overbooking Percentage",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Application Timeline"
+  },
+  {
+   "fieldname": "application_open_date",
+   "fieldtype": "Date",
+   "label": "Application Open Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "early_admission_deadline",
+   "fieldtype": "Date",
+   "label": "Early Admission Deadline"
+  },
+  {
+   "fieldname": "regular_admission_deadline",
+   "fieldtype": "Date",
+   "label": "Regular Admission Deadline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_admission_deadline",
+   "fieldtype": "Date",
+   "label": "Late Admission Deadline"
+  },
+  {
+   "fieldname": "final_deadline",
+   "fieldtype": "Date",
+   "label": "Final Deadline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision_notification_date",
+   "fieldtype": "Date",
+   "label": "Decision Notification Date"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Program Start & Duration"
+  },
+  {
+   "fieldname": "program_start_date",
+   "fieldtype": "Date",
+   "label": "Program Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "orientation_date",
+   "fieldtype": "Date",
+   "label": "Orientation Date"
+  },
+  {
+   "fieldname": "registration_start_date",
+   "fieldtype": "Date",
+   "label": "Registration Start Date"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_end_date",
+   "fieldtype": "Date",
+   "label": "Program End Date"
+  },
+  {
+   "fieldname": "add_drop_deadline",
+   "fieldtype": "Date",
+   "label": "Add/Drop Deadline"
+  },
+  {
+   "fieldname": "tuition_payment_deadline",
+   "fieldtype": "Date",
+   "label": "Tuition Payment Deadline"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Financial Information"
+  },
+  {
+   "fieldname": "tuition_fee",
+   "fieldtype": "Currency",
+   "label": "Tuition Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_fee",
+   "fieldtype": "Currency",
+   "label": "Application Fee"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "early_bird_discount",
+   "fieldtype": "Float",
+   "label": "Early Bird Discount (%)",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "scholarship_availability",
+   "fieldtype": "Check",
+   "label": "Scholarship Availability"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Eligibility & Requirements"
+  },
+  {
+   "fieldname": "minimum_gpa",
+   "fieldtype": "Float",
+   "label": "Minimum GPA",
+   "precision": "2"
+  },
+  {
+   "fieldname": "language_requirement",
+   "fieldtype": "Select",
+   "label": "Language Requirement",
+   "options": "IELTS\nTOEFL\nPTE\nDuolingo\nNo Requirement"
+  },
+  {
+   "fieldname": "minimum_language_score",
+   "fieldtype": "Float",
+   "label": "Minimum Language Score",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_experience_required",
+   "fieldtype": "Int",
+   "label": "Work Experience Required (Years)"
+  },
+  {
+   "default": "0",
+   "fieldname": "portfolio_required",
+   "fieldtype": "Check",
+   "label": "Portfolio Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "interview_required",
+   "fieldtype": "Check",
+   "label": "Interview Required"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "special_notes",
+   "fieldtype": "Text Editor",
+   "label": "Special Notes"
+  },
+  {
+   "fieldname": "admission_coordinator",
+   "fieldtype": "Data",
+   "label": "Admission Coordinator"
+  },
+  {
+   "fieldname": "coordinator_email",
+   "fieldtype": "Data",
+   "label": "Coordinator Email"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_international_intake",
+   "fieldtype": "Check",
+   "label": "International Students Eligible"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_domestic_intake",
+   "fieldtype": "Check",
+   "label": "Domestic Students Eligible"
+  },
+  {
+   "default": "0",
+   "fieldname": "priority_intake",
+   "fieldtype": "Check",
+   "label": "Priority Intake"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_updated_by",
+   "fieldtype": "Link",
+   "label": "Last Updated By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "intake_url",
+   "fieldtype": "Data",
+   "label": "Intake URL"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "application_count",
+   "fieldtype": "Int",
+   "label": "Total Applications",
+   "read_only": 1
+  },
+  {
+   "fieldname": "acceptance_rate",
+   "fieldtype": "Float",
+   "label": "Acceptance Rate (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "yield_rate",
+   "fieldtype": "Float",
+   "label": "Yield Rate (%)",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:56:15.921530",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Program Intake",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "intake_name",
+ "track_changes": 1
+}

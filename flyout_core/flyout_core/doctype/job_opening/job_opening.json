@@ -1,0 +1,512 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:11:48.977700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "job_title",
+  "employer",
+  "job_id",
+  "column_break_1",
+  "employment_type",
+  "job_category",
+  "noc_code",
+  "salary_range_min",
+  "salary_range_max",
+  "section_break_1",
+  "job_description",
+  "key_responsibilities",
+  "required_qualifications",
+  "preferred_qualifications",
+  "column_break_2",
+  "work_location",
+  "work_arrangement",
+  "travel_required",
+  "physical_demands",
+  "working_hours",
+  "section_break_2",
+  "visa_sponsorship_available",
+  "lmia_required",
+  "lmia_exemption_category",
+  "eligible_visa_types",
+  "column_break_3",
+  "work_permit_duration",
+  "pathway_to_pr",
+  "immigration_requirements",
+  "language_requirements",
+  "section_break_3",
+  "minimum_experience_years",
+  "education_level",
+  "field_of_study",
+  "certifications_required",
+  "column_break_4",
+  "technical_skills",
+  "soft_skills",
+  "language_skills",
+  "equipment_experience",
+  "section_break_4",
+  "currency",
+  "salary_frequency",
+  "bonus_structure",
+  "benefits_package",
+  "column_break_5",
+  "health_insurance",
+  "dental_coverage",
+  "retirement_plan",
+  "paid_vacation_days",
+  "professional_development",
+  "section_break_5",
+  "application_deadline",
+  "start_date",
+  "application_method",
+  "contact_person",
+  "column_break_6",
+  "contact_email",
+  "contact_phone",
+  "application_instructions",
+  "required_documents",
+  "section_break_6",
+  "is_active",
+  "is_featured",
+  "priority_level",
+  "job_status",
+  "column_break_7",
+  "total_positions",
+  "filled_positions",
+  "applications_received",
+  "data_source",
+  "internal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "JOB-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employer",
+   "options": "Employer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_id",
+   "fieldtype": "Data",
+   "label": "Job ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Employment Type",
+   "options": "Full-time\nPart-time\nContract\nTemporary\nInternship\nCoop\nSeasonal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_category",
+   "fieldtype": "Select",
+   "label": "Job Category",
+   "options": "Skilled Worker\nManagement\nTechnical\nProfessional\nTradespeople\nLabour\nSales\nService\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "noc_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NOC Code"
+  },
+  {
+   "fieldname": "salary_range_min",
+   "fieldtype": "Currency",
+   "label": "Salary Range (Min)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_range_max",
+   "fieldtype": "Currency",
+   "label": "Salary Range (Max)"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Job Details"
+  },
+  {
+   "fieldname": "job_description",
+   "fieldtype": "Text Editor",
+   "label": "Job Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "key_responsibilities",
+   "fieldtype": "Text Editor",
+   "label": "Key Responsibilities"
+  },
+  {
+   "fieldname": "required_qualifications",
+   "fieldtype": "Text Editor",
+   "label": "Required Qualifications"
+  },
+  {
+   "fieldname": "preferred_qualifications",
+   "fieldtype": "Text Editor",
+   "label": "Preferred Qualifications"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_location",
+   "fieldtype": "Data",
+   "label": "Work Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_arrangement",
+   "fieldtype": "Select",
+   "label": "Work Arrangement",
+   "options": "On-site\nRemote\nHybrid"
+  },
+  {
+   "fieldname": "travel_required",
+   "fieldtype": "Float",
+   "label": "Travel Required (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "physical_demands",
+   "fieldtype": "Small Text",
+   "label": "Physical Demands"
+  },
+  {
+   "fieldname": "working_hours",
+   "fieldtype": "Data",
+   "label": "Working Hours"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Immigration & Visa Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "visa_sponsorship_available",
+   "fieldtype": "Check",
+   "label": "Visa Sponsorship Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "lmia_required",
+   "fieldtype": "Check",
+   "label": "LMIA Required"
+  },
+  {
+   "fieldname": "lmia_exemption_category",
+   "fieldtype": "Data",
+   "label": "LMIA Exemption Category"
+  },
+  {
+   "fieldname": "eligible_visa_types",
+   "fieldtype": "Text",
+   "label": "Eligible Visa Types"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_permit_duration",
+   "fieldtype": "Int",
+   "label": "Work Permit Duration (Months)"
+  },
+  {
+   "default": "0",
+   "fieldname": "pathway_to_pr",
+   "fieldtype": "Check",
+   "label": "Pathway to Permanent Residence"
+  },
+  {
+   "fieldname": "immigration_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Immigration Requirements"
+  },
+  {
+   "fieldname": "language_requirements",
+   "fieldtype": "Text",
+   "label": "Language Requirements"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Experience & Skills"
+  },
+  {
+   "fieldname": "minimum_experience_years",
+   "fieldtype": "Int",
+   "label": "Minimum Experience (Years)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Select",
+   "label": "Education Level",
+   "options": "High School\nTrade Certificate\nDiploma\nBachelor's Degree\nMaster's Degree\nDoctoral Degree\nProfessional Certification"
+  },
+  {
+   "fieldname": "field_of_study",
+   "fieldtype": "Link",
+   "label": "Field of Study",
+   "options": "Field of Study"
+  },
+  {
+   "fieldname": "certifications_required",
+   "fieldtype": "Text",
+   "label": "Certifications Required"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technical_skills",
+   "fieldtype": "Text Editor",
+   "label": "Technical Skills"
+  },
+  {
+   "fieldname": "soft_skills",
+   "fieldtype": "Text",
+   "label": "Soft Skills"
+  },
+  {
+   "fieldname": "language_skills",
+   "fieldtype": "Text",
+   "label": "Language Skills"
+  },
+  {
+   "fieldname": "equipment_experience",
+   "fieldtype": "Text",
+   "label": "Equipment/Software Experience"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Benefits & Compensation"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_frequency",
+   "fieldtype": "Select",
+   "label": "Salary Frequency",
+   "options": "Hourly\nDaily\nWeekly\nBi-weekly\nMonthly\nAnnually",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bonus_structure",
+   "fieldtype": "Text",
+   "label": "Bonus Structure"
+  },
+  {
+   "fieldname": "benefits_package",
+   "fieldtype": "Text Editor",
+   "label": "Benefits Package"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "health_insurance",
+   "fieldtype": "Check",
+   "label": "Health Insurance"
+  },
+  {
+   "default": "0",
+   "fieldname": "dental_coverage",
+   "fieldtype": "Check",
+   "label": "Dental Coverage"
+  },
+  {
+   "default": "0",
+   "fieldname": "retirement_plan",
+   "fieldtype": "Check",
+   "label": "Retirement Plan"
+  },
+  {
+   "fieldname": "paid_vacation_days",
+   "fieldtype": "Int",
+   "label": "Paid Vacation Days"
+  },
+  {
+   "fieldname": "professional_development",
+   "fieldtype": "Currency",
+   "label": "Professional Development Budget"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Application Process"
+  },
+  {
+   "fieldname": "application_deadline",
+   "fieldtype": "Date",
+   "label": "Application Deadline"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "application_method",
+   "fieldtype": "Select",
+   "label": "Application Method",
+   "options": "Online Application\nEmail\nIn Person\nPhone\nOther"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "application_instructions",
+   "fieldtype": "Text Editor",
+   "label": "Application Instructions"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Text",
+   "label": "Required Documents"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_featured",
+   "fieldtype": "Check",
+   "label": "Featured Job"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "job_status",
+   "fieldtype": "Select",
+   "label": "Job Status",
+   "options": "Open\nClosed\nOn Hold\nFilled"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "total_positions",
+   "fieldtype": "Int",
+   "label": "Total Positions"
+  },
+  {
+   "default": "0",
+   "fieldname": "filled_positions",
+   "fieldtype": "Int",
+   "label": "Filled Positions"
+  },
+  {
+   "default": "0",
+   "fieldname": "applications_received",
+   "fieldtype": "Int",
+   "label": "Applications Received"
+  },
+  {
+   "fieldname": "data_source",
+   "fieldtype": "Data",
+   "label": "Data Source"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:56:39.456819",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Job Opening",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "job_title",
+ "track_changes": 1
+}

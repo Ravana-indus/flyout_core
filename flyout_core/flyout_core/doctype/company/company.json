@@ -1,0 +1,309 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company_name",
+ "creation": "2025-08-02 15:07:08.785570",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_name",
+  "company_code",
+  "country",
+  "city",
+  "column_break_1",
+  "website",
+  "industry",
+  "company_type",
+  "logo",
+  "section_break_1",
+  "contact_person",
+  "email",
+  "phone",
+  "column_break_2",
+  "address",
+  "postal_code",
+  "tax_id",
+  "section_break_2",
+  "established_year",
+  "employee_count",
+  "annual_revenue",
+  "column_break_3",
+  "financial_rating",
+  "market_presence",
+  "reputation_score",
+  "section_break_3",
+  "visa_sponsorship_history",
+  "immigration_support_level",
+  "work_permit_success_rate",
+  "column_break_4",
+  "preferred_visa_types",
+  "immigration_timeline",
+  "relocation_package",
+  "section_break_4",
+  "status",
+  "is_immigration_provider",
+  "is_employer_partner",
+  "column_break_5",
+  "last_updated",
+  "data_source",
+  "verification_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "company_code",
+   "fieldtype": "Data",
+   "label": "Company Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Industry",
+   "options": "Education\nTechnology\nHealthcare\nFinance\nManufacturing\nConsulting\nRetail\nGovernment\nNon-Profit\nOther"
+  },
+  {
+   "fieldname": "company_type",
+   "fieldtype": "Select",
+   "label": "Company Type",
+   "options": "Public\nPrivate\nGovernment\nNon-Profit\nStartup\nEnterprise"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Primary Contact Person"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Business Intelligence"
+  },
+  {
+   "fieldname": "established_year",
+   "fieldtype": "Int",
+   "label": "Established Year"
+  },
+  {
+   "fieldname": "employee_count",
+   "fieldtype": "Select",
+   "label": "Employee Count",
+   "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue (USD)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "financial_rating",
+   "fieldtype": "Select",
+   "label": "Financial Rating",
+   "options": "A+\nA\nA-\nB+\nB\nB-\nC+\nC\nC-\nNot Rated"
+  },
+  {
+   "fieldname": "market_presence",
+   "fieldtype": "Select",
+   "label": "Market Presence",
+   "options": "Local\nRegional\nNational\nInternational\nGlobal"
+  },
+  {
+   "fieldname": "reputation_score",
+   "fieldtype": "Float",
+   "label": "Reputation Score (1-10)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Immigration Services"
+  },
+  {
+   "fieldname": "visa_sponsorship_history",
+   "fieldtype": "Text Editor",
+   "label": "Visa Sponsorship History"
+  },
+  {
+   "fieldname": "immigration_support_level",
+   "fieldtype": "Select",
+   "label": "Immigration Support Level",
+   "options": "Full Support\nPartial Support\nNo Support\nUnknown"
+  },
+  {
+   "fieldname": "work_permit_success_rate",
+   "fieldtype": "Float",
+   "label": "Work Permit Success Rate (%)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_visa_types",
+   "fieldtype": "Small Text",
+   "label": "Preferred Visa Types"
+  },
+  {
+   "fieldname": "immigration_timeline",
+   "fieldtype": "Float",
+   "label": "Average Immigration Timeline (months)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "relocation_package",
+   "fieldtype": "Select",
+   "label": "Relocation Package",
+   "options": "Comprehensive\nBasic\nNone\nUnknown"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nPending Verification\nSuspended"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_immigration_provider",
+   "fieldtype": "Check",
+   "label": "Is Immigration Provider"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_employer_partner",
+   "fieldtype": "Check",
+   "label": "Is Employer Partner"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_source",
+   "fieldtype": "Select",
+   "label": "Data Source",
+   "options": "Manual Entry\nAPI Import\nBulk Import\nPartner Integration"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Verified\nPending\nRequires Update\nUnverified"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:57:20.923060",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Company",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "company_name",
+ "track_changes": 1
+}

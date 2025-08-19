@@ -1,0 +1,477 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 15:10:12.048023",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "program_title",
+  "university",
+  "field_of_study",
+  "column_break_1",
+  "program_level",
+  "program_type",
+  "duration_months",
+  "program_code",
+  "section_break_1",
+  "credits_required",
+  "minimum_gpa",
+  "language_of_instruction",
+  "academic_calendar",
+  "column_break_2",
+  "specializations_available",
+  "prerequisite_programs",
+  "core_subjects",
+  "elective_options",
+  "section_break_2",
+  "entry_requirements",
+  "standardized_tests_required",
+  "english_proficiency_tests",
+  "portfolio_required",
+  "column_break_3",
+  "interview_required",
+  "work_experience_required",
+  "minimum_work_experience_months",
+  "application_fee",
+  "section_break_3",
+  "tuition_fee_annual",
+  "currency",
+  "additional_fees",
+  "books_supplies_cost",
+  "column_break_4",
+  "scholarship_available",
+  "financial_aid_available",
+  "average_debt_upon_graduation",
+  "payment_plans_available",
+  "section_break_4",
+  "career_prospects",
+  "employment_rate",
+  "average_starting_salary",
+  "top_employers",
+  "column_break_5",
+  "industry_connections",
+  "internship_opportunities",
+  "research_opportunities",
+  "study_abroad_options",
+  "section_break_5",
+  "application_deadline_fall",
+  "application_deadline_spring",
+  "application_deadline_summer",
+  "early_decision_deadline",
+  "column_break_6",
+  "notification_date",
+  "enrollment_deadline",
+  "waitlist_available",
+  "rolling_admissions",
+  "section_break_6",
+  "is_active",
+  "is_featured",
+  "priority_level",
+  "data_last_updated",
+  "column_break_7",
+  "data_sources",
+  "internal_notes",
+  "verification_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PROG-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Program Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "university",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "University",
+   "options": "University",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_of_study",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Field of Study",
+   "options": "Field of Study",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Program Level",
+   "options": "Certificate\nDiploma\nAssociate Degree\nBachelor's Degree\nMaster's Degree\nDoctoral Degree\nPostdoctoral\nProfessional Certificate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "label": "Program Type",
+   "options": "Full-time\nPart-time\nOnline\nHybrid\nEvening\nWeekend",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_months",
+   "fieldtype": "Int",
+   "label": "Duration (Months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_code",
+   "fieldtype": "Data",
+   "label": "Program Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Academic Details"
+  },
+  {
+   "fieldname": "credits_required",
+   "fieldtype": "Int",
+   "label": "Credits Required"
+  },
+  {
+   "fieldname": "minimum_gpa",
+   "fieldtype": "Float",
+   "label": "Minimum GPA Requirement",
+   "precision": "2"
+  },
+  {
+   "fieldname": "language_of_instruction",
+   "fieldtype": "Data",
+   "label": "Language of Instruction"
+  },
+  {
+   "fieldname": "academic_calendar",
+   "fieldtype": "Select",
+   "label": "Academic Calendar",
+   "options": "Semester\nTrimester\nQuarter\nYear-round"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "specializations_available",
+   "fieldtype": "Text",
+   "label": "Specializations Available"
+  },
+  {
+   "fieldname": "prerequisite_programs",
+   "fieldtype": "Text",
+   "label": "Prerequisite Programs"
+  },
+  {
+   "fieldname": "core_subjects",
+   "fieldtype": "Text",
+   "label": "Core Subjects"
+  },
+  {
+   "fieldname": "elective_options",
+   "fieldtype": "Text",
+   "label": "Elective Options"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Admission Requirements"
+  },
+  {
+   "fieldname": "entry_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Entry Requirements"
+  },
+  {
+   "fieldname": "standardized_tests_required",
+   "fieldtype": "Text",
+   "label": "Standardized Tests Required"
+  },
+  {
+   "fieldname": "english_proficiency_tests",
+   "fieldtype": "Text",
+   "label": "English Proficiency Tests"
+  },
+  {
+   "default": "0",
+   "fieldname": "portfolio_required",
+   "fieldtype": "Check",
+   "label": "Portfolio Required"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "interview_required",
+   "fieldtype": "Check",
+   "label": "Interview Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_experience_required",
+   "fieldtype": "Check",
+   "label": "Work Experience Required"
+  },
+  {
+   "fieldname": "minimum_work_experience_months",
+   "fieldtype": "Int",
+   "label": "Minimum Work Experience (Months)"
+  },
+  {
+   "fieldname": "application_fee",
+   "fieldtype": "Currency",
+   "label": "Application Fee"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Financial Information"
+  },
+  {
+   "fieldname": "tuition_fee_annual",
+   "fieldtype": "Currency",
+   "label": "Annual Tuition Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "additional_fees",
+   "fieldtype": "Currency",
+   "label": "Additional Fees"
+  },
+  {
+   "fieldname": "books_supplies_cost",
+   "fieldtype": "Currency",
+   "label": "Books & Supplies Cost"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "scholarship_available",
+   "fieldtype": "Check",
+   "label": "Scholarships Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "financial_aid_available",
+   "fieldtype": "Check",
+   "label": "Financial Aid Available"
+  },
+  {
+   "fieldname": "average_debt_upon_graduation",
+   "fieldtype": "Currency",
+   "label": "Average Debt Upon Graduation"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_plans_available",
+   "fieldtype": "Check",
+   "label": "Payment Plans Available"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Career & Outcomes"
+  },
+  {
+   "fieldname": "career_prospects",
+   "fieldtype": "Text Editor",
+   "label": "Career Prospects"
+  },
+  {
+   "fieldname": "employment_rate",
+   "fieldtype": "Float",
+   "label": "Employment Rate (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "average_starting_salary",
+   "fieldtype": "Currency",
+   "label": "Average Starting Salary"
+  },
+  {
+   "fieldname": "top_employers",
+   "fieldtype": "Text",
+   "label": "Top Employers"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry_connections",
+   "fieldtype": "Text",
+   "label": "Industry Connections"
+  },
+  {
+   "fieldname": "internship_opportunities",
+   "fieldtype": "Text",
+   "label": "Internship Opportunities"
+  },
+  {
+   "fieldname": "research_opportunities",
+   "fieldtype": "Text",
+   "label": "Research Opportunities"
+  },
+  {
+   "fieldname": "study_abroad_options",
+   "fieldtype": "Text",
+   "label": "Study Abroad Options"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Application Timeline"
+  },
+  {
+   "fieldname": "application_deadline_fall",
+   "fieldtype": "Date",
+   "label": "Application Deadline (Fall)"
+  },
+  {
+   "fieldname": "application_deadline_spring",
+   "fieldtype": "Date",
+   "label": "Application Deadline (Spring)"
+  },
+  {
+   "fieldname": "application_deadline_summer",
+   "fieldtype": "Date",
+   "label": "Application Deadline (Summer)"
+  },
+  {
+   "fieldname": "early_decision_deadline",
+   "fieldtype": "Date",
+   "label": "Early Decision Deadline"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notification_date",
+   "fieldtype": "Date",
+   "label": "Notification Date"
+  },
+  {
+   "fieldname": "enrollment_deadline",
+   "fieldtype": "Date",
+   "label": "Enrollment Deadline"
+  },
+  {
+   "default": "0",
+   "fieldname": "waitlist_available",
+   "fieldtype": "Check",
+   "label": "Waitlist Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "rolling_admissions",
+   "fieldtype": "Check",
+   "label": "Rolling Admissions"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_featured",
+   "fieldtype": "Check",
+   "label": "Featured Program"
+  },
+  {
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "data_last_updated",
+   "fieldtype": "Date",
+   "label": "Data Last Updated"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_sources",
+   "fieldtype": "Small Text",
+   "label": "Data Sources"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Verified\nPending\nRequires Update\nUnverified"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 09:57:01.396327",
+ "modified_by": "Administrator",
+ "module": "Flyout Core",
+ "name": "Program",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "program_title",
+ "track_changes": 1
+}
